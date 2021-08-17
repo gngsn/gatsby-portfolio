@@ -3,12 +3,13 @@ import Icon from '../elements/Icons';
 import styled from 'styled-components';
 
 const Skills = styled.div`
-    display: flex; padding: 40px 0px 20px; flex-wrap : wrap; align-content: center;
+    display: flex; flex-wrap : wrap; align-content: center;
+    padding: ${({ padding }) => isNaN(padding) ? padding : padding + 'px'};
 `;
 
 const SkillIcon = styled.div`
-    max-width: 72px;
-    max-height: 72px;
+    max-width: ${({ width }) => isNaN(width) ? width : width + 'px'};
+    max-height: ${({ height }) => isNaN(height) ? height : height+ 'px'};
     margin: auto 10px auto 0px;
     @media all and (max-width: 900px) {
         max-width: 54px;
@@ -16,18 +17,18 @@ const SkillIcon = styled.div`
     }
 `;
 
-const SkillList = React.memo(({ list, width = '100%', height = '100%', padding =20, fontSize =1.2, style= {} }) => {
+const SkillList = ({ list, width, height, padding = 20, fontSize =1.2}) => {
     return (
-        <Skills container style={style}>
+        <Skills padding={padding} >
             {
             list.map((icon, index) => (
-                <SkillIcon key={index}>
+                <SkillIcon key={icon}>
                     <Icon name={icon} width={width} height={height} fontSize={fontSize} />
                 </SkillIcon>
             ))
             }
         </Skills>
     );
-});
+};
 
 export default SkillList;

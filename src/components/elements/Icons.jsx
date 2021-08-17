@@ -112,6 +112,11 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
             <img style={styles} src="https://img.icons8.com/color/96/000000/autodesk-3ds-max.png" />
         );
     }
+    else if (name === 'vscode') {
+        return (
+            <img src="https://img.icons8.com/fluent/96/000000/visual-studio-code-2019.png" />
+        );
+    }
 }
 );
 

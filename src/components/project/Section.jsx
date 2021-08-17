@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
+import { useQuery, gql } from "@apollo/client";
 
 import SkillList from './SkillList';
 import List from './List';
@@ -7,13 +8,20 @@ import palette from '../../lib/styles/palette';
 
 import styled from 'styled-components';
 
-const ProjectSection = React.memo(({ data }) => {
+const ProjectSection = React.memo(({ item }) => {
     const [open, setOpen] = useState(false);
     const [shortCutData, setShortCutData] = useState({});
     const shortCutDom = useRef();
 
-    const { key, title, cate, description, skills } = data;
+    const { loading, error, data: projects } = useQuery(GET_PROJECTS);
 
+    console.log('projects : ', projects);
+    if (error) console.log('error : ', error);
+    
+    // const { key, title, cate, project, description, skills } = sectionData;
+    
+    // const edges = allProjects;
+    // const projectList = edges?.allMdx?.edges?.filter(node => project.includes(node.slug));
 
     const hideShortCut = () => {
         setOpen(false);
@@ -27,13 +35,13 @@ const ProjectSection = React.memo(({ data }) => {
 
     return (
         <>
-            <Info right={key % 2 === 1}>
+            <Info right={item.key % 2 === 1}>
                 <Title>
-                    <h2>{title}</h2>
+                    <h2>{item.title}</h2>
                     <span></span>
                 </Title>
-                <p> { description } </p>
-                <SkillList width={'100%'} height={'100%'} padding={25} fontSize={1.5} list={skills} />
+                { item.description }
+                <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={item.skills} />
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>
@@ -50,29 +58,48 @@ const ProjectSection = React.memo(({ data }) => {
                                         <HashTag>
                                     {
                                             shortCutData.subTitle.map((tit, index) => (
-                                                <>{tit} &nbsp;&nbsp;&nbsp;</>
+                                                <span key={tit}>{tit} &nbsp;&nbsp;&nbsp;</span>
                                             ))
                                     }
                                         </HashTag>
                                     </p> :
                                     <></>
-                            }                            
+                            }
                             {
                                 shortCutData.skillStack ?
-                                    <SkillList width={'42px'} height={'42px'} padding={25} fontSize={1.5} list={shortCutData.skillStack} /> :
+                                    <SkillList width={30} height={30} padding={5} fontSize={1.5} list={shortCutData.skillStack} /> :
                                     <></>
                             }
-
                             <Link to={`/project/${shortCutData.link}`}>&gt;&gt; 자세히 보기</Link>
                         </ShortCutDetail>
                     </ShortCut>
                 </ShortCutContainer>
-                <List flipId="square" toggleFullScreen={showShortCut} cate={cate} />
+                <List flipId="square" toggleFullScreen={showShortCut} project={projectList} />
             </div>
         </>
     );
 });
 
+const GET_PROJECTS = gql`
+query GetProjects {
+    allMdx {
+    edges {
+      node {
+        id
+        slug
+        exports {
+          metadata {
+            title
+            duration
+            thumbnail
+            link
+          }
+        }
+      }
+    }
+  }
+}
+`;
 
 const Title = styled.div`
     display: inline-flex; flex-direction: column; align-items: center; position: relative;
@@ -146,6 +173,7 @@ const CancelBtn = styled.img`
 `;
 
 const HashTag = styled.span`
+    color: ${palette.grey2};
     font-size: .7rem;
     display: block;
     margin-top: 10px;

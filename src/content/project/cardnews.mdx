@@ -1,0 +1,46 @@
+import Slider from '../../components/elements/Slider'
+
+<div className="cardnews">
+    <section>
+        <QuotationMarksTitle> #SOPT CARDNEWS </QuotationMarksTitle>
+        <p> IT 창업 동아리 SOPT에서 운영팀에 지원하기 위해 자기소개를 담은 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(8).keys()].map(i => `/img/cardnews/sopt-team-${i+1}.png`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> #SOPT SEMINAR CARDNEWS </QuotationMarksTitle>
+        <p> IT 창업 동아리 SOPT에서 운영팀으로 활동하며, 매주 진행되는 세미나에 대한 기사로 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(14).keys()].map(i => `/img/cardnews/SOPT_CN_${i+1}.png`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> #MADDY MT CARDNEWS </QuotationMarksTitle>
+        <p> 문화교류 연합동아리 MADDY에서 부회장 및 DNA(Design 부서)팀에서 활동하며 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(8).keys()].map(i => `/img/cardnews/MT_${i+1}.jpg`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> #MADDY CARDNEWS </QuotationMarksTitle>
+        <p> 문화교류 연합동아리 MADDY에서 활동들을 컨텐츠로 담아 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(7).keys()].map(i => `/img/cardnews/pixel_${i+1}.jpg`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> #MADDY CARDNEWS </QuotationMarksTitle>
+        <p> 문화교류 연합동아리 MADDY에서 새로운 회원들을 모집하기 위한 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(8).keys()].map(i => `/img/cardnews/maddy_intro_${i+1}.jpg`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> #MADDY CARDNEWS </QuotationMarksTitle>
+        <p> 문화교류 연합동아리 MADDY에서 새로운 회원들을 모집하기 위한 카드뉴스를 제작했습니다.</p>
+        <Slider images={[...Array(6).keys()].map(i => `/img/cardnews/maddy_cont_${i+1}.jpg`)} />
+    </section>
+</div>
+
+export const metadata = {
+    title: 'Cardnews',
+    // duration: '2017-09 ~ 2020-01',
+    duration: '2017.09 ~ 2020.01',
+    subTitle: ['# photoshop + illustrator '],
+    thumbnail: '/img/cardnews/cardnews-dark.png',
+    backImage: '/img/cardnews/cardnews-dark.png',
+    link: 'cardnews',
+    summary: '많은 동아리 활동들을 하면서 다양한 목적으로 컨텐츠를 제작하고 홍보하는 재능을 발휘했습니다. 덕분에 동아리 SNS 홍보의 시초가 되었으며, 이해하기 쉽고 심미적인 홍보를 할 수 있었습니다.',
+    skillStack: ['photoshop', 'illustrator'],
+}

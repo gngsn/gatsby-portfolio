@@ -1,0 +1,66 @@
+@font-face{
+    font-family: "Noto Th";
+    font-weight: normal;
+    font-weight: 100;
+    src:url(./NotoSansKR-Thin.otf);
+}
+@font-face{
+	font-family:"Noto L";
+    font-weight: normal;
+    font-weight: 200;
+	src:url(./NotoSansKR-Light.otf);
+}
+
+
+@font-face{
+	font-family:"Noto R";
+    font-weight: normal;
+    font-weight: 300;
+	src:url(./NotoSansKR-Regular.otf);
+}
+
+@font-face{
+	font-family:"Noto M";
+    font-weight: normal;
+    font-weight:400;
+	src:url(./NotoSansKR-Medium.otf);
+}
+
+@font-face{
+	font-family:"Noto B";
+    font-weight: normal;
+    font-weight:500;
+	src:url(./NotoSansKR-Bold.otf);
+}
+
+/* @font-face{
+	font-family:"NanumM R";
+    font-weight: bold;
+    font-weight:700;
+	src:url(./NanumMyeongjo-Regular.ttf);
+}
+
+
+@font-face{
+	font-family:"Kakao L";
+    font-weight: normal;
+    font-weight:100;
+    src:url(./KakaoOTF-aLt.otf),
+    url(./KakaoOTF-aLt.woff);
+}
+
+@font-face{
+	font-family:"Kakao R";
+    font-weight: normal;
+    font-weight:100;
+	src:url(./KakaoOTF-bRg.otf),
+    url(./KakaoOTF-bRg.woff);
+}
+
+@font-face{
+	font-family:"Kakao B";
+    font-weight: normal;
+    font-weight:100;
+    src:url(./KakaoOTF-cBd.otf),
+    url(./KakaoOTF-cBd.woff);
+} */

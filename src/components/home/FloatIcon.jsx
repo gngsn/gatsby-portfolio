@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { mainContext } from '../../context'
+import React from 'react';
 import classNames from 'classnames';
 
+import useTheme from '../../lib/hooks/useTheme';
+
 const FloatIcon = () => {
-    const context = useContext(mainContext);
-    const theme = 'light';
+    const { theme } = useTheme();
 
     const copyMail = e => {
         let email = "rudtjs4540@gmail.com";

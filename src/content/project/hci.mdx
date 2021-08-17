@@ -1,0 +1,72 @@
+import PdfSlider from '../../components/elements/PdfSlider'
+
+<div className="hci">
+    <section>
+        <QuotationMarksTitle> # HUMAN-COMPUTER INTERACTION </QuotationMarksTitle>
+        <p> 인간과 컴퓨터의 상호작용을 탐구하여 기존에 출시되었던 '따릉이' 어플을 UX을 고려하여 재탄생시켰습니다. </p>
+        <PdfSlider images={[...Array(33).keys()].map(i => `/img/hci/hci_${i+1}.png`)} toShow={6}/>
+    </section>
+    <section>
+        <QuotationMarksTitle> # PROTOTYPE - Wizard of OZ </QuotationMarksTitle>
+        <FlexBox>
+            <iframe width="320" height="450" src="https://youtube.com/embed/a-N13-zTeIM?autoplay=1"> </iframe>
+            <p> 마치 사용자가 사용하는 것처럼 뷰를 찾아보고 <br/>버튼을 눌러보는 등의 이벤트를 직접 취하면서 프로토타입을 설명해줍니다. </p>
+        </FlexBox>
+    </section>
+    <section>
+        <QuotationMarksTitle> # PROTOTYPE - XD </QuotationMarksTitle>
+        <FlexBox className="xd flex-box">
+        <img src="/img/hci/hci-main-1.png" />
+        <img src="/img/hci/hci-main-2.png" />
+        <img src="/img/hci/hci-main-3.png" />
+        <img src="/img/hci/hci-main-4.png" />
+        <img src="/img/hci/hci-main-5.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-pay-1.png" />
+            <img src="/img/hci/hci-pay-2.png" />
+            <img src="/img/hci/hci-pay-3.png" />
+            <img src="/img/hci/hci-pay-4.png" />
+            <img src="/img/hci/hci-pay-5.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-lent-1.png" />
+            <img src="/img/hci/hci-lent-2.png" />
+            <img src="/img/hci/hci-lent-3.png" />
+            <img src="/img/hci/hci-lent-4.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-mypage-1.png" />
+            <img src="/img/hci/hci-mypage-2.png" />
+            <img src="/img/hci/hci-mypage-3.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-card-1.png" />
+            <img src="/img/hci/hci-card-2.png" />
+            <img src="/img/hci/hci-card-3.png" />
+            <img src="/img/hci/hci-card-4.png" />
+            <img src="/img/hci/hci-card-5.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-hand-1.png" />
+            <img src="/img/hci/hci-hand-2.png" />
+        </FlexBox>
+        <FlexBox className="xd flex-box">
+            <img src="/img/hci/hci-menu-1.png" />
+            <img src="/img/hci/hci-menu-2.png" />
+            <img src="/img/hci/hci-menu-3.png" />
+        </FlexBox>
+    </section>
+</div>
+
+export const metadata = {
+    title: 'HCI',
+    // duration: '2020.01.18 ~ 2020.08.01',
+    duration: '2020.01 ~ 2020.08',
+    subTitle: ['# 따릉이 Redesign'],
+    thumbnail: '/img/hci/hci_dark.png',
+    backImage: '/img/hci/hci_dark.png',
+    link: 'hci',
+    summary: "인간과 컴퓨터의 상호작용을 탐구하여 기존에 출시되었던 '따릉이' 어플을 UX을 고려하여 재탄생시켰습니다.",
+    skillStack: ['xd', 'illustrator'],
+}

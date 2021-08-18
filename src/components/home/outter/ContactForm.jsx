@@ -11,8 +11,7 @@ const formSchema = Yup.object().shape({
                 .required("Required")
 });
 
-export default () => {
-    /* Server State Handling */
+const ContactForm = () => {
     const [serverState, setServerState] = useState();
     const handleServerResponse = (ok, msg) => {
         setServerState({ ok, msg });
@@ -64,3 +63,5 @@ export default () => {
         </div>
     );
 };
+
+export default ContactForm;

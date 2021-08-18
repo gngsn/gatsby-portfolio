@@ -7,7 +7,20 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
 
-document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
+const isBrowser = typeof window !== "undefined";
+let store = createStore(
+    rootReducer,
+    composeWithDevTools(),
+);
+
+if (isBrowser) {
+    document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
+    store = createStore(
+        rootReducer,
+        window.__REDUX_STATE__,
+        composeWithDevTools(),
+    );
+}
 
 interface ContextProviderProps {
     children: React.ReactNode;
@@ -19,11 +32,7 @@ declare global {
     }
 }
 
-const store = createStore(
-    rootReducer,
-    window.__REDUX_STATE__,
-    composeWithDevTools(),
-);
+
 
 const client = new ApolloClient({
     uri: 'http://localhost:8000/___graphql',

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const LinkIcon = styled.a`
     display: inline-flex; 

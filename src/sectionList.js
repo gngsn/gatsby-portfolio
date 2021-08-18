@@ -1,5 +1,4 @@
 import React from 'react';
-
 const sectionList = [
     {
         key: 0,
@@ -24,7 +23,7 @@ const sectionList = [
         cate: 'design',
         description: <p>가보지 않은 길에 두려움을 없애고, <br /> 다양한 도전을 시도합니다.</p>,
         skills: ['illustrator', 'photoshop', 'xd', 'after-effects', '3ds-max'],
-        project: ['hci', 'cardnews', '3d-max']
+        project: ['hci', 'cardnews', '3ds-max']
     },
 ]
 export default sectionList;

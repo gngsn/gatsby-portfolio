@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import BaseElement from './BaseElement';
 
 const QuotationMarksTitle = styled.h5`

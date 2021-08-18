@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby';
-import { MDXProvider } from '@mdx-js/react';
 import { useQuery, gql} from "@apollo/client";
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import styled from 'styled-components';
 
-import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon} from '../../lib/styles/markdown';
+import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from '../../lib/styles/markdown';
 import palette from '../../lib/styles/palette';
 
 const components = {
@@ -19,10 +19,10 @@ const components = {
 }
 
 const ProjectDetail = React.memo(({ title }) => {
-    const { loading, error, data } = useQuery(GET_PROJECT, {
+    const { error, data } = useQuery(GET_PROJECT, {
         variables: { title },
     });
-    console.log('data : ', data);
+
     if (error) console.log('error : ', error);
     const item = { ...data?.mdx?.exports?.metadata, body: data?.mdx?.body};
 
@@ -86,16 +86,6 @@ const Block = styled.div`
     background-color: ${palette.grey1};
     & > div {
     }
-`;
-
-const DetailContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-    overflow: auto;
-    z-index: 11;
 `;
 
 const Title = styled.div`

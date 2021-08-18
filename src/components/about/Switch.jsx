@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Grid } from '@material-ui/core';
 
@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Inner = React.memo(({ theme, isOn }) => {
     let [turnOn, setTurnOn] = useState(theme);
-    const audio = new Audio('/img/switch.mp3');
+    const audio = typeof window !== "undefined" ? new Audio('/img/switch.mp3') : null;
 
     const clickSwitch = () => {
         audio.play();
@@ -53,8 +53,6 @@ const Inner = React.memo(({ theme, isOn }) => {
             </Grid>
         </Container>
     )
-}, (prev, next) => {
-    return prev.theme === next.theme;
 });
 
 

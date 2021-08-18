@@ -3,10 +3,10 @@ import classNames from 'classnames';
 
 import useTheme from '../../lib/hooks/useTheme';
 
-const FloatIcon = () => {
+const ContactBar = () => {
     const { theme } = useTheme();
 
-    const copyMail = e => {
+    const copyMail = () => {
         let email = "rudtjs4540@gmail.com";
         var emailCopy = document.createElement('textarea');
         emailCopy.value = email;
@@ -20,13 +20,13 @@ const FloatIcon = () => {
     return (
         <div className={classNames('icon', theme === 'dark' ? '--dark': '')}>
             <div id="icon_mail" className="__mail" onClick={copyMail}></div>
-            <a target="_blank" href="https://www.instagram.com/pppppppppark">
+            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/pppppppppark">
                 <div className="__insta"></div>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/%EA%B2%BD%EC%84%A0-%EB%B0%95-4b95961b2/">
+            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/%EA%B2%BD%EC%84%A0-%EB%B0%95-4b95961b2/">
                 <div className="__linkedin"></div>
             </a>
-            <a target="_blank" href="https://github.com/gngsn">
+            <a target="_blank" rel="noreferrer" href="https://github.com/gngsn">
                 <div className="__github"></div>
             </a>
             <a></a>
@@ -34,4 +34,4 @@ const FloatIcon = () => {
     )
 }
 
-export default FloatIcon;
+export default ContactBar;

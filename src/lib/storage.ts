@@ -17,7 +17,7 @@ class FallbackStorage {
 
     setItem(key: string, value: unknown) {
         const string = JSON.stringify(value);
-        if (this.valid) {
+        if (typeof window !== "undefined" && this.valid) {
             localStorage.setItem(key, string);
             return;
         }
@@ -25,7 +25,7 @@ class FallbackStorage {
     }
 
     getItem(key: string) {
-        const value = this.valid
+        const value = typeof window !== "undefined" && this.valid
             ? localStorage.getItem(key)
             : this.fallbackStorage[key];
         try {
@@ -37,7 +37,7 @@ class FallbackStorage {
     }
 
     removeItem(key: string) {
-        if (this.valid) {
+        if (typeof window !== "undefined" && this.valid) {
             localStorage.removeItem(key);
             return;
         }

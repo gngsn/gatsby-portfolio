@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ContactForm from './ContactForm';
-import FloatIcon from '../FloatIcon';
+import ContactBar from '../ContactBar';
 import palette from '../../../lib/styles/palette';
 
 const contact = () => {
@@ -10,7 +10,7 @@ const contact = () => {
         <Block>
             <h1> CONTACT. </h1>
             <ContactForm />
-            <FloatIcon />
+            <ContactBar />
         </Block>
     )
 }

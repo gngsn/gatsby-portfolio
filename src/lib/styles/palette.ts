@@ -10,6 +10,7 @@ const palette = {
     white0: '#FFFFFF',
     /* black */
     black0: '#000000',
+    black1: '#0e0e0e',
 };
 
 export default palette;

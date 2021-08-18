@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-// import { BaseElement } from '.';
-import { BaseElement } from '.';
 import { Flex } from './FlexBox';
 
 const SkillList = styled.div`

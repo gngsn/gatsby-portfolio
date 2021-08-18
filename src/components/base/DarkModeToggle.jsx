@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
-import { mainContext } from '../../context';
+import React from 'react';
+import useTheme from '../../lib/hooks/useTheme';
 import classNames from 'classnames';
 import '../scss/Toggle.scss';
 
 const DarkModeToggle = () => {
-    const theme = 'light';
-    const { dispatch } = useContext(mainContext);
+    const { theme, setTheme } = useTheme();
 
     const changeTheme = e => {
-        // document.body.classList.toggle('dark');
         if(theme === 'dark') {
             e.target.checked = false;
-            // document.body.classList.remove('dark');
-            dispatch({type: 'theme', payload: 'light'});
+            setTheme('light');
         } else {
             e.target.checked = true;
-            // document.body.classList.add('dark');
-            dispatch({type: 'theme', payload: 'dark'});
+            setTheme('dark');
         }
         
     }

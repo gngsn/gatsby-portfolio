@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Inner from './Inner';
-import Outter from './Outter';
+import Outter from './outter';
 
 const index = () => {
     return (

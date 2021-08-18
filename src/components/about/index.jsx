@@ -2,6 +2,7 @@ import React from 'react';
 import Switch from './Switch';
 import styled from 'styled-components';
 import useTheme from '../../lib/hooks/useTheme';
+import palette from '../../lib/styles/palette';
 
 const Inner = () => {
     const { theme, setTheme } = useTheme();
@@ -26,6 +27,7 @@ const Inner = () => {
 }
 
 const Container = styled.div`
+    // background-color: ${palette.black1};
     z-index: -1; top: 0; left: 0;
     width: 100%; height: 100vh; 
     transition: 0.8s transform cubic-bezier(0.65, 0, 0.35, 1); 

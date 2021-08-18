@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
-
 const List = React.memo(({ setShortcut, project }) => {
     const settings = {
         slidesToShow: 5,
@@ -12,7 +11,6 @@ const List = React.memo(({ setShortcut, project }) => {
         infinite: false,
         centerMode: false
     };
-    console.log('update? ');
 
     const hover = e => {
         e.target.parentElement.style.boxShadow = '2px 8px 19px 4px rgb(134,134,134)'

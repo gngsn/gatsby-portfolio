@@ -1,12 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Bubble from './Bubble';
 import Skill from './Skill';
 import Contact from './Contact';
 import useTheme from '../../../lib/hooks/useTheme';
-import styled from 'styled-components';
 import palette from '../../../lib/styles/palette';
-
-
 
 const Bottom = () => {
     const { theme } = useTheme();
@@ -15,7 +14,7 @@ const Bottom = () => {
         <>
         <Container>
             <Bubble />
-                <img src={theme === 'light' ? `/img/working.jpg` : '/img/working.png'} />
+                <img src={theme === 'light' ? `/img/working.jpg` : '/img/working.png'} alt="working" />
             <Skill />
             <hr />
             <Contact />

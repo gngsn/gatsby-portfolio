@@ -3,15 +3,7 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 
 
-const List = ({ cate, toggleFullScreen, project }) => {
-
-
-    // const edges = data?.allMdx?.edges;
-    // console.log('edges : ', edges)
-    // const projectList = edges.filter(node => project.includes(node.slug));
-    const projectList = [];
-    // console.log('projectList : ', projectList)
-
+const List = React.memo(({ setShortcut, project }) => {
     const settings = {
         slidesToShow: 5,
         slidesToScroll: 5,
@@ -20,16 +12,7 @@ const List = ({ cate, toggleFullScreen, project }) => {
         infinite: false,
         centerMode: false
     };
-
-    // let project = []
-    // if (cate === 'backend') {
-    //     project = section1
-    // } else if (cate === 'developer') {
-    //     project = section2
-    // } else {
-    //     project = section3
-    // }
-    const subClass = 'center'
+    console.log('update? ');
 
     const hover = e => {
         e.target.parentElement.style.boxShadow = '2px 8px 19px 4px rgb(134,134,134)'
@@ -38,30 +21,25 @@ const List = ({ cate, toggleFullScreen, project }) => {
         e.target.parentElement.style.boxShadow = 'none';
     }
 
-    const click = (data) => {
-        toggleFullScreen(data);
-    }
-
     return (
-        <div className={subClass}>
+        <div className='center'>
             <Slider {...settings}>
                 {
-                    projectList.map(data => (
-                        <ImageStyle key={data.key} image={data.thumbnail} onClick={() => click(data)} onMouseOver={hover} onMouseLeave={overHover} className="link proj" data-link={data.link}>
+                    project.map(data => {
+                        data = {id: data.node.id, slug: data.node.slug, ...data.node.exports.metadata};
+                        return (
+                            <ImageStyle key={data.id} image={data.thumbnail} onClick={() => setShortcut(data)} onMouseOver={hover} onMouseLeave={overHover} className="link proj" data-link={data.link}>
                             <div className="proj-title">
                                 <h2>{data.duration}</h2>
                                 <h1>{data.title}</h1>
                             </div>
-                        </ImageStyle>
-                    ))
+                        </ImageStyle>);
+                    })
                 }
             </Slider>
         </div>
     );
-};
-
-
-
+}, (prev, next) => true);
 
 const ImageStyle = styled.div`
         background-image: ${props => 'url(' + props.image + ')'};

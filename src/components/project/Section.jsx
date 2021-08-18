@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import { useQuery, gql } from "@apollo/client";
 
@@ -8,56 +8,51 @@ import palette from '../../lib/styles/palette';
 
 import styled from 'styled-components';
 
-const ProjectSection = React.memo(({ item }) => {
+const ProjectSection = React.memo(({ data }) => {
     const [open, setOpen] = useState(false);
-    const [shortCutData, setShortCutData] = useState({});
+    const [shortcut, setShortcut] = useState({});
     const shortCutDom = useRef();
 
-    const { loading, error, data: projects } = useQuery(GET_PROJECTS);
-
-    console.log('projects : ', projects);
+    const { error, data: project } = useQuery(GET_PROJECTS);
+    
     if (error) console.log('error : ', error);
-    
-    // const { key, title, cate, project, description, skills } = sectionData;
-    
-    // const edges = allProjects;
-    // const projectList = edges?.allMdx?.edges?.filter(node => project.includes(node.slug));
+    const projects = project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug));
 
-    const hideShortCut = () => {
+    const hideShortcut = () => {
         setOpen(false);
     }
 
-    const showShortCut = (data) => {
-        setShortCutData(data);
+    const showShortcut = (data) => {
+        setShortcut(data);
         setOpen(true);
         shortCutDom.current.scrollIntoView({ block: "center", behavior: 'smooth' });
     };
 
     return (
         <>
-            <Info right={item.key % 2 === 1}>
+            <Info right={data.key % 2 === 1}>
                 <Title>
-                    <h2>{item.title}</h2>
+                    <h2>{data.title}</h2>
                     <span></span>
                 </Title>
-                { item.description }
-                <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={item.skills} />
+                {data.description }
+                <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={data.skills} />
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>
                     <ShortCut open={open}>
-                        <ProjImage src={shortCutData.thumbnail} image={shortCutData.thumbnail} />
+                        <ProjImage src={shortcut.thumbnail} image={shortcut.thumbnail} />
                         <ShortCutDetail>
-                            <CancelBtn src='/img/cancel-red.png' onClick={hideShortCut} />
-                            <h2>{shortCutData.duration}</h2>
-                            <h1>{shortCutData.title}</h1>
+                            <CancelBtn src='/img/cancel-red.png' onClick={hideShortcut} />
+                            <h2>{shortcut.duration}</h2>
+                            <h1>{shortcut.title}</h1>
                             {
-                                shortCutData.summary ?
+                                shortcut.summary ?
                                     <p>
-                                        {shortCutData.summary}
+                                        {shortcut.summary}
                                         <HashTag>
                                     {
-                                            shortCutData.subTitle.map((tit, index) => (
+                                            shortcut.subTitle.map(tit => (
                                                 <span key={tit}>{tit} &nbsp;&nbsp;&nbsp;</span>
                                             ))
                                     }
@@ -66,18 +61,24 @@ const ProjectSection = React.memo(({ item }) => {
                                     <></>
                             }
                             {
-                                shortCutData.skillStack ?
-                                    <SkillList width={30} height={30} padding={5} fontSize={1.5} list={shortCutData.skillStack} /> :
+                                shortcut.skillStack ?
+                                    <SkillList width={30} height={30} padding={5} fontSize={1.5} list={shortcut.skillStack} /> :
                                     <></>
                             }
-                            <Link to={`/project/${shortCutData.link}`}>&gt;&gt; 자세히 보기</Link>
+                            <Link to={`/project/${shortcut.link}`}>&gt;&gt; 자세히 보기</Link>
                         </ShortCutDetail>
                     </ShortCut>
                 </ShortCutContainer>
-                <List flipId="square" toggleFullScreen={showShortCut} project={projectList} />
+                {
+                    projects ?
+                        <List flipId="square" setShortcut={showShortcut} project={projects} />
+                    : null
+                }
             </div>
         </>
     );
+}, (prev, next) => {
+    return prev.data === next.data;
 });
 
 const GET_PROJECTS = gql`
@@ -90,9 +91,12 @@ query GetProjects {
         exports {
           metadata {
             title
+            subTitle
             duration
+            summary
             thumbnail
             link
+            skillStack
           }
         }
       }

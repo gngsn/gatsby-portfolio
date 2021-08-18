@@ -71,15 +71,13 @@ const Block = styled.div`
             .proj a{text-decoration: none; height: 100%;}
             .proj img{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
             .proj .open{width: 100vw; height: 100vh;}
-            .proj-title{z-index: 30;width: 100%;min-height: 120px; display: flex;flex-direction: column; justify-content: center;}
-            .proj-title h1 {
-                font-size: 1.2rem;
-                text-align: center;
-                word-break: keep-all;
-                font-family: 'Noto B'; color: #FFF;
+            .proj-title{
+                z-index: 30;width: 100%;min-height: 120px; display: flex;flex-direction: column; justify-content: center;
+                cursor: pointer;
+                h1 { font-size: 1.2rem; text-align: center; word-break: keep-all;font-family: 'Noto B'; color: #FFF;}
+                h2 { font-size: 0.8rem; text-align: center; margin: 0px;font-family: 'Noto B';color: #FFF;}
+                h3 { font-size: 0.6rem; text-align: center; line-height: 2;margin: 0px;color: #FFF;}
             }
-            .proj-title h2{font-size: 0.8rem; text-align: center;margin: 0px;font-family: 'Noto B';color: #FFF;}
-            .proj-title h3{font-size: 0.6rem; text-align: center; line-height: 2;margin: 0px;color: #FFF;}
         }
         .slick-prev{display: none !important;}
         .slick-next{display: none !important;}

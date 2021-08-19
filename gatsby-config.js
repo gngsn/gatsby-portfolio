@@ -2,8 +2,12 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "portfolio",
+    siteUrl: "https://kyeongsun.com",
+    title: "kyeongsun",
+    titleTemplate: "%s | Portfolio",
+    description: "안녕하세요. 백앤드 개발자를 꿈꾸는 박경선입니다.",
+    image: "/img/selfie_sq.png/img/selfie_sq.png",
+    url: "https://kyeongsun.com/",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -41,9 +45,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typescript",
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: "jsx", // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: "jsx",
+        allExtensions: true,
       },
     },
     {
@@ -65,5 +69,6 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
   ],
 };

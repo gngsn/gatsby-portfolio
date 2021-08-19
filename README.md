@@ -25,7 +25,7 @@ Following items are core frontend technologies used in this project (2021.08) :
 ## 🏗 &nbsp; Project Architecture
 
 ```
- +- Build  -+        +-   CI   -+           +--    CD   ---+            +- Content -+
+ +- Build  -+        +--  CI  --+           +----  CD  ----+           +- Content  -+
 |           |        |          |           |              |  webhook  |            |
 |  Gatsby   |  push  |  Github  |  publish  | Gatsby Cloud |  <----->  | Contentful |
 |  GraphQL  |  --->  |  Action  |   ---->   |  AWS Route53 |   fetch   |            |
@@ -52,7 +52,7 @@ $ npm run build
 # develop 
 $ npm run develop
 ⠀
-⠀  You can now view my-first-gatsby-site in the browser.
+⠀  You can now view this project in the browser.
 ⠀  http://localhost:8000/
 ⠀
 ```

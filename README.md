@@ -1,10 +1,12 @@
-# Gyeongsun Park | Portfolio
+<br/>
+
+# kyeongsun Park | Portfolio
 
 ### 🔗 &nbsp; [visit MYSITE !](https://kyeongsun.com/)
 
 <br/>
 
-## Project Stack
+## 📚 &nbsp; Project Stack
 
 Following items are core frontend technologies used in this project (2021.08) :
 
@@ -20,7 +22,7 @@ Following items are core frontend technologies used in this project (2021.08) :
 
 <br/>
 
-## Project Architecture
+## 🏗 &nbsp; Project Architecture
 
 ```
  +- Build  -+        +-   CI   -+           +--    CD   ---+            +- Content -+
@@ -34,7 +36,7 @@ Following items are core frontend technologies used in this project (2021.08) :
 
 <br/>
 
-## Run on your machine
+## 💻 &nbsp; Run on your machine
 
 ``` bash
 # clone the project

@@ -1,54 +1,56 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Gyeongsun Park | Portfolio
 
-## 🚀 Quick start
+### 🔗 &nbsp; [visit MYSITE !](https://kyeongsun.com/)
 
-1.  **Create a Gatsby site.**
+<br/>
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Project Stack
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Following items are core frontend technologies used in this project (2021.08) :
 
-2.  **Start developing.**
+- Gatsby <!-- v3.11.1 -->
+- React <!-- v17.0.1 -->
+- Redux <!-- v7.2.4 -->
+- Graphql <!-- v15.4.0 -->
+- Apollo Client <!-- v3.4.7 -->
+- formik <!-- v2.2.9 -->
+- chart.js <!-- v3.5.0 -->
+- Slick <!-- v0.28.1 -->
+- Sass <!-- v1.37.5 -->
 
-    Navigate into your new site’s directory and start it up.
+<br/>
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## Project Architecture
 
-3.  **Open the code and start customizing!**
+```
+ +- Build  -+        +-   CI   -+           +--    CD   ---+            +- Content -+
+|           |        |          |           |              |  webhook  |            |
+|  Gatsby   |  push  |  Github  |  publish  | Gatsby Cloud |  <----->  | Contentful |
+|  GraphQL  |  --->  |  Action  |   ---->   |  AWS Route53 |   fetch   |            |
+|           |        |          |           |              |  content  |            |
++-----------+        +----------+           +--------------+           +------------+
 
-    Your site is now running at http://localhost:8000!
+```
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+<br/>
 
-4.  **Learn more**
+## Run on your machine
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+``` bash
+# clone the project
+$ git clone https://github.com/gngsn/gatsby-portfolio.git
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+# install modules
+$ cd gatsby-portfolio
+$ npm install
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+# build
+$ npm run build
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+# develop 
+$ npm run develop
+⠀
+⠀  You can now view my-first-gatsby-site in the browser.
+⠀  http://localhost:8000/
+⠀
+```

@@ -3,7 +3,6 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import SEO from "../seo";
 
 import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
@@ -33,8 +32,10 @@ declare global {
     }
 }
 
+
+// console.log('hostname : ', window.location.href);
 const client = new ApolloClient({
-    uri: 'http://localhost:8000/___graphql',
+    uri: `${isBrowser ? window.location.href : 'localhost:9000/'}___graphql`,
     cache: new InMemoryCache()
 });
 
@@ -42,7 +43,6 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
     return (
         <Provider store={store}>
             <ApolloProvider client={client}>
-                <SEO/>
                 <Header />
                 {children}
             </ApolloProvider>

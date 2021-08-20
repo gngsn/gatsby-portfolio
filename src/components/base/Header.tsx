@@ -16,12 +16,11 @@ const Header = () => {
     ];
 
     const MenuLoader = () => {
-        const menu = storage.getItem('CURRENT_MENU');
+        const menu = storage.getItem('CURRENT_MENU') || "HOME";
         const { setMenu } = useHeader();
         setMenu(menu);
     };
     MenuLoader();
-    
 
     return (
         <Block>

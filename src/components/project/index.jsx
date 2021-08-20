@@ -4,14 +4,10 @@ import styled from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import useHeader from "../../lib/hooks/useHeader";
 import sectionList from '../../sectionList';
 import ProjectSection from './Section';
 
 const Project = () => {
-    const { setMenu } = useHeader();
-    setMenu('PROJ');
-
     return (
         <Block>
             <Title>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { useQuery, gql } from "@apollo/client";
 
@@ -8,15 +8,26 @@ import palette from '../../lib/styles/palette';
 
 import styled from 'styled-components';
 
-const ProjectSection = React.memo(({ data }) => {
+const ProjectSection = ({ data }) => {
     const [open, setOpen] = useState(false);
     const [shortcut, setShortcut] = useState({});
+    const [projects, setProjects] = useState();
     const shortCutDom = useRef();
 
-    const { error, data: project } = useQuery(GET_PROJECTS);
-    
-    if (error) console.log('error : ', error);
-    const projects = project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug));
+    // setProjects(_project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug)));
+    const { loading, error, data: _project } = useQuery(GET_PROJECTS);
+    useEffect(()=> {
+        console.log('_project : ', _project);
+        if (loading) {
+            console.log('loading ...');
+            return;
+        }
+        if (error) {
+            console.log('error : ', error);
+            return;
+        }
+        setProjects(_project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug)));
+    }, [loading]);
 
     const hideShortcut = () => {
         setOpen(false);
@@ -77,9 +88,7 @@ const ProjectSection = React.memo(({ data }) => {
             </div>
         </>
     );
-}, (prev, next) => {
-    return prev.data === next.data;
-});
+};
 
 const GET_PROJECTS = gql`
 query GetProjects {

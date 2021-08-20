@@ -8,11 +8,11 @@ exports.onCreatePage = async ({
         createPage
     } = actions;
 
-    const projectDetail = path.resolve(`src/pages/project/detail.tsx`)
+    // const projectDetail = path.resolve(`src/pages/project/detail.tsx`)
 
-    if (page.path.match(/^\/project\/[\w]+/)) {
-        page.matchPath = "/project/:title";
-        page.component = projectDetail;
-        createPage(page);
-    }
+    // if (page.path.match(/^\/project\/[\w]+/)) {
+    //     page.matchPath = "/project/:title";
+    //     page.component = projectDetail;
+    //     createPage(page);
+    // }
 };

@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import useProjects from '../../lib/hooks/useProjects';
+import sectionList from '../../sectionList';
+import Section from './Section';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import sectionList from '../../sectionList';
-import ProjectSection from './Section';
+const Project = ({ data }) => {
+    const { setProjects } = useProjects();
+    setProjects(data);
 
-const Project = () => {
     return (
         <Block>
             <Title>
@@ -15,9 +19,10 @@ const Project = () => {
                 <span></span>
             </Title>
             {
-                sectionList.map((sec, index) => (
-                    <ProjectSection key={index} data={sec}/>
-                ))
+                sectionList.map((_section) => {
+                    const projects = data.filter(item => _section.project.includes(item.slug));
+                    return <Section key={_section.key} data={_section} projects={projects}/>;
+                })
             }
         </Block>
     );

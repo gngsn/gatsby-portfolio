@@ -17,8 +17,8 @@ const ScrollImgContainer = styled.div`
 `;
 
 ScrollImgContainer.propTypes = {
-    width: PropTypes.string | PropTypes.number,
-    height: PropTypes.string | PropTypes.number,
+    width: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
+    height: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
 };
 
 export default ScrollImgContainer;

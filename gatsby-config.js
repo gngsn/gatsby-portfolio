@@ -1,8 +1,3 @@
-const path = require("path");
-var os = require("os");
-var hostname = os.hostname();
-console.log('hostname : ', hostname);
-
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -13,12 +8,6 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-mdx",
     "gatsby-plugin-image",
-    {
-      resolve: 'gatsby-plugin-apollo',
-      options: {
-        uri: 'https://localhost:8000/___graphql'
-      }
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

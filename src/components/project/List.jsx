@@ -24,7 +24,6 @@ const List = React.memo(({ setShortcut, project }) => {
             <Slider {...settings}>
                 {
                     project.map(data => {
-                        data = {id: data.node.id, slug: data.node.slug, ...data.node.exports.metadata};
                         return (
                             <ImageStyle key={data.id} image={data.thumbnail} onClick={() => setShortcut(data)} onMouseOver={hover} onMouseLeave={overHover} className="link proj" data-link={data.link}>
                             <div className="proj-title">

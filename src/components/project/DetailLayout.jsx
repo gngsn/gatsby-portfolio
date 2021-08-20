@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby';
-import { useQuery, gql} from "@apollo/client";
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import styled from 'styled-components';
@@ -18,34 +17,28 @@ const components = {
     LinkIcon
 }
 
-const ProjectDetail = React.memo(({ title }) => {
-    const { error, data } = useQuery(GET_PROJECT, {
-        variables: { title },
-    });
-
-    if (error) console.log('error : ', error);
-    const item = { ...data?.mdx?.exports?.metadata, body: data?.mdx?.body};
+const ProjectDetail = React.memo(({ data }) => {
 
     return (
         <Block className='project-detail'>
             {
-                item ?
+                data ?
                     <PageLayout>
                         <div className='full-screen-square'/>
                         <Link to='/project'>
                             <CancelImage src='/img/cancel-red.png'/>
                         </Link>
                         <div>
-                            <Title image={item.backImage}>
-                                <h2> {item.duration} </h2>
-                                <h3> {item.title}</h3>
+                            <Title image={data.backImage}>
+                                <h2> {data.duration} </h2>
+                                <h3> {data.title}</h3>
                             </Title>
                             <ContentLayout>
                             {
-                                item.body? 
+                                data.body? 
                                 <MDXProvider components={components}>
                                     <MDXRenderer> 
-                                        {item.body}
+                                        {data.body}
                                     </MDXRenderer >
                                 </MDXProvider> : null
                             }
@@ -58,28 +51,6 @@ const ProjectDetail = React.memo(({ title }) => {
         </Block>
     )
 });
-
-const GET_PROJECT = gql`
-query GetProject($title: String!) {
-    mdx(slug: {eq: $title}) {
-        id
-        slug
-        exports {
-            metadata {
-                title
-                duration
-                subTitle
-                thumbnail
-                backImage
-                link
-                summary
-                skillStack
-            }
-        }
-        body
-    }
-}
-`;
 
 const Block = styled.div`
     * {word-break: keep-all;}
@@ -152,7 +123,7 @@ const PageLayout = styled.div`
             & > img { width:50%; border-radius: 10px; max-width: 650px;}
             & *:first-child {margin-right: 10px;}
             a {
-                display: inline-flex; align-items: center;
+                display: inline-flex; align-datas: center;
                 img { 
                     width: 30px; display: inline-block; margin-right: 10px;
                 }

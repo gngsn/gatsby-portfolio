@@ -9,10 +9,10 @@ const BaseElement = css`
 `;
 
 BaseElement.propTypes = {
-    mt: PropTypes.string | PropTypes.number,
-    ml: PropTypes.string | PropTypes.number,
-    mr: PropTypes.string | PropTypes.number,
-    mb: PropTypes.string | PropTypes.number,
+    mt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ml: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    mr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default BaseElement;

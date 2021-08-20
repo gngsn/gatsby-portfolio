@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
-import { useQuery, gql } from "@apollo/client";
 
 import SkillList from './SkillList';
 import List from './List';
@@ -8,26 +7,10 @@ import palette from '../../lib/styles/palette';
 
 import styled from 'styled-components';
 
-const ProjectSection = ({ data }) => {
+const Section = ({ data, projects }) => {
     const [open, setOpen] = useState(false);
     const [shortcut, setShortcut] = useState({});
-    const [projects, setProjects] = useState();
     const shortCutDom = useRef();
-
-    // setProjects(_project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug)));
-    const { loading, error, data: _project } = useQuery(GET_PROJECTS);
-    useEffect(()=> {
-        console.log('_project : ', _project);
-        if (loading) {
-            console.log('loading ...');
-            return;
-        }
-        if (error) {
-            console.log('error : ', error);
-            return;
-        }
-        setProjects(_project?.allMdx?.edges?.filter(item => data.project.includes(item.node.slug)));
-    }, [loading]);
 
     const hideShortcut = () => {
         setOpen(false);
@@ -89,30 +72,6 @@ const ProjectSection = ({ data }) => {
         </>
     );
 };
-
-const GET_PROJECTS = gql`
-query GetProjects {
-    allMdx {
-    edges {
-      node {
-        id
-        slug
-        exports {
-          metadata {
-            title
-            subTitle
-            duration
-            summary
-            thumbnail
-            link
-            skillStack
-          }
-        }
-      }
-    }
-  }
-}
-`;
 
 const Title = styled.div`
     display: inline-flex; flex-direction: column; align-items: center; position: relative;
@@ -206,4 +165,4 @@ const ProjImage = styled.div`
     border-radius: 10px;
 `;
 
-export default ProjectSection;
+export default Section;

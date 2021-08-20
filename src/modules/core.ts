@@ -3,13 +3,14 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface CoreState {
     size: string;
     theme: string;
+    projects: Array<Object>;
 };
 
 const initialState: CoreState = {
     size: 'md',
-    theme: 'light'
+    theme: 'light',
+    projects: []
 };
-
 
 const coreSlice = createSlice({
     name: 'core',
@@ -20,7 +21,13 @@ const coreSlice = createSlice({
                 theme: string
             }>) {
             state.theme = action.payload.theme;
-        }
+        },
+        setProjects(state,
+            action: PayloadAction<{
+                projects: Array<Object>
+            }>) {
+            state.projects = action.payload.projects;
+        },
     },
 });
 

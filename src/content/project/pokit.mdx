@@ -1,16 +1,50 @@
+import PdfSlider from '../../components/elements/PdfSlider'
+
 export const metadata = {
     title: 'Pokit',
     duration: '2020.12.10 ~ 2020.12.14',
     subTitle: ['# Fintech # 농협해커톤'],
     thumbnail: '/img/pokit/pokit-dark.png',
     backImage: '/img/pokit/pokit-dark.png',
+    shortcutImage: '/img/pokit/pokit.png',
     link: 'pokit',
     summary: '소상공인과 소비자의 상생을 위한 온라인 판매, 다양하고 신선한 농산물 재료로 제작한 밀키트를 관리하는 플랫폼입니다. 주요 소비층으로 부상한 MZ세대가 착한 소비와 미닝아웃(윤리적 소비) 를 지향하는 추세가 되며 최근 농업에 대한 중요성이 대두되고 있습니다. 트렌드를 살려 밀키트를 제작하고 거래하는 플랫폼인 포킷을 제작하게 되었습니다. 기획부터 디자인, 핀테크 기술을 모두 경험하고 적용했습니다.',
     skillStack: ['react', 'git'],
 }
 
-<div>
+<div classname="pokit">
     <section>
-        작성 중입니다.
+        <QuotationMarksTitle> # Fintech를 적용한 서버를 개발하다. </QuotationMarksTitle>
+        <img src="/img/pokit/arch.png" />
+        <Paragraph align="center" mt={40}>
+            NH오픈플랫폼을 이용한 Fintech API를 사용하였습니다. <br/>
+            Fin Account를 발급받는 것부터, 관리하고 이체하는 과정을 이해한 후 개발하였습니다. <br/>
+            짧은 시간이었지만 제대로 알아보고 싶은 관심이 큰 분야였기 때문에 제대로 이해하는 것을 목표로 하였고,  <br/>
+            그 만큼 값진 시간을 보낼 수 있었습니다.
+        </Paragraph>
+    </section>
+    <section>
+        <QuotationMarksTitle> # 기획부터 디자인, 서버 개발까지 </QuotationMarksTitle>
+        <PdfSlider toShow={7} images={[...Array(26).keys()].map(i => `/img/pokit/pokit_slide_${i+1}.png`)} />
+    </section>
+    <section>
+        <QuotationMarksTitle> # HCI를 적용한 디자인  </QuotationMarksTitle>
+        <FlexBox className="flex-box">
+        <img src="/img/pokit/mock_1.png" />
+        <img src="/img/pokit/mock_2.png" />
+        <img src="/img/pokit/mock_3.png" />
+        <img src="/img/pokit/mock_4.png" />
+        </FlexBox>
+        <FlexBox className="flex-box">
+        <img src="/img/pokit/mock_5.png" />
+        <img src="/img/pokit/mock_6.png" />
+        <img src="/img/pokit/mock_7.png" />
+        <img src="/img/pokit/mock_8.png" />
+        </FlexBox>
+        <FlexBox className="flex-box">
+        <img src="/img/pokit/mock_9.png" />
+        <img src="/img/pokit/mock_10.png" />
+        <img src="/img/pokit/mock_11.png" />
+        </FlexBox>
     </section>
 </div>

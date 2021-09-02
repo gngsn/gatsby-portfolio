@@ -30,6 +30,7 @@ query GetProjects {
             duration
             summary
             thumbnail
+            shortcutImage
             link
             skillStack
           }

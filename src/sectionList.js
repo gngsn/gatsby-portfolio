@@ -15,7 +15,7 @@ const sectionList = [
         description: <p>코딩을 재미로, 취미로, 놀이로, <br /> 끊임없는 호기심을 갖고 있습니다.</p>,
         isRight: true,
         skills: ['react', 'xcode', 'ios', 'swift', 'angular', 'unity', 'git'],
-        project: ['playlicense', 'pokit', 'baby-closet', 'get-rest', 'game']
+        project: ['playlicense', 'pokit', 'clayon', 'baby-closet', 'get-rest', 'game']
     },
     {
         key: 2,

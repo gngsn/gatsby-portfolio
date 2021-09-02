@@ -18,6 +18,7 @@ const Section = ({ data, projects }) => {
 
     const showShortcut = (data) => {
         setShortcut(data);
+        console.log('Shortcut : ', data);
         setOpen(true);
         shortCutDom.current.scrollIntoView({ block: "center", behavior: 'smooth' });
     };
@@ -130,7 +131,7 @@ const ShortCutDetail = styled.div`
     & {
         h2 {font-size: .8rem;margin-top: 0px;}
         h1 {font-size: 1.4rem; margin-top: 0px;}
-        p {font-size: .9rem;line-height: 1.5;}
+        p {font-size: .9rem;line-height: 1.5;white-space: break-spaces;}
         a {color: #dd4226;font-family: 'Noto L';}
         & > div {margin: 5px 0px;}
     }
@@ -162,6 +163,7 @@ const ProjImage = styled.div`
     background-position: center center;
     background-image: ${props => 'url(' + props.image + ')'};
     overflow: hidden;
+    box-shadow: 0px 0px 7px 7px #00000011;
     border-radius: 10px;
 `;
 

@@ -147,6 +147,19 @@ const PageLayout = styled.div`
         .flex-box p:first-child{margin-right: 30px;}
         .flex-box p:last-child{margin-left: 30px;}
     }
+    .clayon {
+        section {text-align: center;}
+        section [class^="ScrollImgContainer"] {margin-top: 40px;}
+    }
+
+    .pokit {
+        iframe {margin-right: 20px;}
+        .flex-box img {
+            max-width: 18%;
+            margin: 20px 10px;
+        }
+    }
+
     .hci {
         iframe {margin-right: 20px;}
         .flex-box img {

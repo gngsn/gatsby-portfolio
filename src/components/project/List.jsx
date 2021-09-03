@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
+import SkillList from './SkillList';
 
 const List = React.memo(({ setShortcut, project }) => {
     const settings = {
@@ -29,7 +30,9 @@ const List = React.memo(({ setShortcut, project }) => {
                             <div className="proj-title">
                                 <h2>{data.duration}</h2>
                                 <h1>{data.title}</h1>
+                                <p>{data.subTitle}</p>
                             </div>
+                            {/* <SkillList width={30} height={30} padding={5} fontSize={1.5} list={data.skillStack}/> */}
                         </ImageStyle>);
                     })
                 }

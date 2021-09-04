@@ -6,15 +6,15 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
 
     if (name === 'spring') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/spring-logo.png" alt="spring" />
+            <img style={styles} src="/svg/spring.svg" alt="spring" />
         );
     } else if (name === 'node') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/nodejs.png" alt="node" />
+            <img style={styles} src="/svg/nodejs.svg" alt="node" />
         );
     } else if (name === 'php') {
         return (
-            <img style={styles} src="https://img.icons8.com/officel/80/000000/php-logo.png" alt="php" />
+            <img style={styles} src="/svg/php.svg" alt="php" />
         );
     } else if (name === 'nextjs') {
         return (
@@ -22,15 +22,19 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
         );
     } else if (name === 'aws') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/amazon-web-services.png" alt="aws" />
+            <img style={styles} src="/svg/aws.svg" alt="aws" />
+        );
+    } else if (name === 'docker') {
+        return (
+            <img style={styles} src="/svg/docker.svg" alt="docker" />
         );
     } else if (name === 'mysql') {
         return (
-            <img style={styles} className="ch" src="https://img.icons8.com/ios-filled/100/000000/mysql-logo.png" alt="mysql" />
+            <img style={styles} src="/svg/mysql.svg" alt="mysql" />
         );
     } else if (name === 'mariadb') {
         return (
-            <img style={styles} src="https://mariadb.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/11/mariadb-logo-vert_blue-transparent-300x245.png.webp" alt="mariadb" />
+            <img style={styles} src="/svg/mariadb.svg" alt="mariadb" />
         );
     }
     else if (name === 'mongodb') {
@@ -40,7 +44,7 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
     }
     else if (name === 'nginx') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/nginx.png" alt="nginx" />
+            <img style={styles} src="/svg/nginx.svg" alt="nginx" />
         );
     }
     else if (name === 'linux') {
@@ -50,12 +54,12 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
     }
     else if (name === 'git') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/git.png" alt="git" />
+            <img style={styles} src="/svg/git.svg" alt="git" />
         );
     }
     else if (name === 'github') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/github.png" alt="github" />
+            <img style={styles} src="/svg/github.svg" alt="github" />
         );
     } else if (name === 'express') {
         return (

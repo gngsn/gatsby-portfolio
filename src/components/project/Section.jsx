@@ -18,7 +18,6 @@ const Section = ({ data, projects }) => {
 
     const showShortcut = (data) => {
         setShortcut(data);
-        console.log('Shortcut : ', data);
         setOpen(true);
         shortCutDom.current.scrollIntoView({ block: "center", behavior: 'smooth' });
     };

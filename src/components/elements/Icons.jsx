@@ -39,12 +39,22 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
     }
     else if (name === 'mongodb') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/mongodb.png" alt="mongodb" />
+            <img style={styles} src="/svg/mongodb.svg" alt="mongodb" />
         );
     }
     else if (name === 'nginx') {
         return (
             <img style={styles} src="/svg/nginx.svg" alt="nginx" />
+        );
+    }
+    else if (name === 'gatsbyjs') {
+        return (
+            <img style={styles} src="/svg/gatsbyjs.svg" alt="gatsbyjs" />
+        );
+    }
+    else if (name === 'graphql') {
+        return (
+            <img style={styles} src="/svg/graphql.svg" alt="graphql" />
         );
     }
     else if (name === 'linux') {
@@ -75,11 +85,11 @@ const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, styl
         );
     } else if (name === 'swift') {
         return (
-            <img style={styles} src="https://img.icons8.com/fluent/96/000000/swift.png" alt="swift" />
+            <img style={styles} src="/svg/swift.svg" alt="swift" />
         );
     } else if (name === 'angular') {
         return (
-            <img style={styles} src="https://img.icons8.com/color/96/000000/angularjs.png" alt="angular" />
+            <img style={styles} src="/svg/angular.svg" alt="angular" />
         );
     } else if (name === 'react') {
         return (

@@ -2,13 +2,15 @@ import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
-const List = React.memo(({ setShortcut, project }) => {
+const List = React.memo(({ setShortcut, project, show=5, scroll=5, autoplay = false, autoplaySpeed=2000}) => {
     const settings = {
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: show,
+        slidesToScroll: scroll,
         dots: true,
+        autoplay: autoplay,
+        autoplaySpeed: autoplaySpeed,
         dotsClass: 'dots',
-        infinite: false,
+        infinite: autoplay,
         centerMode: false
     };
 

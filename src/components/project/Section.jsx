@@ -65,7 +65,7 @@ const Section = ({ data, projects }) => {
                 </ShortCutContainer>
                 {
                     projects ?
-                        <List flipId="square" setShortcut={showShortcut} project={projects} />
+                        <List flipId="square" show={5} scroll={1} autoplay={true} autoplaySpeed={1500} setShortcut={showShortcut} project={projects} />
                     : null
                 }
             </div>

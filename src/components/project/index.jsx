@@ -7,6 +7,7 @@ import Section from './Section';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import palette from '../../lib/styles/palette';
 
 const Project = ({ data }) => {
     const { setProjects } = useProjects();
@@ -54,8 +55,9 @@ const Block = styled.div`
     &.detail-active{z-index: -1; pointer-events: none;}
 
     .dots{position: absolute;display: block;width: 100%; padding: 0;margin: 0;list-style: none;text-align: center;}
-    .dots li{position: relative;display: inline-block;margin: 0 5px;padding: 0;width: 20px;height: 20px;cursor: pointer;}
-    .dots li button{margin-right: 20px; width: 10px !important; height: 7px !important; border: 0;text-indent:-10000px; cursor: pointer;}
+    .dots li{position: relative;display: inline-block;margin: 0 5px;padding: 0;width: 25px;height: 20px;cursor: pointer;}
+    .dots li button {margin-right: 20px; border-radius: 50%; width: 15px !important; height: 15px !important; border: 0;text-indent:-10000px; cursor: pointer;}
+    .dots li.slick-active button{background-color: ${palette.red0}; opacity: .8;}
 
     .center {
         width: 100%; max-width: 100vw;

@@ -16,7 +16,7 @@ const sectionList = [
         isRight: true,
         skills: ['react', 'gatsbyjs', 'graphql', 'ios', 'swift', 'angular', 'unity'
         ],
-        project: ['playlicense', 'pokit', 'clayon', 'baby-closet', 'get-rest', 'game']
+        project: ['playlicense', 'pokit', 'clayon', 'pondan', 'baby-closet', 'get-rest', 'game']
     },
     {
         key: 2,

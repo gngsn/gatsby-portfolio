@@ -98,6 +98,8 @@ const ContentLayout = styled.div`
 `;
 
 const PageLayout = styled.div`
+    iframe {width: 100%; max-width: 100%;}
+    iframe video {width: 100%; max-width: 100%;}
     .early-buddy {
         section:nth-child(1) {
             margin-bottom: 500px; position: relative;
@@ -150,6 +152,11 @@ const PageLayout = styled.div`
     .clayon {
         section {text-align: center;}
         section [class^="ScrollImgContainer"] {margin-top: 40px;}
+    }
+    .pondan {
+        section iframe {
+            margin: auto;
+        }
     }
 
     .pokit {

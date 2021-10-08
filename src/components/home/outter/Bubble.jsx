@@ -12,21 +12,20 @@ const bubble = () => {
                 <Circle />
                 <Circle>
                     <TextContainer>
-                        <h2>PASSION.</h2>
+                        <h2>Growth.</h2>
                         <h3>
                             항상 성장을 갈망하며, <br />
-                            그 누구에게도 <br />
-                            뒤쳐지지 않는  <br />
-                            열정을 갖고있습니다.
+                            성장에 대한 남다른  <br />
+                            열정을 갖고 있습니다.
                         </h3>
                     </TextContainer>
                 </Circle>
                 <Circle>
                     <TextContainer>
-                        <h2>WITH.</h2>
+                        <h2>Communication.</h2>
                         <h3>
-                            “함께”라는 가치를 중요시하여 <br />
-                            주변 사람과 화합합니다.
+                            함께라는 가치를 중요시하며 <br />
+                            주변 사람과 소통합니다.
                         </h3>
                     </TextContainer>
                 </Circle>

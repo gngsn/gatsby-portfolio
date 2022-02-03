@@ -20,7 +20,7 @@ const components = {
 const ProjectDetail = React.memo(({ data }) => {
 
     return (
-        <Block>
+        <Block className='project-detail'>
             {
                 data ?
                     <PageLayout>
@@ -29,9 +29,11 @@ const ProjectDetail = React.memo(({ data }) => {
                             <CancelImage src='/img/cancel.png'/>
                         </Link>
                         <div>
+                            <Title image={data.backImage}>
+                                <h2> {data.duration} </h2>
+                                <h3> {data.title}</h3>
+                            </Title>
                             <ContentLayout>
-                            <h1> {data.title}</h1>
-                            <h2> {data.duration} </h2>
                             {
                                 data.body? 
                                 <MDXProvider components={components}>
@@ -79,12 +81,11 @@ const CancelImage = styled.img`
 `;
 
 const ContentLayout = styled.div`
-    max-width: 900px;
-    margin: auto;
-    padding: 100px 50px;
+    padding: 100px 0px;
     section {
+        max-width: 1200px;
         margin: auto;
-        padding: 10px 0px;
+        padding: 10px 50px;
         margin-bottom: 100px;
     }
     p { 

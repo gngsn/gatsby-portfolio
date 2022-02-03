@@ -26,7 +26,7 @@ const ProjectDetail = React.memo(({ data }) => {
                     <PageLayout>
                         <div className='full-screen-square'/>
                         <Link to='/project'>
-                            <CancelImage src='/img/cancel-red.png'/>
+                            <CancelImage src='/img/cancel.png'/>
                         </Link>
                         <div>
                             <Title image={data.backImage}>

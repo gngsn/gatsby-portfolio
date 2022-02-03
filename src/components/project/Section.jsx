@@ -35,7 +35,7 @@ const Section = ({ data, projects }) => {
                 <ShortCutContainer open={open}>
                     <ShortCut open={open}>
                         <ShortCutDetail>
-                            <CancelBtn src='/img/cancel-red.png' onClick={hideShortcut} />
+                            <CancelBtn src='/img/cancel.png' onClick={hideShortcut} />
                             <h2>{shortcut.duration}</h2>
                             <h1>{shortcut.title}</h1>
                             {

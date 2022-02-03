@@ -35,7 +35,7 @@ const bubble = () => {
                         <h3>
                             어떤 일을 하든지  <br />
                             포기하지 않고 <br />
-                            까지 해냅니다.
+                            끝까지 해냅니다.
                         </h3>
                     </TextContainer>
                 </Circle>

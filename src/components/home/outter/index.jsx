@@ -14,7 +14,6 @@ const Bottom = () => {
         <>
         <Container>
             <Bubble />
-                <img src={theme === 'light' ? `/img/working.jpg` : '/img/working.png'} alt="working" />
             <Skill />
             <hr />
             <Contact />
@@ -24,8 +23,9 @@ const Bottom = () => {
 }
 
 const Container = styled.div`
-    margin-top: 99.5vh; z-index: 3; overflow-x: hidden;
-    background-color: ${palette.grey0};
+    border-top: 2px solid black;
+    margin-top: 99vh; z-index: 3; overflow-x: hidden;
+    background-color: ${palette.white0};
     & > img { width: 100%;}
     & > div { padding: 80px 0px; margin: auto;text-align: center;}
     hr { width: 160px; margin-bottom: 110px;}

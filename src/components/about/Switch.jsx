@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { Grid } from '@material-ui/core';
 
 import styled from 'styled-components';
+import palette from '../../lib/styles/palette';
 
 const Inner = React.memo(({ theme, isOn }) => {
     let [turnOn, setTurnOn] = useState(theme);
@@ -27,7 +28,7 @@ const Inner = React.memo(({ theme, isOn }) => {
 
     
     return (
-        <Container container className="switch">
+        <Container container light={theme === 'light'}>
             <Grid item xs={4}>
                 {
                     turnOn ?
@@ -64,14 +65,17 @@ const Container = styled(Grid)`
     padding-top: 30px;
     max-width: 850px;
     margin: auto;
+    color: ${({light}) => light ? 'black' : 'white'};
     
     h2, h2 em {
-        font-family: 'Noto Th';
+        margin-bottom: 10px;
         font-size: 2.2rem;
+        margin: 10px;
     }
+
     h3, h3 em {
-        font-family: 'Noto B';
         font-size: 2.5rem;
+        margin: 0px;
     }
 
     & {
@@ -124,10 +128,6 @@ const AnimationTextBox = styled.div`
             display: inline-block;
             transition: all .5s ease-in;
             transform: translateY(0rem);
-            margin: 0px;
-        }
-        h3 {
-            transition-delay: .2s;
         }
     }
 `;

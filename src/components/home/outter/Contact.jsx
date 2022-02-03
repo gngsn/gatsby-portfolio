@@ -8,7 +8,7 @@ import palette from '../../../lib/styles/palette';
 const contact = () => {
     return (
         <Block>
-            <h1> CONTACT. </h1>
+            <h1> CONTACT </h1>
             <ContactForm />
             <ContactBar />
         </Block>
@@ -19,7 +19,7 @@ const Block = styled.div`
     h1 {
         font-size: 2.5rem;
         display: inline;
-        border-bottom: 1px solid ${palette.red0};
+        font-weight: 900;
     }
     form { 
         display: flex; flex-direction: column; padding: 50px 20px; max-width: 600px; margin: auto; 

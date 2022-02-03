@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import palette from "../../lib/styles/palette";
 
 const BackgroundStyle = createGlobalStyle`
@@ -7,11 +7,13 @@ const BackgroundStyle = createGlobalStyle`
     background: ${palette.white0};
     margin: 0;
   }
+
   body * {
     box-sizing: border-box;
   }
+
   h1, h2, h3, h4, h5, p, a {
-    font-family: 'Noto Th';
+    font-family: Noto M;
   }
   img {
     max-width: 100%;
@@ -27,11 +29,10 @@ function MainTemplate({ children }: MainTemplateProps) {
     return (
         <>
             <BackgroundStyle />
-            <Block>{children}</Block>
+            <div>{children}</div>
         </>
     );
 }
 
-const Block = styled.div``;
 
 export default MainTemplate;

@@ -48,7 +48,10 @@ const graph = ({ title, datasets, width, height }) => {
 
     return (
         <Block>
-            <h1>{title}.</h1>
+            
+            <h1>{title}</h1>
+
+
             <Bar
                 data={datasets}
                 width={width}
@@ -65,7 +68,7 @@ const Block = styled.div`
     }
     h1 {
         font-size: 2.5rem; display: inline;
-        border-bottom: 1px solid ${palette.red0};
+        font-weight: 800;
     }
 `;
 

@@ -27,15 +27,13 @@ const Section = ({ data, projects }) => {
             <Info right={data.key % 2 === 1}>
                 <Title>
                     <h2>{data.title}</h2>
-                    <span></span>
                 </Title>
-                {data.description }
+                {data.description}
                 <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={data.skills} />
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>
                     <ShortCut open={open}>
-                        <ProjImage src={shortcut.shortcutImage ? shortcut.shortcutImage : shortcut.thumbnail} image={shortcut.shortcutImage ? shortcut.shortcutImage : shortcut.thumbnail} />
                         <ShortCutDetail>
                             <CancelBtn src='/img/cancel-red.png' onClick={hideShortcut} />
                             <h2>{shortcut.duration}</h2>
@@ -77,23 +75,21 @@ const Title = styled.div`
     display: inline-flex; flex-direction: column; align-items: center; position: relative;
     text-align: center;
     h2 {
-        font-size: 4rem; z-index: 1; padding: 0px 20px;
-        font-weight: 500;
-    }
-    span {
-        position: absolute; z-index: 0; width: 100%; top: 45%;
-        display: inline-block; opacity: 0.4; transform: rotate(-1deg); 
-        border-bottom: 10px solid ${palette.red0};
+        font-size: 3rem; 
+        z-index: 1; padding: 0px;
+        font-weight: 800;
     }
 `;
 
 const Info = styled.div`
     display: flex; flex-direction: column; 
     align-items: ${({ right }) => right ? 'flex-end' : 'flex-start'};
-    padding: 60px 70px 10px;
+    padding: 80px 50px 10px;
     p {
-        margin: 0; font-family: 'Noto L';
-        text-align: ${({ right }) => right ? 'right' : 'left'}; font-size: 1.8rem;
+        padding: 0px; font-weight: 500; line-height: 2.2rem; 
+        margin: 0;
+        text-align: ${({ right }) => right ? 'right' : 'left'};
+        font-size: 1.4rem; font-weight: 500;
     }
     @media (max-width:800px) {
         p {font-size: 1.3rem;}
@@ -106,9 +102,9 @@ const Info = styled.div`
 const ShortCutContainer = styled.div`
     display: flex;
     width: 100%;
+    height: ${({ open }) => open ? 'auto' : '0px'};
+    padding: ${({ open }) => open ? '40px 60px 50px' : '0px'};
     transition: 0.8s height cubic-bezier(0.65, 0, 0.35, 1);
-    height: ${({ open }) => open ? '400px' : '0px'};
-    padding: ${({ open }) => open ? '50px 30px 10px' : '0px'};
 `;
 
 const ShortCut = styled.div`
@@ -121,7 +117,6 @@ const ShortCut = styled.div`
 `;
 
 const ShortCutDetail = styled.div`
-    margin: 0px 0px 0px 40px;
     width: 100%;
     text-align: left;
     display: flex;
@@ -141,6 +136,7 @@ const CancelBtn = styled.img`
     max-height: 30px;
     position: absolute;
     top: 10px;
+    cursor: pointer;
     right: 30px;
 `;
 

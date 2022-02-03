@@ -26,11 +26,8 @@ const Header = () => {
         <Block>
             {
                 menuList.map((item) => (
-                    <Link key={item.menu} to={item.link} onClick={() => setMenu(item.menu, true)}>
-                        &nbsp;{item.title}.
-                        {
-                            menu === item.menu ? <UnderBar /> : <></>
-                        }
+                    <Link key={item.menu} to={item.link} isClick={menu === item.menu} onClick={() => setMenu(item.menu, true)}>
+                        { item.title }
                     </Link>
                 ))
             }
@@ -39,17 +36,26 @@ const Header = () => {
 }
 
 const Block = styled.div`
-    background: linear-gradient(180deg, ${palette.grey0} 20%, ${palette.grey0_p60} 67%, transparent 100%);
-    position: fixed; display: flex; z-index: 10; top: 0%; width: 100%; padding: 20px 10px 40px;
+    border: 2px solid #000;
+    background-color: white;
+    position: fixed; display: flex; z-index: 10; top: 0%; width: 100%; 
 `;
-
+    
 const Link = styled(L)`
-    font-weight: 100; font-size: 2.6rem;
-    margin: 0px 5px; padding: 0px 5px; position: relative;
-    display: inline-flex; font-family: 'Noto Th'; color: ${palette.black0};
+    padding: 10px 35px;
+    font-family: Fira Bl; 
+    border-right: 2px solid #000;
+    font-size: 2.5rem;
+    margin: 0px; position: relative;
+    display: inline-flex; 
+    color: ${palette.black0};
     text-decoration: none;
+    font-weight: 900;
+
     &:last-child { 
-        margin: 0px 20px 0px auto;
+        border-left: 2px solid #000;
+        border-right: none;
+        margin: 0px 0px 0px auto;
         color: ${palette.red0};
     }
 
@@ -57,19 +63,6 @@ const Link = styled(L)`
         font-size: 1.5rem;
     }
 `;
-
-const UnderBar = styled.span`
-    position: absolute; z-index: 5; 
-    top: 47%;
-    width: 100%; left: 0;
-    border-top: 2px solid ${palette.red0}; 
-    transform: rotate(-3deg); opacity: .3;
-
-    @media (max-width:600px) {
-        margin-top: -20px;
-    }
-`;
-
 
 
 export default Header;

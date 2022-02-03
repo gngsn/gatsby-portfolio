@@ -4,8 +4,8 @@ const sectionList = [
         key: 0,
         title: 'BACKEND',
         cate: 'backend',
-        description: <p>21살 때부터 배운 서버에 대한 호기심, 흥미 그리고 도전. <br/ >더 배우고 싶은 열정으로 쉼없이 뛰어왔습니다.</p>,
-        skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb', 'php', 'git', 'github'],
+        description: <p>서버에 대한 호기심, 흥미 그리고 도전. <br/ > 더 배우고 싶은 열정으로 쉼없이 뛰어왔습니다.</p>,
+        skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb', 'php'],
         project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'tooc']
     },
     {

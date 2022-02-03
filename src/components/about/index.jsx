@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Switch from './Switch';
 import styled from 'styled-components';
-import useTheme from '../../lib/hooks/useTheme';
 import palette from '../../lib/styles/palette';
 
 const Inner = () => {
-    const { theme, setTheme } = useTheme();
+    const [theme, setTheme] = useState('light');
 
     const isOn = (to) => {
         if (to) {
@@ -16,22 +15,22 @@ const Inner = () => {
     }
 
     return (
-        <Container>
-            <Switch theme={theme === 'light'} setTheme={setTheme} isOn={isOn} />
+        <Container light={theme === 'light'}>
+            <Switch theme={theme} isOn={isOn} />
             <UnderTitle>
-                <UnderTitleH3>"어차피 할 거, 후회하지 않도록"</UnderTitleH3>
-                <UnderTitleSpan />
+                <UnderTitleH3>"한번 할 때 후회하지 않도록"</UnderTitleH3>
             </UnderTitle>
         </Container>
     )
 }
 
 const Container = styled.div`
-    // background-color: ${palette.black1};
+    background-color: ${({ light }) => light ? palette.white0 : palette.black1};
+    color: ${({ light }) => light ? 'black' : 'white'};
     z-index: -1; top: 0; left: 0;
-    width: 100%; height: 100vh; 
+    width: 100%; 
     transition: 0.8s transform cubic-bezier(0.65, 0, 0.35, 1); 
-    padding-top: 20vh;
+    padding: 15vh 0;
 `;
 
 const UnderTitle = styled.div`
@@ -48,20 +47,6 @@ const UnderTitleH3 = styled.h3`
     margin-top: 40px;
     @media all and (max-width: 900px) {
         font-size: 1rem;
-    }
-`;
-
-const UnderTitleSpan = styled.span`
-    width: 400px;
-    margin-top: 30px;
-    opacity: .4;
-    position: absolute;
-    display: inline-block;
-    z-index: -1;
-    transform: rotate(-1deg);
-    border-bottom: 3px solid #dd4226;
-    @media all and (max-width: 900px) {
-        width: 350px;
     }
 `;
 

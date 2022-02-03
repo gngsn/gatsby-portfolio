@@ -7,12 +7,21 @@ import palette from '../../../lib/styles/palette';
 const bubble = () => {
     return (
         <Block>
-            <h1>MOTTO.</h1>
+            <h1>MOTTO</h1>
             <MottoContainer>
                 <Circle />
                 <Circle>
                     <TextContainer>
-                        <h2>Growth.</h2>
+                        <h2>COMMUNICATION</h2>
+                        <h3>
+                            함께라는 가치를 중요시하며 <br />
+                            주변 사람과 소통합니다.
+                        </h3>
+                    </TextContainer>
+                </Circle>
+                <Circle>
+                    <TextContainer>
+                        <h2>GROWTH</h2>
                         <h3>
                             항상 성장을 갈망하며, <br />
                             성장에 대한 남다른  <br />
@@ -22,16 +31,7 @@ const bubble = () => {
                 </Circle>
                 <Circle>
                     <TextContainer>
-                        <h2>Communication.</h2>
-                        <h3>
-                            함께라는 가치를 중요시하며 <br />
-                            주변 사람과 소통합니다.
-                        </h3>
-                    </TextContainer>
-                </Circle>
-                <Circle>
-                    <TextContainer>
-                        <h2>CONSTANTLY.</h2>
+                        <h2>CONSTANTLY</h2>
                         <h3>
                             어떤 일을 하든지  <br />
                             포기하지 않고 <br />
@@ -46,8 +46,12 @@ const bubble = () => {
 };
 
 const Circle = styled.div`
-    border-radius: 50%; position: relative; float: left; margin: auto -14px;border: 1px solid ${palette.white0};
-    color: ${palette.white0};
+    border-radius: 50%; position: relative; float: left; margin: auto -14px;border: 1px solid ${palette.black0};
+    color: ${palette.black0};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @keyframes bubble{0%{transform: scale(1.0) translate(0, 0px);}100%{transform: scale(1.03) translate(0, -30px);}}
 
     &:nth-child(1) {height: 280px; width: 280px; margin-top: 170px; animation: bubble 6s ease-in-out alternate infinite;}
@@ -58,29 +62,27 @@ const Circle = styled.div`
 `;
 
 const TextContainer = styled.div`
-    margin-top: 15%; text-align: center; padding:30px;
+    text-align: center; padding: 20px;
     h2 {
         font-size: 2em;
         display: inline;
-        color: ${palette.white0};
-        border-bottom: #fff solid 0.2rem; font-family: 'Noto B';
+        color: ${palette.black0};
     }
     h3 {
-        color: ${palette.white0};
+        color: ${palette.black0};
         font-size: 1.2em; font-weight: 200; display: block; margin-top: 2em;
     }
 `;
 
 const MottoContainer = styled.div`
     display: flex; flex-direction: row; 
-    padding: 50px 0px;
 `;
 
 const Block = styled.div`
-    background-color: ${palette.red0}; padding-bottom: 130px; display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 130px; display: flex; flex-direction: column; align-items: center;
     h1 {
         font-size: 5rem;
-        color: ${palette.white0}; font-family:'Noto R'; border-bottom: ${palette.white0} solid 1.3px;
+        color: ${palette.black0}; 
     }
 `;
 

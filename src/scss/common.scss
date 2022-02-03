@@ -1,3 +1,5 @@
+@import "../../scss/font.scss";
+
 $main-red: #dd4226;
 body { 
     margin: 0px; width:100vw; background-size: cover;overflow-x: hidden;
@@ -121,69 +123,37 @@ body {
 }
 
 
-@font-face{
-	font-family:"Noto L";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/NotoSansKR-Light.otf);
-}
+// @font-face {
+//     font-family: "Fira L";
+//     font-weight: normal;
+//     font-weight: 300;
+//     src: url(/fonts/FiraSansExtraCondensed-Light.ttf);
+// }
 
-@font-face{
-	font-family:"Noto Th";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/NotoSansKR-Thin.otf);
-}
+// @font-face {
+//     font-family: "Fira r";
+//     font-weight: normal;
+//     font-weight: 400;
+//     src: url(/fonts/FiraSansExtraCondensed-Regular.ttf);
+// }
 
-@font-face{
-	font-family:"Noto R";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/NotoSansKR-Regular.otf);
-}
+// @font-face {
+//     font-family: "Fira M";
+//     font-weight: normal;
+//     font-weight: 500;
+//     src: url(/fonts/FiraSansExtraCondensed-Medium.ttf);
+// }
 
-@font-face{
-	font-family:"NanumM R";
-    font-weight: bold;
-    font-weight:700;
-	src:url(./fonts/NanumMyeongjo-Regular.ttf);
-}
+// @font-face {
+//     font-family: "Fira B";
+//     font-weight: normal;
+//     font-weight: 700;
+//     src: url(/fonts/FiraSansExtraCondensed-Bold.ttf);
+// }
 
-@font-face{
-	font-family:"Noto M";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/NotoSansKR-Medium.otf);
-}
-
-@font-face{
-	font-family:"Noto B";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/NotoSansKR-Bold.otf);
-}
-
-
-@font-face{
-	font-family:"Kakao L";
-    font-weight: normal;
-    font-weight:100;
-    src:url(./fonts/KakaoOTF-aLt.otf),
-    url(./fonts/KakaoOTF-aLt.woff);
-}
-
-@font-face{
-	font-family:"Kakao R";
-    font-weight: normal;
-    font-weight:100;
-	src:url(./fonts/KakaoOTF-bRg.otf),
-    url(./fonts/KakaoOTF-bRg.woff);
-}
-
-@font-face{
-	font-family:"Kakao B";
-    font-weight: normal;
-    font-weight:100;
-    src:url(./fonts/KakaoOTF-cBd.otf),
-    url(./fonts/KakaoOTF-cBd.woff);
-}
+// @font-face {
+//     font-family: "Fira Bl";
+//     font-weight: normal;
+//     font-weight: 900;
+//     src: url(/fonts/FiraSansExtraCondensed-Black.ttf);
+// }

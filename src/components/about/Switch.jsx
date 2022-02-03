@@ -28,20 +28,20 @@ const Inner = React.memo(({ theme, isOn }) => {
 
     
     return (
-        <Container container light={theme === 'light'}>
-            <Grid item xs={4}>
+        <Container light={theme === 'light'}>
+            <div>
                 {
                     turnOn ?
                         <OnOffText><em>ON/</em>OFF</OnOffText> :
                         <OnOffText>ON<em>/OFF</em></OnOffText>
                 }
                 <SmallText className="caption">"push the switch"</SmallText>
-            </Grid>
-            <Grid item xs={4}>
+            </div>
+            <div>
                 <SwitchImage alt="switch" onClick={clickSwitch} className="link switch" id="switch" src={turnOn ? '/img/switch-on.png' : '/img/switch-off.png'} />
-            </Grid>
-            <Grid>
-                <RightText item xs={4}>
+            </div>
+            <div>
+                <RightText>
                     <AnimationTextBox className={classNames('rightText', { '--active': turnOn })} >
                         <h2> 어울릴 땐,</h2>
                         <h3>최고의 화합을</h3>
@@ -51,21 +51,25 @@ const Inner = React.memo(({ theme, isOn }) => {
                         <h3>깊은 집중을</h3>
                     </AnimationTextBox>
                 </RightText>
-            </Grid>
+            </div>
         </Container>
     )
 });
 
 
-const Container = styled(Grid)`
+const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-top: 30px;
-    max-width: 850px;
-    margin: auto;
+    max-width: 900px;
+    width: 100%; 
+    margin: 0 auto;
     color: ${({light}) => light ? 'black' : 'white'};
+    
+    & div {
+        flex-basis: 33.33%;
+    }
     
     h2, h2 em {
         margin-bottom: 10px;
@@ -97,12 +101,13 @@ const SwitchImage = styled.img`
     width: 110px;
     margin: auto;
     z-index: 1;
+    c
+    padding-left: 10px;
+
     @media all and (max-width: 900px) {
         padding-top: 50px;
         padding-bottom: 20px;
-    }
-    @media all and (max-width: 480px) {
-        width: 70px;
+        width: 50%;
     }
 `;
 

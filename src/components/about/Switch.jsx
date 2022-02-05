@@ -76,10 +76,11 @@ const Container = styled.div`
     }
 
     ${device.tablet} {
+        padding-top: 60px;
         max-width: 600px;
         flex-direction: column;
-        h2 { font-size: 1.8rem; }
-        h3 { font-size: 2rem; }
+        h2 { font-size: 1.5rem; }
+        h3 { font-size: 1.8rem; }
     }
 `;
 
@@ -89,26 +90,24 @@ const SwitchImage = styled.img`
     width: 110px;
     margin: auto;
     z-index: 1;
-    c
     padding-left: 10px;
 
     ${device.tablet} {
         padding-top: 50px;
         padding-bottom: 20px;
-        width: 50%;
+        width: 40%;
     }
 `;
 
 const RightText = styled.div`
-        text-align: center;
-        width: 240px;
-        font-size: 2.2rem;
-        text-align: center;
-        h2,
-        h3 {
-            transform: translateY(-2.8rem);
-            opacity: 0;
-        }
+    text-align: center;
+    width: 240px;
+    font-size: 2.2rem;
+    text-align: center;
+    h2,
+    h3 {
+        transform: translateY(-2.8rem);
+        opacity: 0;
     }
 `;
 
@@ -132,6 +131,9 @@ const SmallText = styled.p`
     line-height: 0;
     margin: 0;
     color: #bdbdbd;
+    ${device.tablet} {
+        font-size: .8rem;
+    }
 `;
 
 const OnOffText = styled.h1`
@@ -143,6 +145,10 @@ const OnOffText = styled.h1`
     em {
         font-style: normal;
         opacity: 0.1;
+    }
+
+    ${device.tablet} {
+        font-size: 2.3rem;
     }
 `;
 

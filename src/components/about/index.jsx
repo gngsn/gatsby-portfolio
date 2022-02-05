@@ -48,11 +48,11 @@ const UnderTitle = styled.div`
 `;
 
 const UnderTitleH3 = styled.h3`
-    font-family: 'Noto L';
     font-size: 1.3rem;
     margin-top: 40px;
-
+    
     ${device.tablet} {
+        margin-top: 0px;
         font-size: 1rem;
     }
 `;

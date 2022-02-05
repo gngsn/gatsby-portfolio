@@ -63,6 +63,7 @@ const Block = styled.div`
     align-items: center;
     canvas {
         margin-top: 50px;
+        padding: 0 40px;
     }
     h1 {
         font-size: 2.5rem; display: inline;

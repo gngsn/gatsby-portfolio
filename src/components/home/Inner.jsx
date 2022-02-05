@@ -76,7 +76,7 @@ const Block = styled.div`
         flex-direction: column;
     }
     ${device.mobile} {
-        padding: 100px 10px 0px;
+        padding: 80px 10px 0px;
     }
 
 `;

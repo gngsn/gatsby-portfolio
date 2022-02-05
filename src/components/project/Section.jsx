@@ -17,13 +17,16 @@ const Section = ({ data, projects }) => {
     }
 
     const showShortcut = (data) => {
-        let scrollTop = window.pageYOffset;
+        
+        let scrollTop = typeof window !== "undefined" ? window.pageYOffset : 0;
         const headerOutsideIframe = 160;
         const finalOffset = shortCutDom.current.getBoundingClientRect().top + scrollTop - headerOutsideIframe;
-        window.parent.scrollTo({
-            top: finalOffset,
-            behavior: 'smooth'
-        });
+        if (window !== "undefined") {
+            window.parent.scrollTo({
+                top: finalOffset,
+                behavior: 'smooth'
+            });
+        }
         setShortcut(data);
         setOpen(true);
     };

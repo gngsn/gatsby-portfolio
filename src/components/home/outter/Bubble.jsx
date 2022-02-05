@@ -14,6 +14,7 @@ const Bubble = () => {
     ];
 
     useEffect(() => {
+        if (window === "undefined") return;
         const handler = () => {
             setScreen(getScreenSize());
         }

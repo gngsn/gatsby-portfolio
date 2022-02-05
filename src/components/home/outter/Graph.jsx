@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Bar } from 'react-chartjs-2';
 import styled from 'styled-components';
-import palette from "../../../lib/styles/palette";
 
 const graph = ({ title, datasets, width, height }) => {
     
@@ -48,10 +47,7 @@ const graph = ({ title, datasets, width, height }) => {
 
     return (
         <Block>
-            
             <h1>{title}</h1>
-
-
             <Bar
                 data={datasets}
                 width={width}
@@ -63,6 +59,8 @@ const graph = ({ title, datasets, width, height }) => {
 };
 
 const Block = styled.div`
+    display: flex; flex-direction: column;
+    align-items: center;
     canvas {
         margin-top: 50px;
     }

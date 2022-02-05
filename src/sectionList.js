@@ -6,7 +6,7 @@ const sectionList = [
         cate: 'backend',
         description: <p>서버에 대한 호기심, 흥미 그리고 도전. <br/ > 더 배우고 싶은 열정으로 쉼없이 뛰어왔습니다.</p>,
         skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb', 'php'],
-        project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'tooc']
+        project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'pondan', 'tooc']
     },
     {
         key: 1,
@@ -16,7 +16,7 @@ const sectionList = [
         isRight: true,
         skills: ['react', 'gatsbyjs', 'graphql', 'ios', 'swift', 'angular', 'unity'
         ],
-        project: ['playlicense', 'pokit', 'clayon', 'pondan', 'baby-closet', 'get-rest', 'game']
+        project: ['playlicense', 'pokit', 'clayon', 'baby-closet', 'get-rest', 'game']
     },
     {
         key: 2,

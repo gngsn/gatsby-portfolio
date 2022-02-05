@@ -1,12 +1,10 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import useTheme from '../../lib/hooks/useTheme';
 import palette from '../../lib/styles/palette';
+import { device } from '../../lib/styles/sizes';
 
 const Inner = () => {
-    const { theme } = useTheme();
-
     return (
         <Container>
             <Block>
@@ -34,6 +32,15 @@ const ImageContainer = styled.div`
         max-width: 800px; 
         transition: all 500ms ease-in-out;
     }
+    ${device.mobile} {
+        display: none;
+    }
+
+    ${device.tablet} {
+        max-width: 40%;
+        height: auto;
+        margin-top: 5%;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -41,22 +48,18 @@ const TextContainer = styled.div`
     padding: 0 20px 0 30px;
     h1 {
         margin: 0;
-        line-height: 5.5rem; font-size: 5.2rem;
+        line-height: 5.5rem; 
+        font-size: 5.2rem;
         color: ${palette.red0};
+        ${device.mobile} {
+            line-height: 4rem; 
+            font-size: 4rem;
+        }
     }
     h3 {
         color: ${palette.red0};
         font-size: 2.5rem;
     }
-    // @media (max-width:1048px) {
-    //     h1 {line-height: 6rem; font-size: 6rem;min-width: 350px;}
-    // }
-
-    // @media (max-width:820px) {
-    //     position: fixed; bottom: 0%;
-    //     h1 {line-height: 4rem; font-size: 4rem;min-width: 600px;}
-    //     h3 {font-size: 2.5rem;}
-    // }
 `;
 
 const Container = styled.div`
@@ -68,13 +71,14 @@ const Block = styled.div`
     align-items: flex-end; 
     margin: auto; height: 100vh; max-width: 1440px;
     padding: 72px 50px 0px; 
+    ${device.tablet} {
+        align-items: center; 
+        flex-direction: column;
+    }
+    ${device.mobile} {
+        padding: 100px 10px 0px;
+    }
 
-    // @media(max-width: 1048px) {
-    //     padding: 72px 70px 0px;
-    // }
-    // @media (max-width:820px) {
-    //     padding: 72px 10px 0px;
-    // }
 `;
 
 export default Inner;

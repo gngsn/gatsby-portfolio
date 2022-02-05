@@ -17,11 +17,17 @@ const Section = ({ data, projects }) => {
     }
 
     const showShortcut = (data) => {
+        let scrollTop = window.pageYOffset;
+        const headerOutsideIframe = 160;
+        const finalOffset = shortCutDom.current.getBoundingClientRect().top + scrollTop - headerOutsideIframe;
+        window.parent.scrollTo({
+            top: finalOffset,
+            behavior: 'smooth'
+        });
         setShortcut(data);
         setOpen(true);
-        shortCutDom.current.scrollIntoView({ block: "center", behavior: 'smooth' });
     };
-
+    
     return (
         <>
             <Info right={data.key % 2 === 1}>
@@ -63,7 +69,7 @@ const Section = ({ data, projects }) => {
                 </ShortCutContainer>
                 {
                     projects ?
-                        <List flipId="square" show={5} scroll={1} autoplay={true} autoplaySpeed={1500} setShortcut={showShortcut} project={projects} />
+                        <List flipId="square" handleClick={showShortcut} project={projects} />
                     : null
                 }
             </div>
@@ -102,9 +108,9 @@ const Info = styled.div`
 const ShortCutContainer = styled.div`
     display: flex;
     width: 100%;
-    height: ${({ open }) => open ? 'auto' : '0px'};
-    padding: ${({ open }) => open ? '40px 60px 50px' : '0px'};
-    transition: 0.8s height cubic-bezier(0.65, 0, 0.35, 1);
+    height: ${({ open }) => open ? '450px' : '0px'};
+    padding: 20px 60px 50px;
+    transition: 0.5s height cubic-bezier(0.65, 0, 0.35, 1);
 `;
 
 const ShortCut = styled.div`
@@ -112,8 +118,8 @@ const ShortCut = styled.div`
     display: flex;
     position: relative;
     opacity: ${({ open }) => open ? 1 : 0};
-    transition-delay: .2s;
-    transition: 0.8s opacity cubic-bezier(0.65, 0, 0.35, 1);
+    transition-delay: .4s;
+    transition: 0.3s opacity cubic-bezier(0.65, 0, 0.35, 1);
 `;
 
 const ShortCutDetail = styled.div`
@@ -145,21 +151,6 @@ const HashTag = styled.span`
     font-size: .7rem;
     display: block;
     margin-top: 10px;
-`;
-
-const ProjImage = styled.div`
-    display: inline-block;
-    width: 60%;
-    height: 100%;
-    opacity: ${props => props.image ? 1 : 0};
-    transition: 0.8s opacity cubic-bezier(0.65, 0, 0.35, 1);
-    transition-delay: .4s;
-    background-size: cover;
-    background-position: center center;
-    background-image: ${props => 'url(' + props.image + ')'};
-    overflow: hidden;
-    box-shadow: 0px 0px 7px 7px #00000011;
-    border-radius: 10px;
 `;
 
 export default Section;

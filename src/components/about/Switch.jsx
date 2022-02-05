@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
-import { Grid } from '@material-ui/core';
 
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
+import { device } from '../../lib/styles/sizes';
 
 const Inner = React.memo(({ theme, isOn }) => {
     let [turnOn, setTurnOn] = useState(theme);
@@ -14,18 +13,6 @@ const Inner = React.memo(({ theme, isOn }) => {
         isOn(!turnOn);
         setTurnOn(!turnOn);
     }
-
-    // const setSwitch = e => {
-    //     clickSwitch();
-        
-    //     if (turnOn !== theme)
-    //         isOn(turnOn);
-    // }
-    
-    // useEffect(() => {
-    //     setTurnOn(theme);
-    // }, [theme]);
-
     
     return (
         <Container light={theme === 'light'}>
@@ -87,7 +74,8 @@ const Container = styled.div`
             width: 100%;
         }
     }
-    @media all and (max-width: 900px) {
+
+    ${device.tablet} {
         max-width: 600px;
         flex-direction: column;
         h2 { font-size: 1.8rem; }
@@ -104,7 +92,7 @@ const SwitchImage = styled.img`
     c
     padding-left: 10px;
 
-    @media all and (max-width: 900px) {
+    ${device.tablet} {
         padding-top: 50px;
         padding-bottom: 20px;
         width: 50%;

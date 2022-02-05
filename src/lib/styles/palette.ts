@@ -3,6 +3,7 @@ const palette = {
     // red0: '#e76363',
     // red0: '#ffd4b0',
     red0: '#ffcb6a',
+    red1: '#f9daa1',
     /* grey */
     grey0: '#F2F2F2',
     grey0_p60: '#F2F2F296',

@@ -1,58 +1,71 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+
 import palette from '../../../lib/styles/palette';
+import { device, getScreenSize } from '../../../lib/styles/sizes';
 
+const Bubble = () => {
+    const [screen, setScreen] = useState(getScreenSize());
 
-const bubble = () => {
+    const motoList = [
+        { id: 0, title: "COMMUNICATION", desc: "함께라는 가치를 중요시하며\n주변 사람과 소통합니다." },
+        { id: 1, title: "GROWTH", desc: "항상 성장을 갈망하며,\n성장에 대한 남다른 열정을\n갖고 있습니다." },
+        { id: 2, title: "GROWTH", desc: "어떤 일을 하든지 포기하지 않고\n끝까지 해냅니다." }
+    ];
+
+    useEffect(() => {
+        const handler = () => {
+            setScreen(getScreenSize());
+        }
+        window.addEventListener('resize', handler);
+        return () => {
+            window.removeEventListener('resize', handler);
+        };
+    }, []);
+
     return (
         <Block>
             <h1>MOTTO</h1>
-            <MottoContainer>
-                <Circle />
-                <Circle>
-                    <TextContainer>
-                        <h2>COMMUNICATION</h2>
+            {
+                screen === 'small' ?
+                motoList.map(moto =>
+                    <TextContainer key={moto.id}>
+                        <h2> {moto.title} </h2>
                         <h3>
-                            함께라는 가치를 중요시하며 <br />
-                            주변 사람과 소통합니다.
+                            {moto.desc}
                         </h3>
                     </TextContainer>
-                </Circle>
-                <Circle>
-                    <TextContainer>
-                        <h2>GROWTH</h2>
-                        <h3>
-                            항상 성장을 갈망하며, <br />
-                            성장에 대한 남다른  <br />
-                            열정을 갖고 있습니다.
-                        </h3>
-                    </TextContainer>
-                </Circle>
-                <Circle>
-                    <TextContainer>
-                        <h2>CONSTANTLY</h2>
-                        <h3>
-                            어떤 일을 하든지  <br />
-                            포기하지 않고 <br />
-                            끝까지 해냅니다.
-                        </h3>
-                    </TextContainer>
-                </Circle>
-                <Circle />
-            </MottoContainer>
+                    )
+                :
+                <MottoContainer>
+                    <Circle />
+                    {
+                        motoList.map(moto =>
+                            <Circle key={moto.id}>
+                            <TextContainer>
+                                <h2> {moto.title} </h2>
+                                <h3>
+                                    {moto.desc}
+                                </h3>
+                            </TextContainer>
+                            </Circle>
+                        )
+                    }
+                    <Circle />
+                </MottoContainer>
+            }
         </Block>
     )
 };
 
 const Circle = styled.div`
-    border-radius: 50%; position: relative; float: left; margin: auto -14px;border: 1px solid ${palette.black0};
+    border-radius: 50%; position: relative; float: left; margin: auto -14px; border: 1px solid ${palette.black0};
     color: ${palette.black0};
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @keyframes bubble{0%{transform: scale(1.0) translate(0, 0px);}100%{transform: scale(1.03) translate(0, -30px);}}
+    @keyframes bubble{ 0%{transform: scale(1.0) translate(0, 0px);} 100% {transform: scale(1.03) translate(0, -30px);}}
 
     &:nth-child(1) {height: 280px; width: 280px; margin-top: 170px; animation: bubble 6s ease-in-out alternate infinite;}
     &:nth-child(2) {height: 380px; width: 380px; margin-top: 50px; animation: bubble 3s ease-in alternate infinite;}
@@ -63,28 +76,48 @@ const Circle = styled.div`
 
 const TextContainer = styled.div`
     text-align: center; padding: 20px;
+    white-space: pre-wrap;
+    line-height: 1.6em;
     h2 {
         font-size: 2em;
         display: inline;
         color: ${palette.black0};
     }
+
     h3 {
         color: ${palette.black0};
-        font-size: 1.2em; font-weight: 200; display: block; margin-top: 2em;
+        display: block; 
+        margin: 2em auto 0;
+        font-size: 1.2em; 
+        font-weight: 200; 
+    }
+    ${device.tablet} {
+        width: 100%;
+        margin: 20px auto;
+        h2 {
+            padding: 5px;
+            text-decoration: underline;
+        }
+        h3 {
+            margin-top: 1em;
+        }
     }
 `;
 
 const MottoContainer = styled.div`
     display: flex; flex-direction: row; 
+    ${device.tablet} {
+        flex-direction: column;
+    }
 `;
 
 const Block = styled.div`
     padding-bottom: 130px; display: flex; flex-direction: column; align-items: center;
     h1 {
-        font-size: 5rem;
+        font-size: 3.5rem;
         color: ${palette.black0}; 
     }
 `;
 
 
-export default bubble;
+export default Bubble;

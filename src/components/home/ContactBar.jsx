@@ -1,10 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
-
-import useTheme from '../../lib/hooks/useTheme';
 
 const ContactBar = () => {
-    const { theme } = useTheme();
 
     const copyMail = () => {
         let email = "rudtjs4540@gmail.com";
@@ -18,7 +14,7 @@ const ContactBar = () => {
     }
 
     return (
-        <div className={classNames('icon', theme === 'dark' ? '--dark': '')}>
+        <div>
             <div id="icon_mail" className="__mail" onClick={copyMail}></div>
             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/pppppppppark">
                 <div className="__insta"></div>

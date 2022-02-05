@@ -1,22 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+import { device } from '../../../lib/styles/sizes';
 
 import Graph from './Graph';
-import useTheme from '../../../lib/hooks/useTheme';
-
-import styled from 'styled-components';
 
 const Skill = () => {
-    const { theme } = useTheme();
 
     var backgroundColor = [
         '#000', '#000', '#000', '#000', '#000'
     ];
-    
-    if (theme === 'dark') {
-        backgroundColor = [ '#fff', '#fff', '#fff', '#fff', '#fff'];
-    } else {
-        backgroundColor = [ '#000', '#000', '#000', '#000', '#000'];
-    }
     
     var langData = {
         labels: ["Java", "JS", "MySQL", "PHP", "C"],
@@ -41,13 +33,13 @@ const Skill = () => {
                     title="LANGUAGE"
                     datasets={langData}
                     width={400}
-                    height={300}
+                    height={200}
                 />
                 <Graph
                     title="SKILL"
                     datasets={techData}
                     width={400}
-                    height={300}
+                    height={200}
                 />
             </GraphContainer>
         </Block>
@@ -57,18 +49,20 @@ const Skill = () => {
 const GraphContainer = styled.div`
     display: flex;
     justify-content: space-around;
-`;
-
+    flex-direction: row;
+    width: 100%;
+    ${device.tablet} {
+        flex-direction: column;
+        & div:last-child {
+            margin-top: 50px;
+        }
+    }
+    `;
+    
 const Block = styled.div`
     padding:100px 70px 100px;
-    @media (max-width:820px) {
-        .break-line820 {display: inline;}
-        &.skill {padding: 50px 60px 200px;}
-        &.skill h1 {font-size: 2rem;}
-        &.skill .graph-container {flex-direction: column; padding-left: 2vw;}
-        &.skill .graph-container .graph {margin-right: 6vw;margin-top: 50px;}
-        &.skill .graph-container canvas {width:80vw !important; height: 200px !important; margin-top: 10vh;  }
-    }
+    ${device.tablet} {
+        justify-content: center;
 `;
 
 export default Skill;

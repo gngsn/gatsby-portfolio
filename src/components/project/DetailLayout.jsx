@@ -57,23 +57,6 @@ const Block = styled.div`
     }
 `;
 
-const Title = styled.div`
-    width: 100%;
-    height: 100vh;
-    z-index: 111;
-    background-image: ${props => 'url(' + props.image + ')'};
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-    opacity: 1;
-    h2 { 
-        color:white; font-size: 3.5rem; margin: 55vh 0px 30px 10vw;
-    }
-    h3 { 
-        color:white;font-size: 3.8rem; margin: 0; margin-left: 10vw;
-    }
-`;
-
 const CancelImage = styled.img`
     position: fixed; right: 50px; z-index: 999; width: 50px; height: 50px; top: 45vh; cursor: pointer;
 `;

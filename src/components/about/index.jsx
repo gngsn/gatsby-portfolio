@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Switch from './Switch';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
+import { device } from '../../lib/styles/sizes';
 
 const Inner = () => {
     const [theme, setTheme] = useState('light');
@@ -31,8 +32,11 @@ const Container = styled.div`
     color: ${({ light }) => light ? 'black' : 'white'};
     z-index: -1; top: 0; left: 0;
     max-width: 100%; width: 100vw; height: 100vh;
-    transition: 0.8s transform cubic-bezier(0.65, 0, 0.35, 1); 
+    transition: 0.4s all cubic-bezier(0.65, 0, 0.35, 1); 
     padding: 15vh 0;
+
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
 `;
 
 const UnderTitle = styled.div`
@@ -47,7 +51,8 @@ const UnderTitleH3 = styled.h3`
     font-family: 'Noto L';
     font-size: 1.3rem;
     margin-top: 40px;
-    @media all and (max-width: 900px) {
+
+    ${device.tablet} {
         font-size: 1rem;
     }
 `;

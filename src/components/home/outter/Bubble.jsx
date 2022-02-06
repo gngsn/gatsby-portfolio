@@ -10,7 +10,7 @@ const Bubble = () => {
     const motoList = [
         { id: 0, title: "COMMUNICATION", desc: "함께라는 가치를 중요시하며\n주변 사람과 소통합니다." },
         { id: 1, title: "GROWTH", desc: "항상 성장을 갈망하며,\n성장에 대한 남다른 열정을\n갖고 있습니다." },
-        { id: 2, title: "GROWTH", desc: "어떤 일을 하든지 포기하지 않고\n끝까지 해냅니다." }
+        { id: 2, title: "GROWTH", desc: "어떤 일을 하든지\n포기하지 않고\n끝까지 해냅니다." }
     ];
 
     useEffect(() => {
@@ -61,8 +61,13 @@ const Bubble = () => {
 };
 
 const Circle = styled.div`
-    border-radius: 50%; position: relative; float: left; margin: auto -14px; border: 1px solid ${palette.black0};
+    position: relative; 
+    float: left; 
     color: ${palette.black0};
+    margin: auto -14px; 
+    border: 1px solid ${palette.black0};
+    border-radius: 50%; 
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +82,8 @@ const Circle = styled.div`
 `;
 
 const TextContainer = styled.div`
-    text-align: center; padding: 20px;
+    text-align: center; 
+    padding: 20px;
     white-space: pre-wrap;
     line-height: 1.6em;
     h2 {
@@ -115,7 +121,10 @@ const MottoContainer = styled.div`
 `;
 
 const Block = styled.div`
-    padding-bottom: 130px; display: flex; flex-direction: column; align-items: center;
+    padding-bottom: 130px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
     h1 {
         font-size: 3.5rem;
         color: ${palette.black0}; 

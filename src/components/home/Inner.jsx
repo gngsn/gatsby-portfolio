@@ -14,7 +14,7 @@ const Inner = () => {
                 <TextContainer>
                     <h1>
                         Hi 👋🏻 
-                        I'm gyeong seon Park,
+                        I'm Gyeong Seon Park,
                         Backend Developer 💻
                     </h1>
                 </TextContainer>
@@ -78,7 +78,6 @@ const Block = styled.div`
     ${device.mobile} {
         padding: 80px 10px 0px;
     }
-
 `;
 
 export default Inner;

@@ -92,6 +92,7 @@ const TextContainer = styled.div`
         margin: 2em auto 0;
         font-size: 1.2em; 
         font-weight: 200; 
+        white-space: pre-wrap;
     }
     ${device.tablet} {
         width: 100%;

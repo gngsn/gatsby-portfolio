@@ -5,6 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 
 import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
+import Cursor from "./Cursor";
 
 const isBrowser = typeof window !== "undefined";
 let store = createStore(
@@ -35,6 +36,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
     return (
         <Provider store={store}>
                 <Header />
+                <Cursor />
                 {children}
         </Provider>
     );

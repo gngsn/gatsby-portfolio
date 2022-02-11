@@ -135,7 +135,9 @@ const ShortCutDetail = styled.div`
         h2 {font-size: .8rem;margin-top: 0px;}
         h1 {font-size: 1.4rem; margin-top: 0px;}
         p {font-size: .9rem;line-height: 1.5;white-space: break-spaces;}
-        a {color: #dd4226;font-family: 'Noto L';}
+        a {
+            color: ${palette.primary};
+        }
         & > div {margin: 5px 0px;}
     }
 `;

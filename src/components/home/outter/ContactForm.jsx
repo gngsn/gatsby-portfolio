@@ -22,16 +22,14 @@ const ContactForm = () => {
             method: "POST",
             url: "http://formspree.io/moqpvnpw",
             data: values
-        })
-            .then(response => {
-                actions.setSubmitting(false);
-                actions.resetForm();
-                handleServerResponse(true, "Thanks!");
-            })
-            .catch(error => {
-                actions.setSubmitting(false);
-                handleServerResponse(false, error.response.data.error);
-            });
+        }).then(response => {
+            actions.setSubmitting(false);
+            actions.resetForm();
+            handleServerResponse(true, "Thanks!");
+        }).catch(error => {
+            actions.setSubmitting(false);
+            handleServerResponse(false, error.response.data.error);
+        });
     };
 
     return (
@@ -44,10 +42,10 @@ const ContactForm = () => {
                 {({ isSubmitting }) => (
                     <Form id="fs-frm" noValidate>
                         <label htmlFor="email">Email</label>
-                        <Field id="email" type="email" name="email" />
+                        <Field id="email" type="email" name="email" placeholder="Email" />
                         <ErrorMessage name="email" className="errorMsg" component="p" />
                         <label htmlFor="message">Message</label>
-                        <Field id="message" name="message" component="textarea" />
+                        <Field id="message" name="message" component="textarea" placeholder="Message" />
                         <ErrorMessage name="message" className="errorMsg" component="p" />
                         <button type="submit" disabled={isSubmitting}>
                             Submit

@@ -44,32 +44,40 @@ const ImageContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-    z-index: 100; margin: auto;
+    margin: auto;
     padding: 0 20px 0 30px;
     h1 {
         margin: 0;
-        line-height: 5.5rem; 
-        font-size: 5.2rem;
-        color: ${palette.red0};
+        line-height: 4.5rem; 
+        font-size: 4.3rem;
+        color: ${palette.primary};
         ${device.mobile} {
             line-height: 4rem; 
             font-size: 4rem;
         }
     }
     h3 {
-        color: ${palette.red0};
+        color: ${palette.primary};
         font-size: 2.5rem;
     }
 `;
 
 const Container = styled.div`
-position: fixed; top: 0; left: 0;width: 100%; height: 100vh;z-index: -1; pointer-events: none;
+    cursor: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; 
+    height: 100vh;
+    z-index: -1;
 `;
 
 const Block = styled.div`
-    display: flex; flex-direction: row; 
+    display: flex; 
+    flex-direction: row; 
     align-items: flex-end; 
-    margin: auto; height: 100vh; max-width: 1440px;
+    margin: auto; 
+    height: calc(100vh - 72px); 
+    max-width: 1440px;
     padding: 72px 50px 0px; 
     ${device.tablet} {
         align-items: center; 

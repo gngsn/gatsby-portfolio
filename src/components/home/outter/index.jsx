@@ -13,7 +13,6 @@ const Bottom = () => {
         <Container>
             <Bubble />
             <Skill />
-            <hr />
             <Contact />
         </Container>
         </>
@@ -21,24 +20,25 @@ const Bottom = () => {
 }
 
 const Container = styled.div`
-    border-top: 2px solid black;
-    margin-top: 99vh; z-index: 3; 
+    cursor: none;
+    border-top: 1px solid black;
+    margin-top: 100vh; 
+    z-index: 2;
     
-    background-color: ${palette.white0};
+    background-color: ${palette.background};
     position: relative;
     & > img { width: 100%;}
     & > div { 
         overflow-x: hidden;
-        padding: 80px 0px; 
+        padding: 40px 0px; 
         margin: auto;
         text-align: center;
     }
-    hr { width: 160px; margin-bottom: 110px;}
     &:before {
         position: absolute;
-        content: 'scroll up ! ';
-        font-size: 1.5rem;
-        color: ${palette.red1};
+        content: 'scroll up !';
+        font-size: 1.2rem;
+        color: ${palette.black0};
         left: 50%; transform: translateX(-50%);
         top: -3rem;
         ${device.tablet} {

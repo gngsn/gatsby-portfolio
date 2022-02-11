@@ -26,11 +26,12 @@ const Inner = () => {
 }
 
 const Container = styled.div`
-    background-color: ${({ light }) => light ? palette.white0 : palette.black1};
+    background-color: ${({ light }) => light ? palette.background : palette.black1};
     display: flex; align-items: center; justify-content: center;
     flex-direction: column;
     color: ${({ light }) => light ? 'black' : 'white'};
-    z-index: -1; top: 0; left: 0;
+    z-index: -1; 
+    top: 0; left: 0;
     max-width: 100%; width: 100vw; height: 100vh;
     transition: 0.4s all cubic-bezier(0.65, 0, 0.35, 1); 
     padding: 15vh 0;

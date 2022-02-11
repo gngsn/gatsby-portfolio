@@ -52,13 +52,16 @@ const ProjectDetail = React.memo(({ data }) => {
 
 const Block = styled.div`
     * {word-break: keep-all;}
-    background-color: ${palette.grey1};
     & > div {
     }
 `;
 
 const CancelImage = styled.img`
-    position: fixed; right: 50px; z-index: 999; width: 50px; height: 50px; top: 45vh; cursor: pointer;
+    position: fixed; right: 50px; 
+    z-index: 2;
+    width: 50px; height: 50px; 
+    top: 45vh; 
+    cursor: pointer;
 `;
 
 const ContentLayout = styled.div`
@@ -75,7 +78,7 @@ const ContentLayout = styled.div`
     }
     a { 
         font-size: 1rem; line-height: 1.5;
-        color: ${palette.red0}; 
+        color: ${palette.primary}; 
     }
 `;
 

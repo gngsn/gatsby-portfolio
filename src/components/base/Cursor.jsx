@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
-import '../scss/cursor.scss';
+import styled from 'styled-components';
+import palette from '../../lib/styles/palette';
 
 const isMobile = () => {
     const ua = navigator.userAgent;
@@ -73,13 +74,55 @@ const Cursor = () => {
         setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    return <div className={cursorClasses}
+    return <Block>
+    <div className={cursorClasses}
         style={
             {
                 left: `${position.x}px`,
                 top: `${position.y}px`
             }
         } />
+    </Block> 
 }
+
+const Block = styled.div`
+pointer-events: none;
+
+@keyframes circle {
+  from {
+  }
+  to {
+      
+    transform:translate(-50%, -50%) scale(1.4);
+  }
+}
+
+.cursor {
+    width: 35px;
+    height: 35px;
+    border: 1px solid ${palette.primary};
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    cursor: none;
+    transition: all 150ms ease;
+    transition-property: opacity, background-color, transform, mix-blend-mode;
+}
+
+.cursor--link-hovered {
+    animation: circle .6s infinite alternate;
+}
+
+.cursor--clicked {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: ${palette.primary};
+}
+
+.cursor--hidden {
+    opacity: 0;
+}
+
+`;
 
 export default Cursor;

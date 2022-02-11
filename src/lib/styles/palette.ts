@@ -1,9 +1,11 @@
-const palette = {
+let palette = {
     /* red */
-    // red0: '#e76363',
-    // red0: '#ffd4b0',
-    red0: '#ffcb6a',
-    red1: '#f9daa1',
+    red0: '#e76363',
+    yellow0: '#ffcb6a',
+    yellow1: '#f9daa1',
+    orange0: '#ffa26a',
+    lavender0: '#f1eafb',
+    lavender1: '#f2d6ff',
     /* grey */
     grey0: '#F2F2F2',
     grey0_p60: '#F2F2F296',
@@ -12,8 +14,14 @@ const palette = {
     /* white */
     white0: '#FFFFFF',
     /* black */
-    black0: '#000000',
+    black0: '#313131',
     black1: '#0e0e0e',
+    ivory0: '#f9f7f3',
+    primary: '',
+    background: ''
 };
+
+palette.primary = palette.orange0;
+palette.background = palette.ivory0;
 
 export default palette;

@@ -37,6 +37,18 @@ module.exports = {
         jsxPragma: "jsx", // defaults to "React"
         allExtensions: true, // defaults to false
       },
+    }, {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Fira Code`,
+          `Nanum Gothic Coding`,
+          `Lora`,
+          `Source Code Pro`,
+          `Gideon Roman`
+        ],
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-plugin-sharp`,

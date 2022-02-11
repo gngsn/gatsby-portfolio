@@ -13,7 +13,7 @@ const ScrollImgContainer = styled.div`
     img { margin-right: 20px; border-radius: 10px;}
     &::-webkit-scrollbar {width: 6px;}
     &::-webkit-scrollbar-track {border-radius: 6px;background-color:${palette.grey0};}
-    &::-webkit-scrollbar-thumb {border-radius: 10px; background-color:${palette.red0};}
+    &::-webkit-scrollbar-thumb {border-radius: 10px; background-color:${palette.primary};}
 `;
 
 ScrollImgContainer.propTypes = {

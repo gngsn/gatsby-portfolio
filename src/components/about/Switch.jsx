@@ -19,8 +19,8 @@ const Inner = React.memo(({ theme, isOn }) => {
             <div>
                 {
                     turnOn ?
-                        <OnOffText><em>ON/</em>OFF</OnOffText> :
-                        <OnOffText>ON<em>/OFF</em></OnOffText>
+                    <OnOffText>ON<em>/OFF</em></OnOffText>:
+                    <OnOffText><em>ON/</em>OFF</OnOffText>
                 }
                 <SmallText className="caption">"push the switch"</SmallText>
             </div>
@@ -31,10 +31,10 @@ const Inner = React.memo(({ theme, isOn }) => {
                 <RightText>
                     <AnimationTextBox className={classNames('rightText', { '--active': turnOn })} >
                         <h2> 어울릴 땐,</h2>
-                        <h3>최고의 화합을</h3>
+                        <h3>밝은 에너지를</h3>
                     </AnimationTextBox>
                     <AnimationTextBox className={classNames('rightText', { '--active': !turnOn })}>
-                        <h2> 개발할 땐,</h2>
+                        <h2>개발할 땐,</h2>
                         <h3>깊은 집중을</h3>
                     </AnimationTextBox>
                 </RightText>

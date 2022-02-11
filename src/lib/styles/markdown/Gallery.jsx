@@ -17,7 +17,7 @@ const Gallery = styled.div`
         box-shadow: 0px 0px 12px 10px rgba(192, 192, 192, 0.192);
     }
     &::-webkit-scrollbar {height: 6px;}
-    &::-webkit-scrollbar-thumb {opacity: .4; border-radius: 15px; background-color: ${palette.red0};}
+    &::-webkit-scrollbar-thumb {opacity: .4; border-radius: 15px; background-color: ${palette.primary};}
     &::-webkit-scrollbar-track {opacity: .4; border-radius: 15px; background-color: ${palette.grey0};}
 `;
 

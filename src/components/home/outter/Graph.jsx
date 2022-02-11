@@ -66,7 +66,7 @@ const Block = styled.div`
         padding: 0 40px;
     }
     h1 {
-        font-size: 2.5rem; display: inline;
+        font-size: 2.2rem; display: inline;
         font-weight: 800;
     }
 `;

@@ -11,7 +11,7 @@ const Header = () => {
     const { menu, setMenu } = useHeader();
 
     const menuList = [
-        { title: "HOME", menu: "HOME", link: "/" },
+        { title: "PARK", menu: "HOME", link: "/" },
         { title: "ABOUT", menu: "ABOUT", link: "/about" },
         { title: "PROJ", menu: "PROJ", link: "/project" },
     ];

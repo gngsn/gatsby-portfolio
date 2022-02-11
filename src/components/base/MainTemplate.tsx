@@ -13,7 +13,7 @@ const BackgroundStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, p, a {
-    font-family: Noto M;
+    font-family: Fira;
   }
   img {
     max-width: 100%;

@@ -26,6 +26,12 @@ interface ContextProviderProps {
     children: React.ReactNode;
 };
 
+
+const isMobile = () => {
+    const ua = navigator.userAgent;
+    return /Android|Mobi/i.test(ua);
+};
+
 declare global {
     interface Window {
         __REDUX_STATE__: RootState;
@@ -36,7 +42,11 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
     return (
         <Provider store={store}>
                 <Header />
-                <Cursor />
+                {
+                    typeof navigator !== 'undefined' && isMobile() ? 
+                    null : <Cursor />
+                }
+                
                 {children}
         </Provider>
     );

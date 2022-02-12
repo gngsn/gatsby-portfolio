@@ -3,14 +3,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 
-const isMobile = () => {
-    const ua = navigator.userAgent;
-    return /Android|Mobi/i.test(ua);
-};
-
 const Cursor = () => {
-    // if (typeof navigator !== 'undefined' && isMobile()) return null;
-    
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [hidden, setHidden] = useState(false);
     const [clicked, setClicked] = useState(false);
@@ -92,7 +85,6 @@ pointer-events: none;
   from {
   }
   to {
-      
     transform:translate(-50%, -50%) scale(1.4);
   }
 }

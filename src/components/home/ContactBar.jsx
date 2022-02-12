@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactBar = () => {
 
-    const copyMail = () => {
+    const copyMail = (events) => {
         let email = "rudtjs4540@gmail.com";
         var emailCopy = document.createElement('textarea');
         emailCopy.value = email;

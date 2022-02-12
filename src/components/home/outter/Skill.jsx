@@ -63,9 +63,10 @@ const Block = styled.div`
 `;
 
 const Text = styled.h2`
-display: inline;
-cursor: pointer;
+    display: inline;
+    cursor: pointer;
     line-height: 1.5;
+    white-space: nowrap;
     border-radius: 30px;
     border: 3px solid ${palette.black0};
     padding: 5px 20px;

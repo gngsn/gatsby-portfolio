@@ -6,6 +6,7 @@ import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
 import Cursor from "./Cursor";
+import Metadata from "./Metadata";
 
 const isBrowser = typeof window !== "undefined";
 let store = createStore(
@@ -41,14 +42,15 @@ declare global {
 const ContextProvider = ({ children }: ContextProviderProps) => {
     return (
         <Provider store={store}>
+            <Metadata />
                 <Header />
+                <div>
+                    {children}
+                </div>
                 {
                     typeof navigator !== 'undefined' && isMobile() ? 
                     null : <Cursor />
                 }
-                <div>
-                    {children}
-                </div>
         </Provider>
     );
 };

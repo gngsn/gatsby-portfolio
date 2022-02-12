@@ -2,32 +2,21 @@ import React from 'react';
 import { Link as L } from 'gatsby';
 
 import styled from 'styled-components';
-import useHeader from "../../lib/hooks/useHeader";
-import storage from "../../lib/storage";
 import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
 
 const Header = () => {
-    const { menu, setMenu } = useHeader();
-
     const menuList = [
         { title: "park.", menu: "HOME", link: "/" },
         { title: "about.", menu: "ABOUT", link: "/about" },
         { title: "proj.", menu: "PROJ", link: "/project" },
     ];
 
-    const MenuLoader = () => {
-        const menu = storage.getItem('CURRENT_MENU') || "HOME";
-        const { setMenu } = useHeader();
-        setMenu(menu);
-    };
-    MenuLoader();
-
     return (
         <Block>
             {
                 menuList.map((item) => (
-                    <Link key={item.menu} className="link" to={item.link} isClick={menu === item.menu} onClick={() => setMenu(item.menu, true)}>
+                    <Link key={item.menu} className="link" to={item.link}>
                         { item.title }
                     </Link>
                 ))

@@ -8,20 +8,6 @@ const Cursor = () => {
     const [hidden, setHidden] = useState(false);
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
-    
-
-    useEffect(() => {
-        addEventListeners();
-        handleLinkHoverEvents();
-        return () => removeEventListeners();
-    }, []);
-
-    const handleLinkHoverEvents = () => {
-        document.querySelectorAll(".link").forEach(el => {
-            el.addEventListener("mouseover", () => setLinkHovered(true));
-            el.addEventListener("mouseout", () => setLinkHovered(false));
-        });
-    };
 
     const addEventListeners = () => {
         document.addEventListener("mousemove", onMouseMove);
@@ -38,6 +24,21 @@ const Cursor = () => {
         document.removeEventListener("mousedown", onMouseDown);
         document.removeEventListener("mouseup", onMouseUp);
     };
+
+
+    useEffect(() => {
+        addEventListeners();
+        handleLinkHoverEvents();
+        return () => removeEventListeners();
+    }, []);
+
+    const handleLinkHoverEvents = () => {
+        document.querySelectorAll(".link").forEach(el => {
+            el.addEventListener("mouseover", () => setLinkHovered(true));
+            el.addEventListener("mouseout", () => setLinkHovered(false));
+        });
+    };
+
 
     const onMouseDown = () => {
         setClicked(true);

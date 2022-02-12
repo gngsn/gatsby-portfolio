@@ -18,8 +18,8 @@ const Inner = () => {
                         sequence={[
                             'Hi There 👋🏻 ', 1000, 
                             "Hi There 👋🏻\nMy name is Gyeongseon Park", 2000,
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.", 2000,
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.\nI am very curious 🔍 and outgoing 🌿 ", 2000,
+                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.", 1500,
+                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.\nI am very curious 🔍 and outgoing 🌿 ", 1500,
                             "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.\nI am very curious 🔍 and outgoing 🌿 \n\nScroll up, then you can learn more about me."
                         ]}
                         wrapper="h1"
@@ -69,15 +69,17 @@ const TextContainer = styled.div`
     }
     ${device.tablet} {
         width: 100%; 
+        padding: 0 10px;
         h1 {
-            line-height: 3.2rem; 
-            font-size: 2.5rem;
+            line-height: 2.7rem; 
+            font-size: 2rem;
         }
     }
     ${device.mobile} {
         h1 {
-            line-height: 3rem; 
+            line-height: 2.3rem; 
             font-size: 1.7rem;
+            letter-spacing: -0.5px;
         }
     }
 `;

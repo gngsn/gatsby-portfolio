@@ -46,8 +46,9 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
                     typeof navigator !== 'undefined' && isMobile() ? 
                     null : <Cursor />
                 }
-                
-                {children}
+                <div>
+                    {children}
+                </div>
         </Provider>
     );
 };

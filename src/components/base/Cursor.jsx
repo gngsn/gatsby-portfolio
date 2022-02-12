@@ -87,18 +87,18 @@ pointer-events: none;
   }
 }
 
-.cursor {
-    width: 35px;
-    height: 35px;
-    border: 1px solid ${palette.primary};
-    border-radius: 100%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    z-index: 11;
-    cursor: none;
-    transition: all 150ms ease;
-    transition-property: opacity, background-color, transform, mix-blend-mode;
-}
+    .cursor {
+        width: 35px;
+        height: 35px;
+        border: 1px solid ${palette.primary};
+        border-radius: 100%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+        cursor: none;
+        transition: all 150ms ease;
+        transition-property: opacity, background-color, transform, mix-blend-mode;
+    }
 
     .cursor--link-hovered {
         animation: circle .6s infinite alternate;

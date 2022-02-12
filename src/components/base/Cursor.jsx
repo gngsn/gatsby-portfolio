@@ -59,7 +59,7 @@ const Cursor = () => {
         {
             'cursor--clicked': clicked,
             'cursor--hidden': hidden,
-            'cursor--link-hovered': linkHovered
+            'cursor--link-hovered': linkHovered,
         }
     );
 
@@ -82,8 +82,6 @@ const Block = styled.div`
 pointer-events: none;
 
 @keyframes circle {
-  from {
-  }
   to {
     transform:translate(-50%, -50%) scale(1.4);
   }
@@ -102,18 +100,18 @@ pointer-events: none;
     transition-property: opacity, background-color, transform, mix-blend-mode;
 }
 
-.cursor--link-hovered {
-    animation: circle .6s infinite alternate;
-}
+    .cursor--link-hovered {
+        animation: circle .6s infinite alternate;
+    }
 
-.cursor--clicked {
-    transform: translate(-50%, -50%) scale(0.8);
-    background-color: ${palette.primary};
-}
+    .cursor--clicked {
+        transform: translate(-50%, -50%) scale(0.8);
+        background-color: ${palette.primary};
+    }
 
-.cursor--hidden {
-    opacity: 0;
-}
+    .cursor--hidden {
+        opacity: 0;
+    }
 
 `;
 

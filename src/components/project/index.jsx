@@ -13,24 +13,16 @@ const Project = ({ data }) => {
     setProjects(data);
 
     return (
-        <Container>
-            <Block>
-                {
-                    sectionList.map((_section) => {
-                        const projects = data.filter(item => _section.project.includes(item.slug));
-                        return <Section key={_section.key} data={_section} projects={projects}/>;
-                    })
-                }
-            </Block>
-        </Container>
+        <Block>
+            {
+                sectionList.map((_section) => {
+                    const projects = data.filter(item => _section.project.includes(item.slug));
+                    return <Section key={_section.key} data={_section} projects={projects}/>;
+                })
+            }
+        </Block>
     );
 }
-
-
-const Container = styled.div`
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
-`;
 
 const Block = styled.div`
     padding: 60px 0 100px;

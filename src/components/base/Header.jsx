@@ -52,7 +52,7 @@ const Block = styled.div`
 const Link = styled(L)`
     padding: 10px;
     width:100%; max-width: 200px;
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center; justify-content: center;
     font-size: 2.2rem;
     font-weight: 900;
@@ -70,18 +70,15 @@ const Link = styled(L)`
             border-right: none;
         }
     }
-    &:nth-child(3) {
-        // border-right: 2px solid #000;
-    }
 
     ${device.mobile} {
         max-width: none;
         flex-basis: 50%;
         font-size: 1.5rem;
-        border-left: 2px solid #000;
+        border-left: 1px solid ${palette.black0};
         &:first-child {
             flex-basis: 100%;
-            border: 2px solid #000;
+            border-bottom: 1px solid ${palette.black0};
         }
     }
 `;

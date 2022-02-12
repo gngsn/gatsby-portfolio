@@ -35,9 +35,6 @@ const Container = styled.div`
     max-width: 100%; width: 100vw; height: 100vh;
     transition: 0.4s all cubic-bezier(0.65, 0, 0.35, 1); 
     padding: 15vh 0;
-
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
 `;
 
 const UnderTitle = styled.div`

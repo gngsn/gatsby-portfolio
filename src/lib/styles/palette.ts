@@ -18,7 +18,7 @@ let palette = {
     black1: '#0e0e0e',
     ivory0: '#f9f7f3',
     primary: '',
-    background: ''
+    background: '',
 };
 
 palette.primary = palette.orange0;

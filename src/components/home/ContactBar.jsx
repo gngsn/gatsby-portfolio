@@ -6,86 +6,98 @@ import { device } from '../../lib/styles/sizes';
 
 const ContactBar = () => {
     return (
-        <Box className="link-diff">
-            <div onClick={() => navigate("https://gngsn.tistory.com/")}>
-                <h2>Blog</h2>
-            </div>
-            <div onClick={() => navigate("https://www.instagram.com/pppppppppark")}>
-                <h2>Instagram</h2>
-            </div>
-            <div onClick={() => navigate("https://github.com/gngsn")}>
+        <Block className="link-diff">
+            <Box onClick={() => navigate("https://github.com/gngsn")}>
                 <h2>Github</h2>
-            </div>
-            <div>
+            </Box>
+            <Box onClick={() => navigate("https://gngsn.tistory.com/")}>
+                <h2>Blog</h2>
+            </Box>
+            <Box onClick={() => navigate("https://www.instagram.com/pppppppppark")}>
+                <h2>Instagram</h2>
+            </Box>
+            <Box>
+                <div>
+                <h2>Gyeongseon Park </h2>
                 <h3>
-                    Gyeongseon Park 
-                    <br/>
-                    <br/>
                     Email
                     <br/>
-                    <em>rudtjs4540@gmail.com</em>
+                    rudtjs4540@gmail.com
                 </h3>
-                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/pppppppppark">
-                </a>
-            </div>
-        </Box>
+                <h3>
+                    Korean 25
+                    <br/>
+                    SEOUL · YONGIN
+                </h3>
+                </div>
+            </Box>
+        </Block>
     )
 }
 
-const Box = styled.div`
+const Block = styled.div`
     padding:0 !important;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     border: 1px solid ${palette.black0};
-    & > div {
-        background-color: ${palette.black2};
-        border-right: 1px solid ${palette.ivory0};
-        display: flex;
-        flex: 25%;
-        align-items: center;
-        justify-content: center;
-        width: 100%; height: 100%;
-        position: relative;
-        height: 25vw;
-        &:last-child {
-            border-right: none;
+`;
+
+const Box = styled.div`
+    background-color: ${palette.black2};
+    border-right: 1px solid ${palette.ivory0};
+    display: flex;
+    flex: 25%;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    position: relative;
+    height: 25vw;
+    
+    &:last-child {
+        border-right: none;
+        &:hover:before{
+            content: none;
+        }
+        & h2::selection, h3::selection, br::selection{
+            color: ${palette.primary};
         }
     }
-    h2, h3 {
+    h2, h3, &>div {
         color: ${palette.ivory0};
-        display: inline;
         font-size: 1.8rem;
         z-index: 2;
     }
     h3 {
-        font-size: 1.4rem;
-        em {
-            font-size: 80%;
-        }
+        margin-top: 40px;
+        font-size: 1.2rem;
     }
-    h2:hover {}
-    & > div:hover:before {
+    &:hover:before {
         z-index: 0;
         content: " ";
         position: absolute;
         width: 80%; height: 80%;
-        top:50; left: 50;
+        top: 50; left: 50;
         border-radius: 50%;
         background-color: ${palette.primary};
     }
 
     ${device.tablet} {
-        & > div {
-            flex: 50%;
-            height: 50vw;
-            &:nth-child(1) {
-                border-bottom: 1px solid ${palette.ivory0};
-            }
-            &:nth-child(2) {
-                border-bottom: 1px solid ${palette.ivory0};
-                border-right: none;
-            }
+        border-bottom: 1px solid ${palette.ivory0};
+        flex: 50%;
+        height: 50vw;
+        &:nth-child(2) {
+            border-right: none;
+        }
+    }
+    ${device.mobile} {
+        &:nth-child(3) {
+            flex: 100%;
+            border-right: none;
+            border-bottom: 1px solid ${palette.ivory0};
+        }
+        &:nth-child(4) {
+            height: 100vw;
         }
     }
 `;

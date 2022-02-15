@@ -8,6 +8,7 @@ const Cursor = () => {
     const [hidden, setHidden] = useState(false);
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
+    const [diffHovered, setDiffHovered] = useState(false);
 
     const addEventListeners = () => {
         document.addEventListener("mousemove", onMouseMove);
@@ -37,6 +38,10 @@ const Cursor = () => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
             el.addEventListener("mouseout", () => setLinkHovered(false));
         });
+        document.querySelectorAll(".link-diff").forEach(el => {
+            el.addEventListener("mouseover", () => setDiffHovered(true));
+            el.addEventListener("mouseout", () => setDiffHovered(false));
+        });
     };
 
 
@@ -61,6 +66,7 @@ const Cursor = () => {
             'cursor--clicked': clicked,
             'cursor--hidden': hidden,
             'cursor--link-hovered': linkHovered,
+            'cursor--link-diff-hovered': diffHovered,
         }
     );
 
@@ -80,13 +86,13 @@ const Cursor = () => {
 }
 
 const Block = styled.div`
-pointer-events: none;
+    pointer-events: none;
 
-@keyframes circle {
-  to {
-    transform:translate(-50%, -50%) scale(1.4);
-  }
-}
+    @keyframes circle {
+        to {
+            transform:translate(-50%, -50%) scale(1.4);
+        }
+    }
 
     .cursor {
         width: 35px;
@@ -104,7 +110,11 @@ pointer-events: none;
     .cursor--link-hovered {
         animation: circle .6s infinite alternate;
     }
+    .cursor--link-diff-hovered {
+        mix-blend-mode: difference;
+    }
 
+    
     .cursor--clicked {
         transform: translate(-50%, -50%) scale(0.8);
         background-color: ${palette.primary};

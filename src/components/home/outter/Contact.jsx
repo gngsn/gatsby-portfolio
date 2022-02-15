@@ -7,19 +7,20 @@ import palette from '../../../lib/styles/palette';
 
 const contact = () => {
     return (
+        <>
         <Block>
-            <h1> CONTACT </h1>
+            <h1> contact. </h1>
             <ContactForm />
-            <ContactBar />
         </Block>
+        <ContactBar />
+        </>
     )
 }
 
 const Block = styled.div`
     h1 {
-        font-size: 2.5rem;
-        display: inline;
-        font-weight: 900;
+        font-size: 3.5rem;
+        color: ${palette.black0}; 
     }
 
     form { 
@@ -64,6 +65,7 @@ const Block = styled.div`
     textarea:focus, input:focus { 
         outline: none;
     }
+
     textarea:focus, textarea:focus, input:focus { 
         font-size: 1.4rem;
     }

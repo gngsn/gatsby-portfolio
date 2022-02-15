@@ -30,7 +30,7 @@ const Container = styled.div`
     & > img { width: 100%;}
     & > div { 
         overflow-x: hidden;
-        padding: 40px 0px; 
+        padding: 70px 0px 90px; 
         margin: auto;
         text-align: center;
     }

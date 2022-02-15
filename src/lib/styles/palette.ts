@@ -16,6 +16,7 @@ let palette = {
     /* black */
     black0: '#313131',
     black1: '#0e0e0e',
+    black2: '#1c1c1c',
     ivory0: '#f9f7f3',
     primary: '',
     background: '',

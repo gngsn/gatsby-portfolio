@@ -7,16 +7,17 @@ import { device } from '../../lib/styles/sizes';
 
 const Header = () => {
     const menuList = [
-        { title: "park.", menu: "HOME", link: "/" },
-        { title: "about.", menu: "ABOUT", link: "/about" },
-        { title: "proj.", menu: "PROJ", link: "/project" },
+        { title: "park.", link: "/" },
+        { title: "about.", link: "/about" },
+        { title: "proj.", link: "/project" },
+        // { title: "blog.", link: "https://gngsn.tistory.com/" },
     ];
 
     return (
         <Block>
             {
                 menuList.map((item) => (
-                    <Link key={item.menu} className="link" to={item.link}>
+                    <Link key={item.title} className="link" to={item.link}>
                         { item.title }
                     </Link>
                 ))

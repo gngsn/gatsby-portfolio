@@ -4,44 +4,43 @@ import styled from 'styled-components';
 import palette from '../../../lib/styles/palette';
 import { device } from '../../../lib/styles/sizes';
 
+const min = 1.5, max = 3;
+const skills = [
+    "Java 3", 
+    "Javascript 4", 
+    "📚",
+    "Typescript 3", 
+    "Python 3", 
+    "👾",
+    "C++ 3", 
+    "Bash 2", 
+    "Go 2", 
+    
+    "Nodejs 3", 
+    "🖥",
+    "Nextjs 3", 
+    "🎵",
+    "Spring 3", 
+    "React 3", 
+    "🥁",
+    "AWS 3", 
+    "Nginx 2", 
+    "Mongodb 2", 
+    "🔥",
+    "MySQL 3"
+];
+
+const randoms = skills.map(_ => Math.random() * (max - min) + min);
+
 const Skill = () => {
-    const getRandom = (min, max) => {
-        return Math.random() * (max - min) + min;
-    }
-
-    const skills = [
-        "Java 3", 
-        "Javascript 4", 
-        "📚",
-        "Typescript 3", 
-        "Python 3", 
-        "👾",
-        "C++ 3", 
-        "Bash 2", 
-        "Go 2", 
-        
-        "Nodejs 3", 
-        "🖥",
-        "Nextjs 3", 
-        "🎵",
-        "Spring 3", 
-        "React 3", 
-        "🥁",
-        "AWS 3", 
-        "Nginx 2", 
-        "Mongodb 2", 
-        "🔥",
-        "MySQL 3"
-    ];
-
     return (
         <Block>
             <h1>skill.</h1>
             <Container>
                 {
-                    skills.map(skill => (
+                    skills.map((skill, idx) => (
                         <Draggable key={skill}>
-                            <Text random={getRandom(1.5, 3)} className='link'>{skill}</Text>
+                            <Text random={randoms[idx]} className='link'>{skill}</Text>
                         </Draggable>
                     ))
                 }
@@ -67,7 +66,7 @@ const Text = styled.h2`
     cursor: pointer;
     line-height: 1.5;
     white-space: nowrap;
-    border-radius: 30px;
+    border-radius: ${({ random }) => random/1.2}rem;
     border: 3px solid ${palette.black0};
     padding: 5px 20px;
     margin: 10px 5px;

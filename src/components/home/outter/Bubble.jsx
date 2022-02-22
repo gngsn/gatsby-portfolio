@@ -44,12 +44,12 @@ const Bubble = () => {
                     {
                         motoList.map(moto =>
                             <Circle key={moto.id}>
-                            <TextContainer>
-                                <h2> {moto.title} </h2>
-                                <h3>
-                                    {moto.desc}
-                                </h3>
-                            </TextContainer>
+                                <TextContainer>
+                                    <h2> {moto.title} </h2>
+                                    <h3>
+                                        {moto.desc}
+                                    </h3>
+                                </TextContainer>
                             </Circle>
                         )
                     }
@@ -109,6 +109,7 @@ const TextContainer = styled.div`
         margin: 20px auto;
         h2 {
             padding: 5px;
+            font-size: 1.6em;
             text-decoration: underline;
         }
         h3 {
@@ -134,6 +135,9 @@ const Block = styled.div`
     h1 {
         font-size: 3.5rem;
         color: ${palette.black0}; 
+        ${device.tablet} {
+            font-size: 2.5rem;
+        }
     }
 `;
 

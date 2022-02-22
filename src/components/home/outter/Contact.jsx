@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ContactForm from './ContactForm';
 import ContactBar from '../ContactBar';
 import palette from '../../../lib/styles/palette';
+import { device } from '../../../lib/styles/sizes';
 
 const contact = () => {
     return (
@@ -21,6 +22,9 @@ const Block = styled.div`
     h1 {
         font-size: 3.5rem;
         color: ${palette.black0}; 
+        ${device.tablet} {
+            font-size: 2.5rem;
+        }
     }
 
     form { 

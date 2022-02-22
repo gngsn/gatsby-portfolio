@@ -50,6 +50,7 @@ const UnderTitleH3 = styled.h3`
     margin-top: 40px;
     
     ${device.tablet} {
+        display: none;
         margin-top: 0px;
         font-size: 1rem;
     }

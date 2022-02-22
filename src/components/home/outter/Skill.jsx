@@ -58,6 +58,9 @@ const Block = styled.div`
     h1 {
         font-size: 3.5rem;
         color: ${palette.black0}; 
+        ${device.tablet} {
+            font-size: 2.5rem;
+        }
     }
 `;
 

@@ -44,7 +44,7 @@ const Block = styled.div`
 `;
 
 const Box = styled.div`
-    background-color: ${palette.black2};
+    background-color: ${palette.black3};
     border-right: 1px solid ${palette.ivory0};
     display: flex;
     flex: 25%;

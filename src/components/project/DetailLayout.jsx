@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from '../../lib/styles/markdown';
 import palette from '../../lib/styles/palette';
+import { device } from '../../lib/styles/sizes';
 
 const components = {
     QuotationMarksTitle, 
@@ -24,10 +25,11 @@ const ProjectDetail = React.memo(({ data }) => {
             {
                 data ?
                     <PageLayout>
-                        <div className='full-screen-square'/>
-                        <Link to='/project'>
-                            <CancelImage src='/img/cancel.png'/>
-                        </Link>
+                        <Cancel>
+                            <Link to='/project'>
+                                <CancelImage src='/img/cancel.png'/>
+                            </Link>
+                        </Cancel>
                         <div>
                             <ContentLayout>
                             <h1> {data.title}</h1>
@@ -56,12 +58,40 @@ const Block = styled.div`
     }
 `;
 
-const CancelImage = styled.img`
-    position: fixed; right: 50px; 
+
+const Cancel = styled.div`
+    position: fixed; 
     z-index: 2;
     width: 50px; height: 50px; 
-    top: 45vh; 
+    bottom: 55vh; right: 50px; 
     cursor: pointer;
+    a {
+        width: 100%;
+        height: 100%;
+    }
+
+    ${device.tablet} {
+        display: flex; align-items: center; justify-content: flex-end;
+        padding: 0 30px;
+        bottom: 0; right: 0;
+        width: 100vw;
+        height: 100px;
+        background-color: ${palette.background};
+        border-top: 1px solid ${palette.black0};
+        &:after {
+            // display: block;
+            position: absolute;
+            content: 'close.';
+            font-family: 'Fira Code',Roboto,monospace;
+            font-size: 2.2rem;
+        }
+        img {
+            display: none;
+        }
+    }
+`;
+
+const CancelImage = styled.img`
 `;
 
 const ContentLayout = styled.div`
@@ -79,6 +109,9 @@ const ContentLayout = styled.div`
     a { 
         font-size: 1rem; line-height: 1.5;
         color: ${palette.primary}; 
+    }
+    ${device.tablet} {
+        padding: 130px 20px;
     }
 `;
 

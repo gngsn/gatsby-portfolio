@@ -13,12 +13,12 @@ const ContactBar = () => {
             <Box onClick={() => navigate("https://gngsn.tistory.com/")}>
                 <h2>Blog</h2>
             </Box>
-            <Box onClick={() => navigate("https://www.instagram.com/pppppppppark")}>
-                <h2>Instagram</h2>
+            <Box onClick={() => navigate("https://www.linkedin.com/in/kyeongsun-park")}>
+                <h2>LinkedIn</h2>
             </Box>
             <Box>
                 <div>
-                <h2>Gyeongseon Park </h2>
+                <h2>Kyeongsun Park </h2>
                 <h3>
                     Email
                     <br/>

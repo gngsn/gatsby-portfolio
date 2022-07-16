@@ -16,11 +16,11 @@ const Inner = () => {
                     <TypeAnimation
                         cursor={true}
                         sequence={[
-                            'Hi There 👋🏻 ', 1000, 
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park", 2000,
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.", 1500,
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.\nI am very curious 🔍 and outgoing 🌿 ", 1500,
-                            "Hi There 👋🏻\nMy name is Gyeongseon Park and I'm a backend developer in Korea.\nI am very curious 🔍 and outgoing 🌿 \n\nScroll up, then you can learn more about me."
+                            'Hi There 👋🏻', 700, 
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park.", 1200,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area.", 1200,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 ", 1500,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 \n\nLet's scroll up and get to know me 🔥"
                         ]}
                         wrapper="h1"
                     />

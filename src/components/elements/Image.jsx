@@ -6,7 +6,7 @@ const Image = props => (
     <StaticQuery
         query={graphql`
       query {
-        images: allFile {
+        images: allFile (filter: {extension: {in: ["png","jpg", "svg", "jpeg"]}})  {
           edges {
             node {
               relativePath
@@ -25,8 +25,7 @@ const Image = props => (
             const image = data.images.edges.find(n => {
                 return n.node.relativePath.includes(props.filename);
             });
-            console.log('image : ', image)
-            console.log('image.node.childImageSharp.fluid.src : ', image.node.childImageSharp.fluid.src)
+            
             if (!image) {
                 return null;
             }

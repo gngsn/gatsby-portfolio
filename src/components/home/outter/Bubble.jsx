@@ -8,9 +8,9 @@ const Bubble = () => {
     const [screen, setScreen] = useState(getScreenSize());
 
     const motoList = [
-        { id: 0, title: "COMMUNICATION", desc: "함께라는 가치를 중요시하며\n주변 사람과 소통합니다." },
-        { id: 1, title: "GROWTH", desc: "항상 성장을 갈망하며,\n성장에 대한 남다른 열정을\n갖고 있습니다." },
-        { id: 2, title: "CONSTANTLY", desc: "어떤 일을 하든지\n포기하지 않고\n끝까지 해냅니다." }
+        { id: 0, title: "COMMUNICATION", desc: "Communicate with people, putting importance on the value of being together.", descKr: "함께라는 가치를 중요시하며\n주변 사람과 소통합니다." },
+        { id: 1, title: "GROWTH", desc: "Always crave for growth, and I have a special passion for it", descKr: "항상 성장을 갈망하며,\n성장에 대한 남다른 열정을\n갖고 있습니다."},
+        { id: 2, title: "CONSTANTLY", desc: "No matter what I do, I don't give up and even if it takes a long time, I will do it.", descKr: "어떤 일을 하든지\n포기하지 않고\n끝까지 해냅니다."}
     ];
 
     useEffect(() => {

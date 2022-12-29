@@ -20,7 +20,7 @@ const Inner = () => {
                             "Hi There 👋🏻\nMy name is Kyeongsun Park.", 1200,
                             "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area.", 1200,
                             "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 ", 1500,
-                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 \n\nLet's scroll up and get to know me 🔥"
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 \n\nScroll up and then you will get to know me 🔥"
                         ]}
                         wrapper="h1"
                     />

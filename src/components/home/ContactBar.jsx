@@ -21,7 +21,7 @@ const ContactBar = () => {
             <Box onClick={() => navigate("https://www.linkedin.com/in/kyeongsun-park")}>
                 <h2>LinkedIn</h2>
             </Box>
-            <Box class="info">
+            <Box className="info">
                 <div>
                 <h2>Kyeongsun Park </h2>
                 <h3>

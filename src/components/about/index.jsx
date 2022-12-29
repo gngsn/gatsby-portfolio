@@ -19,7 +19,7 @@ const Inner = () => {
         <Container light={theme === 'light'}>
             <Switch theme={theme} isOn={isOn} />
             <UnderTitle>
-                <UnderTitleH3>"한번 할 때 후회하지 않도록"</UnderTitleH3>
+                <UnderTitleH3>"Our greatest freedom is the freedom to choose our attitude"<br/><small> ― Victor Frankl</small></UnderTitleH3>
             </UnderTitle>
         </Container>
     )
@@ -46,9 +46,15 @@ const UnderTitle = styled.div`
 `;
 
 const UnderTitleH3 = styled.h3`
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-top: 40px;
-    
+    letter-spacing: 1px;
+
+    & > small {
+        opacity: 0.3;
+    line-height: 2;
+    font-size: 0.6%;
+    }
     ${device.tablet} {
         display: none;
         margin-top: 0px;

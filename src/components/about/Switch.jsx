@@ -30,12 +30,16 @@ const Inner = React.memo(({ theme, isOn }) => {
             <div>
                 <RightText>
                     <AnimationTextBox className={classNames('rightText', { '--active': turnOn })} >
+                        <h2>Play Hard</h2>
+                        {/* <h3></h3>
                         <h2> 어울릴 땐,</h2>
-                        <h3>밝은 에너지를</h3>
+                        <h3>밝은 에너지를</h3> */}
                     </AnimationTextBox>
                     <AnimationTextBox className={classNames('rightText', { '--active': !turnOn })}>
+                        <h2>Work Hard</h2>
+                        {/* <h3></h3>
                         <h2>개발할 땐,</h2>
-                        <h3>깊은 집중을</h3>
+                        <h3>깊은 집중을</h3> */}
                     </AnimationTextBox>
                 </RightText>
             </div>
@@ -137,7 +141,7 @@ const SmallText = styled.p`
 `;
 
 const OnOffText = styled.h1`
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     display: inline-block; 
     transition: all 300ms ease-in-out;
     text-align: center;
@@ -148,7 +152,7 @@ const OnOffText = styled.h1`
     }
 
     ${device.tablet} {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
 `;
 

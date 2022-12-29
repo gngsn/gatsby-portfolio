@@ -10,8 +10,8 @@ const sectionList = [
     },
     {
         key: 1,
-        title: 'DEVELOPER',
-        cate: 'developer',
+        title: 'DEVELOP',
+        cate: 'develop',
         description: <p>코딩을 재미로, 취미로, 놀이로, <br /> 끊임없는 호기심을 갖고 있습니다.</p>,
         isRight: true,
         skills: ['react', 'gatsbyjs', 'graphql', 'ios', 'swift', 'angular', 'unity'

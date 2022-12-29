@@ -10,13 +10,18 @@ const ContactBar = () => {
             <Box onClick={() => navigate("https://github.com/gngsn")}>
                 <h2>Github</h2>
             </Box>
-            <Box onClick={() => navigate("https://gngsn.tistory.com/")}>
-                <h2>Blog</h2>
+            <Box>
+                <Box onClick={() => navigate("https://medium.com/@gngsn")}>
+                    <h2>Medium</h2>
+                </Box>
+                <Box onClick={() => navigate("https://gngsn.tistory.com")}>
+                    <h2>Tistory</h2>
+                </Box>
             </Box>
             <Box onClick={() => navigate("https://www.linkedin.com/in/kyeongsun-park")}>
                 <h2>LinkedIn</h2>
             </Box>
-            <Box>
+            <Box class="info">
                 <div>
                 <h2>Kyeongsun Park </h2>
                 <h3>
@@ -40,6 +45,7 @@ const Block = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    flex-direction: row;
     border: 1px solid ${palette.black0};
 `;
 
@@ -54,7 +60,7 @@ const Box = styled.div`
     position: relative;
     height: 25vw;
     
-    &:last-child {
+    &.info {
         border-right: none;
         &:hover:before{
             content: none;

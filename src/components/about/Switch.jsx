@@ -31,15 +31,9 @@ const Inner = React.memo(({ theme, isOn }) => {
                 <RightText>
                     <AnimationTextBox className={classNames('rightText', { '--active': turnOn })} >
                         <h2>Play Hard</h2>
-                        {/* <h3></h3>
-                        <h2> 어울릴 땐,</h2>
-                        <h3>밝은 에너지를</h3> */}
                     </AnimationTextBox>
                     <AnimationTextBox className={classNames('rightText', { '--active': !turnOn })}>
                         <h2>Work Hard</h2>
-                        {/* <h3></h3>
-                        <h2>개발할 땐,</h2>
-                        <h3>깊은 집중을</h3> */}
                     </AnimationTextBox>
                 </RightText>
             </div>

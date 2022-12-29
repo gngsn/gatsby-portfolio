@@ -37,8 +37,8 @@ const Section = ({ data, projects }) => {
                 <Title>
                     <h2>{data.title}</h2>
                 </Title>
-                {/* {data.description} */}
-                <SkillList width={60} height={60} padding="0px 0px 20px" fontSize={1.5} list={data.skills} />
+                {data.description}
+                <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={data.skills} />
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>

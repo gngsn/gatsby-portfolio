@@ -16,11 +16,11 @@ const Inner = () => {
                     <TypeAnimation
                         cursor={true}
                         sequence={[
-                            'Hi There 👋🏻', 700, 
-                            "Hi There 👋🏻\nMy name is Kyeongsun Park.", 1200,
-                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area.", 1200,
-                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 ", 1500,
-                            "Hi There 👋🏻\nMy name is Kyeongsun Park. I'm a software engineer 💻 working in the backend area. I'm very curious 🔍 and outgoing 🌿 \n\nScroll up and you will get to know me 🔥"
+                            'Hi There 👋🏻', 200, 
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny.", 200,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny. I am a software engineer working on the back-end side.", 800,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny. I am a software engineer working on the back-end side. As a technology hobbyist, I love to learn 📚 and explore 🔍 new technologies.", 800,
+                            "Hi There 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny. I am a software engineer working on the back-end side. As a technology hobbyist, I love to learn 📚 and explore 🔍 new technologies.\n\nScroll up and you will get to know me 🔥", 800,
                         ]}
                         wrapper="h1"
                     />
@@ -59,7 +59,7 @@ const TextContainer = styled.div`
         width: 100%;
         margin: 0;
         line-height: 3.7rem;
-        font-size: 3rem;
+        font-size: 2.8rem;
         color: ${palette.primary};
         white-space: pre-line;
     }

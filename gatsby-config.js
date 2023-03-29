@@ -77,10 +77,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-adsense`,
+      resolve: `gatsby-plugin-translate`,
       options: {
-        publisherId: `ca-pub-4553219130656487`
-      },
-    },
+        sourceLanguage: 'en',
+        targetLanguages: ['kr']
+      }
+    }
   ],
 };

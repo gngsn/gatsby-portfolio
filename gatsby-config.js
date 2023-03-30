@@ -33,9 +33,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typescript",
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: "jsx", // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: "jsx",
+        allExtensions: true,
       },
     }, {
       resolve: `gatsby-plugin-google-fonts`,
@@ -75,13 +75,6 @@ module.exports = {
         trackingId: "UA-174913603-2",
         head: true,
       },
-    },
-    {
-      resolve: `gatsby-plugin-translate`,
-      options: {
-        sourceLanguage: 'en',
-        targetLanguages: ['kr']
-      }
     }
   ],
 };

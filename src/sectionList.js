@@ -4,7 +4,7 @@ const sectionList = [
         key: 0,
         title: 'BACKEND',
         cate: 'backend',
-        description: <p>서버에 대한 호기심, 흥미 그리고 도전. <br/ > 더 배우고 싶은 열정으로 쉼없이 뛰어왔습니다.</p>,
+        description: <p> Curiosity, interest, and the challenge of working with backend systems. <br/> A passion for learning and always eager to explore new knowledge. </p>,
         skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb', 'php'],
         project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'pondan', 'tooc']
     },
@@ -12,7 +12,7 @@ const sectionList = [
         key: 1,
         title: 'DEVELOP',
         cate: 'develop',
-        description: <p>코딩을 재미로, 취미로, 놀이로, <br /> 끊임없는 호기심을 갖고 있습니다.</p>,
+        description: <p> Code every day for the sake of habit, enjoyment, and the pleasure of learning. <br/> Yes, I am an enthusiastic developer. </p>,
         isRight: true,
         skills: ['react', 'gatsbyjs', 'graphql', 'ios', 'swift', 'angular', 'unity'
         ],
@@ -22,7 +22,7 @@ const sectionList = [
         key: 2,
         title: 'DESIGNER',
         cate: 'design',
-        description: <p>가보지 않은 길에 두려움을 없애고, <br /> 다양한 도전을 시도합니다.</p>,
+        description: <p> Enjoy taking on new challenges and persisting <br/> until I succeed, without being afraid of failure. </p>,
         skills: ['illustrator', 'photoshop', 'xd', 'after-effects', '3ds-max'],
         project: ['hci', 'cardnews', '3ds-max']
     },

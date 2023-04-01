@@ -31,13 +31,8 @@ function CursorSpotlight({ className = '', spotlightStyle }) {
     return (
         <Cursor>
         <div className='cursor' 
-            // className={className} 
             onMouseMove={onMouseMove}
             style={{
-                // width,
-                // height,
-                // borderRadius: radius,
-                // borderColor: backgroundColor,
                 left: `${position.x}px`,
                 top: `${position.y}px`
             }}>
@@ -55,7 +50,6 @@ const Cursor = styled.div`
 
     .cursor {
         animation: glow 1s linear forwards;
-        // width: 100px;
         width: 30vw;
         height: 30vw;
         transform: translateX(-50%) translateY(-50%);
@@ -96,24 +90,12 @@ const Cursor = styled.div`
     background-color: white;
 
     box-shadow: 0 0 1rem 2rem white;
-
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
-    // // z-index:20;
-    // transform: translate(-50%, -50%);
-    // width: 100px;
-    // height: 100px;
-    // border-radius: 50%;
-    // border-width: 9999px;
-    // border-style: solid;
-    // border-color: #000;
   }
 
   .circle {
     width: 40%;
     height: 40%;
-}
+  }
   `;
 
 export default CursorSpotlight;

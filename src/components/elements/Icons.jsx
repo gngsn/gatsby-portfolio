@@ -1,24 +1,31 @@
 import React from 'react';
 
-const CustomIcon = React.memo(({   name, width = 60, height = 60, fontSize, style = {} }) => {
-    // const styles = { width, height, verticalAlign: 'middle' }
+const CustomIcon = React.memo(({name, width = 60, height = 60, fontSize, style = {} }) => {
     const styles = { ...style, width, height, verticalAlign: 'middle' }
 
     if (name === 'spring') {
         return (
             <img style={styles} src="/svg/spring.svg" alt="spring" />
         );
+    } else if (name === 'spring-batch') {
+        return (
+            <img style={styles} src="/img/spring-batch.png" alt="spring-batch" />
+        );
+    } else if (name === 'spring-cloud') {
+        return (
+            <img style={styles} src="/img/spring-cloud.png" alt="spring-cloud" />
+        );
+    } else if (name === 'java') {
+        return (
+            <img style={styles} src="/svg/java.svg" alt="java" />
+        );
     } else if (name === 'node') {
         return (
             <img style={styles} src="/svg/nodejs.svg" alt="node" />
         );
-    } else if (name === 'php') {
-        return (
-            <img style={styles} src="/svg/php.svg" alt="php" />
-        );
     } else if (name === 'nextjs') {
         return (
-            <img style={styles} className="ch" src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/nextjs.png" alt="mysql" />
+            <img style={styles} className="ch" src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/nextjs.png" alt="nextjs" />
         );
     } else if (name === 'aws') {
         return (

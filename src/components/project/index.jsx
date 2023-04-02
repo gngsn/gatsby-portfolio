@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import useProjects from '../../lib/hooks/useProjects';
+// import useProjects from '../../lib/hooks/useProjects';
 import sectionList from '../../sectionList';
 import Section from './Section';
-import GoogleTranslate from './GoogleTranslate';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Project = ({ data }) => {
-    const { setProjects } = useProjects();
-    setProjects(data);
+    // const { setProjects } = useProjects(data);
+    // setProjects();
 
     return (
         <Block>

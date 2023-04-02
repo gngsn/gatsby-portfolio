@@ -5,7 +5,7 @@ const sectionList = [
         title: 'BACKEND',
         cate: 'backend',
         description: <p> Curiosity, interest, and the challenge of working with backend systems. <br/> A passion for learning and always eager to explore new knowledge. </p>,
-        skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb', 'php'],
+        skills: ['spring', 'node', 'aws', 'nginx', 'docker', 'mysql', 'linux', 'mongodb'],
         project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'pondan', 'tooc']
     },
     {

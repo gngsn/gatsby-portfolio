@@ -1,6 +1,11 @@
+const {
+  languages,
+  defaultLanguage
+} = require('./src/modules/languages.ts');
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://kyeongsun.com",
     title: "portfolio",
   },
   plugins: [
@@ -74,6 +79,22 @@ module.exports = {
       options: {
         trackingId: "UA-174913603-2",
         head: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-i18next',
+      options: {
+        languages,
+        defaultLanguage,
+        // siteUrl,
+        i18nextOptions: {
+          fallbackLng: defaultLanguage,
+          supportedLngs: languages,
+          defaultNS: 'common',
+          interpolation: {
+            escapeValue: false,
+          }
+        },
       },
     }
   ],

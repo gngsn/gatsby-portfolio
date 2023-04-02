@@ -3,14 +3,14 @@ import { Link as L } from 'gatsby';
 
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
+
 import { device } from '../../lib/styles/sizes';
 
 const Header = () => {
     const menuList = [
         { title: "park.", link: "/" },
         { title: "about.", link: "/about" },
-        { title: "proj.", link: "/project" },
-        // { title: "blog.", link: "https://gngsn.tistory.com/" },
+        { title: "proj.", link: "/project" }
     ];
 
     return (

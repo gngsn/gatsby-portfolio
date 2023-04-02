@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import useProjects from '../../lib/hooks/useProjects';
 import sectionList from '../../sectionList';
 import Section from './Section';
-import GoogleTranslate from './GoogleTranslate';
+// import GoogleTranslate from './GoogleTranslate';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -16,10 +16,11 @@ const Project = ({ data }) => {
     return (
         <Block>
             {
-                sectionList.map((_section) => {
-                    const projects = data.filter(item => _section.project.includes(item.slug));
-                    return <Section key={_section.key} data={_section} projects={projects}/>;
-                })
+                sectionList.map((_section) => 
+                    <Section key={_section.key} data={_section} projects={
+                        data.filter(item => _section.project.includes(item.slug))
+                    }/>
+                )
             }
         </Block>
     );

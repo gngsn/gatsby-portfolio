@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 
 import SkillList from './SkillList';
-import List from './List';
+import ProjectList from './ProjectList';
 import palette from '../../lib/styles/palette';
 
 import styled from 'styled-components';
@@ -12,12 +12,7 @@ const Section = ({ data, projects }) => {
     const [shortcut, setShortcut] = useState({});
     const shortCutDom = useRef();
 
-    const hideShortcut = () => {
-        setOpen(false);
-    }
-
-    const showShortcut = (data) => {
-        
+    const showShortcutSection = (data) => {
         let scrollTop = typeof window !== "undefined" ? window.pageYOffset : 0;
         const headerOutsideIframe = 160;
         const finalOffset = shortCutDom.current.getBoundingClientRect().top + scrollTop - headerOutsideIframe;
@@ -30,6 +25,10 @@ const Section = ({ data, projects }) => {
         setShortcut(data);
         setOpen(true);
     };
+    
+    const hideShortcutSection = () => {
+        setOpen(false);
+    }
     
     return (
         <>
@@ -44,7 +43,7 @@ const Section = ({ data, projects }) => {
                 <ShortCutContainer open={open}>
                     <ShortCut open={open}>
                         <ShortCutDetail>
-                            <CancelBtn src='/img/cancel.png' onClick={hideShortcut} />
+                            <CancelBtn src='/img/cancel.png' onClick={hideShortcutSection} />
                             <h2>{shortcut.duration}</h2>
                             <h1>{shortcut.title}</h1>
                             {
@@ -52,11 +51,11 @@ const Section = ({ data, projects }) => {
                                     <p>
                                         {shortcut.summary}
                                         <HashTag>
-                                    {
+                                        {
                                             shortcut.subTitle.map(tit => (
                                                 <span key={tit}>{tit} &nbsp;&nbsp;&nbsp;</span>
                                             ))
-                                    }
+                                        }
                                         </HashTag>
                                     </p> :
                                     <></>
@@ -72,7 +71,7 @@ const Section = ({ data, projects }) => {
                 </ShortCutContainer>
                 {
                     projects ?
-                        <List flipId="square" handleClick={showShortcut} project={projects} />
+                        <ProjectList flipId="square" handleClick={showShortcutSection} project={projects} />
                     : null
                 }
             </div>

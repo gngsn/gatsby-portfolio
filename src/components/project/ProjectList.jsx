@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { device } from '../../lib/styles/sizes';
 
-const List = React.memo(({ handleClick, project }) => {
+const ProjectList = React.memo(({ handleClick, project }) => {
 
     return (
         <Block>
@@ -31,7 +31,7 @@ const Block = styled.div`
 const ImageStyle = styled.div`
     background-image: ${props => 'url(' + props.image + ')'};
     background-position: center center; background-size: cover;
-    flex-basis: 30%;
+    flex-basis: ${({ flexBasis = '30%' }) => flexBasis};
     width: 100%;
     height: 200px;
     margin: 10px auto 10px 0;
@@ -58,4 +58,4 @@ const ImageStyle = styled.div`
     }
 `;
 
-export default List;
+export default ProjectList;

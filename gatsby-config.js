@@ -86,7 +86,6 @@ module.exports = {
       options: {
         languages,
         defaultLanguage,
-        // siteUrl,
         i18nextOptions: {
           fallbackLng: defaultLanguage,
           supportedLngs: languages,

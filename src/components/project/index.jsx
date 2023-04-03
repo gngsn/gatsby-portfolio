@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import useProjects from '../../lib/hooks/useProjects';
 import sectionList from '../../sectionList';
 import Section from './Section';
 
@@ -9,8 +8,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Project = ({ data }) => {
-    // const { setProjects } = useProjects(data);
-    // setProjects();
 
     return (
         <Block>

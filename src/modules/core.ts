@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface CoreState {
     size: string;
-    theme: string;
+    lang: string;
     projects: Array<Object>;
 };
 
 const initialState: CoreState = {
     size: 'md',
-    theme: 'light',
+    lang: 'en',
     projects: []
 };
 
@@ -16,11 +16,10 @@ const coreSlice = createSlice({
     name: 'core',
     initialState,
     reducers: {
-        setTheme(state,
-            action: PayloadAction<{
-                theme: string
+        setLang(state, action: PayloadAction<{
+                lang: string
             }>) {
-            state.theme = action.payload.theme;
+            state.lang = action.payload.lang;
         },
         setProjects(state,
             action: PayloadAction<{

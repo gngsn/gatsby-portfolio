@@ -3,16 +3,17 @@ import styled from 'styled-components';
 
 import { device } from '../../lib/styles/sizes';
 
-const ProjectList = React.memo(({ handleClick, project }) => {
+const ProjectCardView = React.memo(({ handleClick, project }) => {
 
     return (
         <Block>
             {
                 project.map(data => {
                     return (
-                    <ImageStyle key={data.id} image={data.thumbnail} onClick={() => handleClick(data)} data-link={data.link}>
+                        <ImageStyle key={data.id} image={data.thumbnail} className='link' onClick={() => handleClick(data)} data-link={data.link}>
                         <div>
                             <h1>{data.title}</h1>
+                            <p>{data.duration}</p>
                             <p>{data.subTitle}</p>
                         </div>
                     </ImageStyle>);
@@ -25,11 +26,12 @@ const ProjectList = React.memo(({ handleClick, project }) => {
 const Block = styled.div`
     display: flex; flex-wrap: wrap;
     align-items: center; justify-content: space-around;
-    max-width: 900px; width: 100%; margin: 0 auto;
+    max-width: 1000px; 
+    width: 100%; margin: 0 auto;
     padding: 0 20px;
 `;
 const ImageStyle = styled.div`
-    background-image: ${props => 'url(' + props.image + ')'};
+    ${({ image }) => image ? 'background-image: url(' + image + ')' : 'background-color: black'};
     background-position: center center; background-size: cover;
     flex-basis: ${({ flexBasis = '30%' }) => flexBasis};
     width: 100%;
@@ -58,4 +60,4 @@ const ImageStyle = styled.div`
     }
 `;
 
-export default ProjectList;
+export default ProjectCardView;

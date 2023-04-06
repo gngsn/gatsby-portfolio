@@ -2,11 +2,11 @@ import React from 'react';
 import Icon from '../elements/Icons';
 import styled from 'styled-components';
 
-const SkillList = ({ list, width, height, padding = 20, fontSize =1.2}) => {
+const SkillList = ({ list, width, height, padding = 20, fontSize = 1.2}) => {
     return (
         <Skills padding={padding} >
             {
-            list.map((icon, index) => (
+            list.map((icon) => (
                 <SkillIcon key={icon}>
                     <Icon name={icon} width={width} height={height} fontSize={fontSize} />
                 </SkillIcon>
@@ -25,7 +25,7 @@ const SkillIcon = styled.div`
     max-width: ${({ width }) => isNaN(width) ? width : width + 'px'};
     max-height: ${({ height }) => isNaN(height) ? height : height + 'px'};
     margin: auto 10px auto 0px;
-    @media all and (max-width: 900px) {
+    @media all and (max-width: 1000px) {
         max-width: 54px;
         max-height: 54px;
     }

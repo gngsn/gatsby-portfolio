@@ -10,7 +10,7 @@ const contact = () => {
     return (
         <>
         <Block>
-            <h1> contact. </h1>
+            <h1 id="contact"> contact. </h1>
             <ContactForm />
         </Block>
         <ContactBar />

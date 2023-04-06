@@ -22,7 +22,7 @@ const bubbleData = [
     ["Spring", 4],
     ["React", 3],
     ["🥁"],
-    ["AWS", 2],
+    ["AWS", 3],
     ["Nginx", 3],
     ["Mongodb", 2],
     ["🔥"],

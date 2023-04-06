@@ -15,6 +15,10 @@ const CustomIcon = React.memo(({name, width = 60, height = 60, fontSize, style =
         return (
             <img style={styles} src="/img/spring-cloud.png" alt="spring-cloud" />
         );
+    } else if (name === 'jenkins') {
+        return (
+            <img style={styles} src="/svg/jenkins.svg" alt="jenkins" />
+        );
     } else if (name === 'java') {
         return (
             <img style={styles} src="/svg/java.svg" alt="java" />

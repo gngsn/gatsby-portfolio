@@ -1,26 +1,21 @@
 import React from "react";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
+import { composeWithDevTools } from "@redux-devtools/extension";
 
 import rootReducer, { RootState } from "../../modules";
 import Header from "./Header";
 import Cursor from "./Cursor";
 import Metadata from "./Metadata";
+import { configureStore } from "@reduxjs/toolkit";
 
 const isBrowser = typeof window !== "undefined";
-let store = createStore(
-    rootReducer,
-    composeWithDevTools(),
-);
+let store = configureStore({
+    reducer: rootReducer
+});
 
 if (isBrowser) {
     document.cookie = "cross-site-cookie=bar; SameSite=None; Secure";
-    store = createStore(
-        rootReducer,
-        window.__REDUX_STATE__,
-        composeWithDevTools(),
-    );
 }
 
 interface ContextProviderProps {

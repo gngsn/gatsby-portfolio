@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import styled from 'styled-components';
 
-import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from '../../lib/styles/markdown';
+import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from './mdComponent';
 import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
 
@@ -79,7 +79,6 @@ const Cancel = styled.div`
         background-color: ${palette.background};
         border-top: 1px solid ${palette.black0};
         &:after {
-            // display: block;
             position: absolute;
             content: 'close.';
             font-family: 'Fira Code',Roboto,monospace;
@@ -95,7 +94,7 @@ const CancelImage = styled.img`
 `;
 
 const ContentLayout = styled.div`
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 100px 50px;
     section {

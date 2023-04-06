@@ -10,29 +10,6 @@ const Cursor = () => {
     const [linkHovered, setLinkHovered] = useState(false);
     const [diffHovered, setDiffHovered] = useState(false);
 
-    const addEventListeners = () => {
-        document.addEventListener("mousemove", onMouseMove);
-        document.addEventListener("mouseenter", onMouseEnter);
-        document.addEventListener("mouseleave", onMouseLeave);
-        document.addEventListener("mousedown", onMouseDown);
-        document.addEventListener("mouseup", onMouseUp);
-    };
-
-    const removeEventListeners = () => {
-        document.removeEventListener("mousemove", onMouseMove);
-        document.removeEventListener("mouseenter", onMouseEnter);
-        document.removeEventListener("mouseleave", onMouseLeave);
-        document.removeEventListener("mousedown", onMouseDown);
-        document.removeEventListener("mouseup", onMouseUp);
-    };
-
-
-    useEffect(() => {
-        addEventListeners();
-        handleLinkHoverEvents();
-        return () => removeEventListeners();
-    }, []);
-
     const handleLinkHoverEvents = () => {
         document.querySelectorAll(".link").forEach(el => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
@@ -44,6 +21,27 @@ const Cursor = () => {
         });
     };
 
+    useEffect(() => {
+        const addEventListeners = () => {
+            document.addEventListener("mousemove", onMouseMove);
+            document.addEventListener("mouseenter", onMouseEnter);
+            document.addEventListener("mouseleave", onMouseLeave);
+            document.addEventListener("mousedown", onMouseDown);
+            document.addEventListener("mouseup", onMouseUp);
+        };
+        
+        const removeEventListeners = () => {
+            document.removeEventListener("mousemove", onMouseMove);
+            document.removeEventListener("mouseenter", onMouseEnter);
+            document.removeEventListener("mouseleave", onMouseLeave);
+            document.removeEventListener("mousedown", onMouseDown);
+            document.removeEventListener("mouseup", onMouseUp);
+        };
+
+        addEventListeners();
+        handleLinkHoverEvents();
+        return () => removeEventListeners();
+    }, []);
 
     const onMouseDown = () => {
         setClicked(true);
@@ -108,8 +106,16 @@ const Block = styled.div`
     }
 
     .cursor--link-hovered {
+        &:before {
+            content: "CLICK";
+            bottom: -15px;
+            position: absolute;
+            font-size: 70%;
+            color: ${palette.primary};
+        }
         animation: circle .6s infinite alternate;
     }
+
     .cursor--link-diff-hovered {
         mix-blend-mode: difference;
     }

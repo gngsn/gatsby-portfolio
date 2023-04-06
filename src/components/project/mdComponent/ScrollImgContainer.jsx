@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import BaseElement from './BaseElement';
-import palette from '../palette';
+import palette from '../../../lib/styles/palette';
 
 const ScrollImgContainer = styled.div`
     ${BaseElement};

@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const GET_PROJECTS = graphql`
+export const get_mdx_project_data = graphql`
 query GetProjects {
     allMdx(sort: {order: DESC, fields: exports___metadata___duration}) {
     edges {

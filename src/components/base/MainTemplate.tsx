@@ -13,12 +13,7 @@ const BackgroundStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, p, a, input, textarea, div, img {
-    // font-family: 'Nanum Gothic Coding', monospace;
-    // font-family: 'Hahmlet', serif;
     font-family: 'Fira Code', Roboto, monospace;
-    // font-family: 'Source Code Pro', monospace;
-    // font-family: 'Gideon Roman', cursive;
-    // font-family: 'Lora', serif;
     cursor: none;
   }
 

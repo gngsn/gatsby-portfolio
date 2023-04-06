@@ -1,23 +1,19 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 
+import styled from 'styled-components';
+
 import SkillList from './SkillList';
-import List from './List';
+import ProjectCardView from './ProjectCardView';
 import palette from '../../lib/styles/palette';
 
-import styled from 'styled-components';
 
 const Section = ({ data, projects }) => {
     const [open, setOpen] = useState(false);
     const [shortcut, setShortcut] = useState({});
     const shortCutDom = useRef();
 
-    const hideShortcut = () => {
-        setOpen(false);
-    }
-
-    const showShortcut = (data) => {
-        
+    const showShortcutSection = (data) => {
         let scrollTop = typeof window !== "undefined" ? window.pageYOffset : 0;
         const headerOutsideIframe = 160;
         const finalOffset = shortCutDom.current.getBoundingClientRect().top + scrollTop - headerOutsideIframe;
@@ -31,20 +27,24 @@ const Section = ({ data, projects }) => {
         setOpen(true);
     };
     
+    const hideShortcutSection = () => {
+        setOpen(false);
+    }
+    
     return (
         <>
             <Info right={data.key % 2 === 1}>
                 <Title>
                     <h2>{data.title}</h2>
                 </Title>
-                {data.description}
+                <p>{data.description}</p>
                 <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={data.skills} />
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>
                     <ShortCut open={open}>
                         <ShortCutDetail>
-                            <CancelBtn src='/img/cancel.png' onClick={hideShortcut} />
+                            <CancelBtn className='link' src='/img/cancel.png' onClick={hideShortcutSection} />
                             <h2>{shortcut.duration}</h2>
                             <h1>{shortcut.title}</h1>
                             {
@@ -52,11 +52,11 @@ const Section = ({ data, projects }) => {
                                     <p>
                                         {shortcut.summary}
                                         <HashTag>
-                                    {
+                                        {
                                             shortcut.subTitle.map(tit => (
                                                 <span key={tit}>{tit} &nbsp;&nbsp;&nbsp;</span>
                                             ))
-                                    }
+                                        }
                                         </HashTag>
                                     </p> :
                                     <></>
@@ -66,13 +66,13 @@ const Section = ({ data, projects }) => {
                                     <SkillList width={30} height={30} padding={5} fontSize={1.5} list={shortcut.skillStack} /> :
                                     <></>
                             }
-                            <Link to={`/project/${shortcut.link}`}>&gt;&gt; 자세히 보기</Link>
+                            <Link className='link' to={`/project/${shortcut.link}`}>&gt;&gt; 자세히 보기</Link>
                         </ShortCutDetail>
                     </ShortCut>
                 </ShortCutContainer>
                 {
                     projects ?
-                        <List flipId="square" handleClick={showShortcut} project={projects} />
+                        <ProjectCardView flipId="square" handleClick={showShortcutSection} project={projects} />
                     : null
                 }
             </div>

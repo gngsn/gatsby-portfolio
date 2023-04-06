@@ -12,8 +12,6 @@ const languages = readdirSync(join(__dirname, '../locales')).filter((fileName) =
     return isDirectory
 });
 
-// console.log("\n\n\n\n\n\n\n\n\n\nlanguages: ", languages)
-
 languages.splice(languages.indexOf(defaultLanguage), 1);
 languages.unshift(defaultLanguage);
 

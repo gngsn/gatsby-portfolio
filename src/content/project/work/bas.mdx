@@ -1,0 +1,56 @@
+export const metadata = {
+        title: 'Billing Account System',
+        duration: '2022.06 ~ 2022.09',
+        subTitle: ['# Spring Batch # Billing # DataWarehouse'],
+        thumbnail: '/img/billingAccount/springboot-springbatch.png',
+        link: 'work/bas',
+        summary: '자체 적재한 결제 데이터와 외부 플랫폼의 원장(결제 데이터) 비교를 위한 기반 시스템 제작. 구글 플레이스토어, 애플 앱스토어, 페이레터 등 매출이 발생하는 채널로부터의 데이터 수집 Data Warehouse를 구축. 정확성 및 신뢰성을 기반한 원장 비교 분석 플랫폼 설계 및 제작',
+        skillStack: ['spring-batch', 'spring', 'java', 'mysql']
+}
+
+<div>
+        <section>
+                <h3> 주요업무</h3>
+                <ol>
+                        <li> 
+                                <p>원장 비교 플랫폼 설계 및 제작</p>
+                                <p>- 자체 적재한 결제 데이터와 외부 플랫폼의 원장(결제 데이터) 비교</p>
+                                <p>- 구글 플레이스토어, 애플 앱스토어, 페이레터 등 매출이 발생하는 채널로부터의 데이터 수집 DW구축</p>
+                                <p>- 정확성 및 신뢰성을 기반한 원장 비교 분석 플랫폼 설계 및 제작</p>
+                        </li>
+                        <li><p>Multi Module Project: Support, API, Web, 두 개의 Batch 모듈, 총 5개의 모듈로 구성된 프로젝트 제작</p></li>
+                        <li><p>설계 및 개발 과정까지 모두 주체적이고 주도적으로 진행</p></li>
+                </ol>
+                <br/>
+                <h3> 성과</h3>
+                <ol>
+                        <li> 
+                                <p>최종 빌링 데이터 일관성을 위한 코드 작업 및 환경 세팅</p>
+                                <p>- ‘기간 별 배치’와 ‘수동 일정 기입 배치’ 설정 값을 인자로 받도록 Jenkins 설정 및 자동 실행 세팅 설계</p>
+                        </li>
+                        <li> 
+                                <p>DB CPU와 네트워크 성능을 고려한 개발</p>
+                                <p>- 데이터 Chunk 단위 처리</p>
+                                <p>- Covering Index 처리</p>
+                                <p>- Thread Sleep Time 설정으로 각 작업 사이 부하 시간 조절</p>
+                                <p>- 대용량 데이터 처리: visualVM을 이용한 Heap 메모리 모니터링</p>
+                        </li>
+                        <li> 
+                                <p>SQL 쿼리 개선으로 DB CPU 최대 65% → 최대 35%로 부하 절감</p>
+                                <p>- WHERE 절 인덱스 미적용 → 서비스 로직 Paging 처리.</p>
+                        </li> 
+                        <li> 
+                                <p>특이 데이터(예. 국가 별 원천징수제)를 분기 저장하여 데이터 신뢰성 확보</p>
+                        </li> 
+                        <li>
+                                <p>해외 데이터 처리를 위한 Time Zone 과 환율 고려</p>
+                        </li> 
+                        <li> 
+                                <p>Spring Batch 상세 문서화로 배치 관리 현황 엑셀 관리 포맷 생성</p>
+                        </li> 
+                        <li> 
+                                <p>팀 내 범용적으로 사용 가능한 컴포넌트 제작</p>
+                        </li> 
+                </ol>
+        </section>
+</div>

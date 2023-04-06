@@ -42,18 +42,6 @@ module.exports = {
         jsxPragma: "jsx",
         allExtensions: true,
       },
-    }, {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Fira Code`,
-          `Nanum Gothic Coding`,
-          `Lora`,
-          `Source Code Pro`,
-          `Gideon Roman`
-        ],
-        display: 'swap'
-      }
     },
     {
       resolve: `gatsby-plugin-sharp`,
@@ -79,21 +67,6 @@ module.exports = {
       options: {
         trackingId: "UA-174913603-2",
         head: true,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-i18next',
-      options: {
-        languages,
-        defaultLanguage,
-        i18nextOptions: {
-          fallbackLng: defaultLanguage,
-          supportedLngs: languages,
-          defaultNS: 'common',
-          interpolation: {
-            escapeValue: false,
-          }
-        },
       },
     }
   ],

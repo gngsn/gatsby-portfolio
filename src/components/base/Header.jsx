@@ -9,6 +9,7 @@ import { device } from '../../lib/styles/sizes';
 const Header = () => {
     const menuList = [
         { title: "park.", link: "/" },
+        { title: "contact.", link: "/#contact" },
         { title: "about.", link: "/about" },
         { title: "proj.", link: "/project" }
     ];

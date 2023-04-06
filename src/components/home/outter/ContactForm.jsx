@@ -20,7 +20,7 @@ const ContactForm = () => {
     const handleOnSubmit = (values, actions) => {
         axios({
             method: "POST",
-            url: "http://formspree.io/moqpvnpw",
+            url: "https://formspree.io/f/moqpvnpw",
             data: values
         }).then(response => {
             actions.setSubmitting(false);

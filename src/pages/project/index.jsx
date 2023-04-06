@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import ContextProvider from "../../components/base/Layout";
 import MainTemplate from "../../components/base/MainTemplate";
 import Project from "../../components/project";
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const GET_PROJECTS = graphql`
+export const get_mdx_project_data = graphql`
 query GetProjects {
     allMdx(sort: {order: DESC, fields: exports___metadata___duration}) {
     edges {

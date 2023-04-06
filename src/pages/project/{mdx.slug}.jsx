@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import ContextProvider from "../../components/base/Layout";
 import MainTemplate from "../../components/base/MainTemplate";
-import ProjectDetail from "../../components/project/DetailLayout";
+import ProjectDetail from "../../components/project/ProjectContent";
 
 
 const IndexPage = ({ data }) => {

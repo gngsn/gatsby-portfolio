@@ -1,5 +1,5 @@
 const path = require("path")
-const postTemplate = path.resolve(`./src/pages/project/template.jsx`)
+const postTemplate = path.resolve(`./src/components/project/template.jsx`)
 
 exports.createPages = async ({
   graphql,

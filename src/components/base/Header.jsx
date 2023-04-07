@@ -31,12 +31,14 @@ const Block = styled.div`
     cursor: none;
     border-bottom: 1px solid #000;
     background-color: ${palette.background};
-    position: fixed; display: flex; 
+    position: fixed; 
+    display: flex; 
     z-index: 10; 
     top: 0%; 
     width: 100%; 
     ${device.mobile} {
         flex-wrap: wrap;
+        border-bottom: none;
     }
 `;
     
@@ -60,6 +62,10 @@ const Link = styled(L)`
         ${device.tablet} {
             border-right: none;
         }
+        ${device.mobile} {
+            color: white;
+            background-color: ${palette.primary};
+        }
     }
 
     ${device.mobile} {
@@ -67,10 +73,7 @@ const Link = styled(L)`
         flex-basis: 50%;
         font-size: 1.5rem;
         border-left: 1px solid ${palette.black0};
-        &:first-child {
-            flex-basis: 100%;
-            border-bottom: 1px solid ${palette.black0};
-        }
+        border-bottom: 1px solid ${palette.black0};
     }
 `;
 

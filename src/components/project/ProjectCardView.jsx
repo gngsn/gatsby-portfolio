@@ -24,13 +24,20 @@ const ProjectCardView = React.memo(({ handleClick, projects }) => {
 });
 
 const Block = styled.div`
-display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     align-items: center; justify-content: space-around;
     max-width: 1000px; 
     width: 100%; margin: 0 auto;
     padding: 0 20px;
+
+    ${device.tablet} {
+        grid-template-columns: 1fr 1fr;
+    }
+    ${device.mobile} {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const ImageStyle = styled.div`
@@ -53,13 +60,6 @@ const ImageStyle = styled.div`
     p {font-size: .8rem;}
     &:hover {
         box-shadow: 2px 8px 19px 4px rgb(134,134,134);
-    }
-
-    ${device.tablet} {
-        flex-basis: 45%;
-    }
-    ${device.mobile} {
-        flex-basis: 100%;
     }
 `;
 

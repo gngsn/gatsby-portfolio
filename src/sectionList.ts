@@ -30,7 +30,7 @@ const sectionList: Array<ISection> = [
         cate: 'design',
         description: 'Enjoy taking on new challenges and persisting until I succeed, without being afraid of failure.',
         skills: ['illustrator', 'photoshop', 'xd', 'after-effects', '3ds-max'],
-        project: ['hci', 'cardnews', '3ds-max']
+        project: ['hci', 'cardnews', 'max3ds']
     },
 ];
 

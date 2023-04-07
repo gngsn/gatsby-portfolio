@@ -63,6 +63,15 @@ module.exports = {
         trackingId: "UA-174913603-2",
         head: true,
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Fira Code`, 'Roboto'
+        ],
+        display: 'swap'
+      }
     }
   ],
 };

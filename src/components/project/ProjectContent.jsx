@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from "gatsby-plugin-mdx";
 import styled from 'styled-components';
 
 import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from './mdComponent';
@@ -9,8 +8,8 @@ import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
 
 const components = {
-    QuotationMarksTitle, 
-    FlexBox, 
+    QuotationMarksTitle,
+    FlexBox,
     Paragraph,
     SkillList,
     ScrollImgContainer,
@@ -18,7 +17,7 @@ const components = {
     LinkIcon
 }
 
-const ProjectDetail = React.memo(({ data }) => {
+const ProjectDetail = React.memo(({ data, body }) => {
 
     return (
         <Block>
@@ -27,26 +26,23 @@ const ProjectDetail = React.memo(({ data }) => {
                     <PageLayout>
                         <Cancel>
                             <Link to='/project'>
-                                <CancelImage src='/img/cancel.png'/>
+                                <CancelImage src='/img/cancel.png' />
                             </Link>
                         </Cancel>
                         <div>
                             <ContentLayout>
-                            <h1> {data.title}</h1>
-                            <h2> {data.duration} </h2>
-                            {
-                                data.body? 
-                                <MDXProvider components={components}>
-                                    <MDXRenderer> 
-                                        {data.body}
-                                    </MDXRenderer >
-                                </MDXProvider> : null
-                            }
+                                <h1> {data.title}</h1>
+                                <h2> {data.duration} </h2>
+                                {
+                                    body ?
+                                        <MDXProvider components={components}> {body} </MDXProvider>
+                                        : null
+                                }
                             </ContentLayout>
                         </div>
                     </PageLayout>
-                :
-                <></>
+                    :
+                    <></>
             }
         </Block>
     )

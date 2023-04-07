@@ -72,7 +72,7 @@ const Section = ({ data, projects }) => {
                 </ShortCutContainer>
                 {
                     projects ?
-                        <ProjectCardView flipId="square" handleClick={showShortcutSection} project={projects} />
+                        <ProjectCardView flipId="square" handleClick={showShortcutSection} projects={projects} />
                     : null
                 }
             </div>

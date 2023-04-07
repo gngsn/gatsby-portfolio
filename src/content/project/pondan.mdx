@@ -1,15 +1,22 @@
+---
+title: "pondan"
+slug: "pondan"
+---
 import PdfSlider from '../../components/elements/PdfSlider'
 
 <div className="pondan">
     <section>
         <QuotationMarksTitle> # 당신은 어떤 사람인가요? </QuotationMarksTitle>
-        <Paragraph mb={40}> 나를 향한 중독, 몰입
-        <br/><br/>
-        가볍게 호수에 돌멩이를 퐁-당 던지듯,<br/>
-        가벼운 질문으로 시작해서, 나의 심연으로 몰입하는 시간을 제공하는 서비스 ‘퐁당’
-        <br/><br/>
-        지독한 자기 몰입의 상징, 나르키소스(Narcissos)<br/>
-        그리스 신화에서 호수에 비친 자기 모습을 사랑하며 그리워하다가 물에 빠져 죽은 나르키소스(Narcissos)로부터 모티브를 얻었습니다.
+        <Paragraph mb={40}> 
+            나를 향한 중독, 몰입
+            <br/><br/>
+            가볍게 호수에 돌멩이를 퐁-당 던지듯,
+            <br/>
+            가벼운 질문으로 시작해서, 나의 심연으로 몰입하는 시간을 제공하는 서비스 ‘퐁당’
+            <br/><br/>
+            지독한 자기 몰입의 상징, 나르키소스(Narcissos)
+            <br/>
+            그리스 신화에서 호수에 비친 자기 모습을 사랑하며 그리워하다가 물에 빠져 죽은 나르키소스(Narcissos)로부터 모티브를 얻었습니다.
         </Paragraph>
         <PdfSlider toShow={7} images={[...Array(25).keys()].map(i => `/img/pondan/pondan_slide_${i+1}.png`)} />
     </section>
@@ -18,15 +25,3 @@ import PdfSlider from '../../components/elements/PdfSlider'
         <iframe width="840" height="630" src="/img/pondan/capture.MP4" />
     </section>
 </div>
-
-export const metadata = {
-    title: 'pondan',
-    duration: '2020.11.21 ~ 2020.11.22',
-    subTitle: ['# hackaton'],
-    thumbnail: '/img/pondan/banner-dark.png',
-    backImage: '/img/pondan/banner-dark.png',
-    shortcutImage: '/img/pondan/banner.png',
-    link: 'pondan',
-    summary: 'SOPT Hackaton으로 하루동안 제작한 작은 프로젝트입니다. \n가볍게 호수에 돌멩이를 퐁-당 던지듯 가벼운 질문으로 시작해서, \n나의 심연으로 몰입하는 시간을 제공하는 서비스 ‘퐁당’입니다.',
-    skillStack: ['node', 'aws','mysql'],
-}

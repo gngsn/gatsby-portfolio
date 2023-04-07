@@ -1,4 +1,4 @@
-export interface IProjects {
+export interface ISection {
     key: number;
     title: string;
     cate: string;
@@ -7,7 +7,7 @@ export interface IProjects {
     project: Array<string>;
 };
 
-const skillList: Array<IProjects> = [
+const sectionList: Array<ISection> = [
     {
         key: 0,
         title: 'BACKEND',
@@ -34,4 +34,4 @@ const skillList: Array<IProjects> = [
     },
 ];
 
-export default skillList;
+export default sectionList;

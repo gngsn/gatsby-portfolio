@@ -3,18 +3,18 @@ import styled from 'styled-components';
 
 import { device } from '../../lib/styles/sizes';
 
-const ProjectCardView = React.memo(({ handleClick, project }) => {
+const ProjectCardView = React.memo(({ handleClick, projects }) => {
 
     return (
         <Block>
             {
-                project.map(data => {
+                projects.map(p => {
                     return (
-                        <ImageStyle key={data.id} image={data.thumbnail} className='link' onClick={() => handleClick(data)} data-link={data.link}>
+                        <ImageStyle key={p.link} image={p.thumbnail} className='link' onClick={() => handleClick(p)} data-link={p.link}>
                         <div>
-                            <h1>{data.title}</h1>
-                            <p>{data.duration}</p>
-                            <p>{data.subTitle}</p>
+                            <h1>{p.title}</h1>
+                            <p>{p.duration}</p>
+                            <p>{p.subTitle.join(' ')}</p>
                         </div>
                     </ImageStyle>);
                 })
@@ -24,19 +24,22 @@ const ProjectCardView = React.memo(({ handleClick, project }) => {
 });
 
 const Block = styled.div`
-    display: flex; flex-wrap: wrap;
+display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     align-items: center; justify-content: space-around;
     max-width: 1000px; 
     width: 100%; margin: 0 auto;
     padding: 0 20px;
 `;
+
 const ImageStyle = styled.div`
     ${({ image }) => image ? 'background-image: url(' + image + ')' : 'background-color: black'};
-    background-position: center center; background-size: cover;
+    background-position: center center; 
+    background-size: cover;
     flex-basis: ${({ flexBasis = '30%' }) => flexBasis};
     width: 100%;
     height: 200px;
-    margin: 10px auto 10px 0;
     padding: 20px;
     display: flex;
     align-items: center; justify-content: center;

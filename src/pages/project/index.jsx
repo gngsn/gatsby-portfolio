@@ -3,42 +3,17 @@ import { graphql } from 'gatsby';
 import ContextProvider from "../../components/base/Layout";
 import MainTemplate from "../../components/base/MainTemplate";
 import Project from "../../components/project";
+import projectList from '../../projectList';
 
-const IndexPage = ({ data }) => {
-  const project = data?.allMdx?.edges?.map(item => Object({ id: item.node.id, slug: item.node.slug, ...item.node.exports.metadata }));
+const IndexPage = () => {
 
   return (
     <ContextProvider>
       <MainTemplate>
-        <Project data={project}/>
+        <Project data={projectList} />
       </MainTemplate>
     </ContextProvider>
   )
 }
-
-export const get_mdx_project_data = graphql`
-query GetProjects {
-    allMdx(sort: {order: DESC, fields: exports___metadata___duration}) {
-    edges {
-      node {
-        id
-        slug
-        exports {
-          metadata {
-            title
-            subTitle
-            duration
-            summary
-            thumbnail
-            shortcutImage
-            link
-            skillStack
-          }
-        }
-      }
-    }
-  }
-}
-`;
 
 export default IndexPage;

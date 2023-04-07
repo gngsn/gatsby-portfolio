@@ -1,5 +1,5 @@
 import React from 'react';
-import TypeAnimation from 'react-type-animation';
+import { TypeAnimation } from 'react-type-animation';
 
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
@@ -22,7 +22,6 @@ const Inner = () => {
                             "Hello 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny. I am a back-end software engineer 💻 and a tech lover who is always eager to learn 📚 and discover 🔍 new advancements.", 800,
                             "Hello 👋🏻\nMy name is Kyeongsun Park, but you can call me Sunny. I am a back-end software engineer 💻 and a tech lover who is always eager to learn 📚 and discover 🔍 new advancements. Please take a moment to scroll up to get to know me better 🔥", 800,
                         ]}
-                         
                         wrapper="h1"
                     />
                 </TextContainer>

@@ -9,10 +9,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 interface IProjectMetaData {
     duration: string;
-    id: string;
     link: string;
     skillStack: Array<string>;
-    slug: string;
     subTitle: Array<string>;
     summary: string;
     thumbnail?: string;
@@ -30,7 +28,7 @@ const Project = ({ data }: { data: Array<IProjectMetaData> }): React.ReactNode =
             {
                 sectionList.map((_section) => 
                     <Section key={_section.key} data={_section} projects={
-                        data.filter(item => _section.project.includes(item.slug)).sort(compareDuration)
+                        data.filter(item => _section.project.includes(item.link)).sort(compareDuration)
                     }/>
                 )
             }

@@ -1,13 +1,7 @@
-export const metadata = {
-    title: 'EARLY-BUDDY',
-    duration: '2019.12 ~ 2020.01',
-    subTitle: ['# 해커톤 APPJAM 우수상 ', '# Node.js'],
-    thumbnail: '/img/early-buddy.png',
-    backImage: '/img/early-buddy.png',
-    link: 'early-buddy',
-    summary: "2주간의 해커톤 기간 동안, 약속시간을 지키기 어려워하는 사람을 위한 대중교통 배차 알림 서비스를 모바일 어플리케이션의 서버를 node.js를 이용하여 개발하였습니다. 약속 시간에 맞추어 일정을 관리하는 것부터, 약속 장소로 가는 경로까지 제공합니다. ODsay에서 제공해주는 경로 검색 API를 사용하여, 대중교통을 이용한 이동 경로에 대해 데이터들을 받아왔습니다. 서버를 구축해본 경험이 있었기 때문에 해당 프로젝트에서는 주도적인 개발을 하고 싶었고, 또 실제로 주도적인 개발을 이끌어나갔습니다.",
-    skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux'],
-}
+---
+title: "EARLY BUDDY"
+slug: "early-buddy"
+---
 
 <div className="early-buddy">
     <section>
@@ -22,6 +16,10 @@ export const metadata = {
         </QuotationMarksTitle>
         <img src="/img/eb-panel.png" />
     </section>
+
+
+
+
     <section>
         <QuotationMarksTitle>
             APPJAM 해커톤 우수상. Node.js 서버 개발. 협업 능력
@@ -31,13 +29,13 @@ export const metadata = {
                 <img src="/img/eb-capture.png" />
             </div>
             <div>
-            <p> 2주간의 해커톤 기간 동안, 약속시간을 지키지 못하는 사람들을 위한 대중교통 배차 알림 서비스를 모바일 어플리케이션으로 제작하였습니다.
-                주 업무는 node.js를 이용해 서버를 개발하는 것입니다. <br /><br />
+            <p> 
+                2주간의 해커톤 기간 동안, 약속시간을 지키지 못하는 사람들을 위한 대중교통 배차 알림 서비스를 모바일 어플리케이션으로 제작하였습니다.
+                주 업무는 node.js를 이용해 서버를 개발하는 것입니다.
                 기능은 약속 시간에 맞추어 일정을 관리하는 것부터, 약속 장소로 가는 경로까지 제공합니다.
                 ODsay에서 제공해주는 경로 검색 API를 사용하여, 대중교통을 이용한 이동 경로에 대해 데이터들을 받아왔습니다.
                 서버를 구축해본 경험이 있었기 때문에 해당 프로젝트에서는 주도적인 개발을 하고 싶었고, 또 실제로 주도적인 개발을 이끌어나갔습니다.
             </p>
-            {/* <SkillList width={30} height={30} padding={25} fontSize={1.5} list={['vscode', 'node', 'Express', 'mysql', 'git', 'github', 'aws', 'nginx']} /> */}
             <SkillList size={40} justify="flex-start">
                 <img src="https://img.icons8.com/fluent/96/000000/visual-studio-code-2019.png" />
                 <img src="https://img.icons8.com/color/96/000000/nodejs.png" />
@@ -65,7 +63,7 @@ export const metadata = {
                     개발 과정에서 가장 힘들었던 점은 테스트 도중 서버가 다운되어 버리면 저장되어 있던 schedule 객체들이 사라지는 문제가 있었습니다. 어플리케이션을 발표하는 날, 테스트를 안정적으로 해야했기 때문에 큰 이슈로 떠올랐습니다. 결국 새로운 프로젝트 하나를 생성하여, 알림 기능만을 위한 프로젝트를 생성하고 다른 포트로 요청하게끔 만들어 문제를 해결할 수 있었습니다. 발표하는 날, 다행히도 온전한 테스트가 가능하여 평가를 하시는 멘토님께 좋은 평을 들을 수 있었습니다.
                 </p>
                 <LinkIcon target="_blank" href="https://github.com/EARLY-BUDDY/EARLY-BUDDY-PUSH-SERVER">
-                    <img style="width: 30px; height: 30px" src="https://img.icons8.com/fluent/96/000000/github.png" /> 알림 서버 (FCM)
+                    알림 서버 (FCM)
                 </LinkIcon>
             </div>
             <img src="/img/early-buddy-arch.png" />

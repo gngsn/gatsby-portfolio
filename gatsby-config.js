@@ -1,8 +1,3 @@
-const {
-  languages,
-  defaultLanguage
-} = require('./src/modules/languages.ts');
-
 module.exports = {
   siteMetadata: {
     siteUrl: "https://kyeongsun.com",

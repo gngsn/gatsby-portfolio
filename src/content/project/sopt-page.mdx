@@ -1,17 +1,13 @@
-export const metadata = {
-    title: 'SOPT 페이지',
-    duration: '2020.02 ~ 2020.07',
-    subTitle: ['# php'],
-    thumbnail: '/img/sopt-page.png',
-    backImage: '/img/sopt-page.png',
-    link: 'sopt-page',
-    summary: "HCI(Human Computer Interaction)를 응용하여 사용자 경험을 중심으로 페이지를 디자인하여 개발했습니다. 동아리 26기 컨셉이 입체감이었으며, 당시 유행하던 뉴모피즘(Neumorphism)을 참고하여 제작했습니다. javascript를 사용해서 각 필드값의 유효성을 판단하여 알람을 주며, 글자수를 카운팅하도록 했습니다. 각 필드의 데이터는 데이터 베이스와 연동된 php 파일에 데이터를 전송합니다. php는 학교 수업시간에 잠깐 다뤄본 것이 다였지만, 지원서 페이지를 제작하게 되면서 공식 문서를 참고하면서 개발했습니다. 데이터를 다른 페이지에서 전달받아 데이터베이스와 연결하는 것까지 안정적으로 데이터를 처리합니다.",
-    skillStack: ['php', 'aws', 'mysql', 'git'],
-}
+---
+title: "SOPT 페이지"
+slug: "sopt-page"
+---
 
 <div className="sopt-page">
     <section>
-        <QuotationMarksTitle> 천명이 지원한 페이지 제작 </QuotationMarksTitle>
+        <QuotationMarksTitle> 
+            천명이 지원한 페이지 제작 
+        </QuotationMarksTitle>
         <ScrollImgContainer>
             <img src="/img/sopt-page/26th_yb_apply_yb.png" />
         </ScrollImgContainer>
@@ -20,12 +16,14 @@ export const metadata = {
         <QuotationMarksTitle> UX </QuotationMarksTitle>
         <FlexBox className="flex-box">
             <img src="/img/sopt-page/alert.png" />
-            <p> HCI(Human Computer Interaction)를 응용하여 사용자 경험을 중심으로 페이지를 만들었습니다.
+            <p> 
+            HCI(Human Computer Interaction)를 응용하여 사용자 경험을 중심으로 페이지를 만들었습니다.
             동아리 26기 컨셉이 입체감이었으며, 당시 유행하던 뉴모피즘(Neumorphism)을 참고하여 제작했습니다.
             </p>
         </FlexBox>
         <FlexBox className="flex-box">
-            <p> javascript를 사용해서 각 필드값의 유효성을 판단하여 알람을 주기도 합니다.
+            <p> 
+                javascript를 사용해서 각 필드값의 유효성을 판단하여 알람을 주기도 합니다.
                 javascript를 사용해서 textarea에 내용이 변경될 때마다 글자수를 카운팅하도록 했습니다.
                 또, 맨 아래의 '지원하기'를 누르면 데이터 베이스와 연동된 php 파일에 데이터를 전송합니다.
                 php는 학교 수업시간에 잠깐 다뤄본 것이 다였지만, 지원서 페이지를 제작하게 되면서 공식 문서를 참고하면서 개발했습니다.
@@ -36,8 +34,9 @@ export const metadata = {
     </section>
     <section>
         <QuotationMarksTitle> 지원서 확인 페이지 </QuotationMarksTitle>
-        <p> 지원서 페이지에 이어, 지원서 확인 페이지도 php와 jquery, javascript를 사용해서 제작했습니다.
-        지원서 페이지를 기반으로 php를 충분히 익혀 pagination이나 분야별로 확인할 수 있게끔 제작하였습니다.
+        <p> 
+            지원서 페이지에 이어, 지원서 확인 페이지도 php와 jquery, javascript를 사용해서 제작했습니다.
+            지원서 페이지를 기반으로 php를 충분히 익혀 pagination이나 분야별로 확인할 수 있게끔 제작하였습니다.
         </p>
         <ScrollImgContainer>
             <img src="/img/sopt-page/check-server.png" />

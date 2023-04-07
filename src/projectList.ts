@@ -65,7 +65,7 @@ const projectList: Array<IProject> = [
         duration: '2018.11 ~ 2018.12',
         subTitle: ['# 3D max', '# After Effects'],
         thumbnail: '/img/max3d/tangled-dark.png',
-        link: '3ds-max',
+        link: 'max3ds',
         summary: '3D 모델링을 통해 3D Animation을 제작했습니다. 짧은 시간이었지만, 심미적으로나 스토리, 완성도에서 인정받았습니다.',
         skillStack: ['3ds-max', 'after-effects'],
     },

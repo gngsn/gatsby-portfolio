@@ -56,9 +56,9 @@ const UnderTitleH3 = styled.h3`
     font-size: 0.6%;
     }
     ${device.tablet} {
-        display: none;
         margin-top: 0px;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        max-width: 70vw;
     }
 `;
 

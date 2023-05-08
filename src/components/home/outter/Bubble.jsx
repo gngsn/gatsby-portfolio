@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import palette from '../../../lib/styles/palette';
 import { device, getScreenSize } from '../../../lib/styles/sizes';
 
+
+
 const Bubble = () => {
     const [screen, setScreen] = useState(getScreenSize());
 
     const motoList = [
-        { id: 0, title: "COMMUNICATION", desc: "Communicate with people, putting importance on the value of being together.", descKr: "함께라는 가치를 중요시하며\n주변 사람과 소통합니다." },
-        { id: 1, title: "GROWTH", desc: "Always crave for growth, and I have a special passion for it.", descKr: "항상 성장을 갈망하며,\n성장에 대한 남다른 열정을\n갖고 있습니다."},
-        { id: 2, title: "CONSTANTLY", desc: "No matter what I do, I don't give up and even if it takes a long time, I will do it.", descKr: "어떤 일을 하든지\n포기하지 않고\n끝까지 해냅니다."}
+        { id: 0, icon: "/svg/moto/growth.svg", iconWidth: '30%', title: "GROWTH.", desc: "I am a hard worker and a fast learner who is always eager to explore new knowledge and keep up with the latest technology trends.", descKr: "."},
+        { id: 1, icon: "/svg/moto/persistence.svg", iconWidth: '40%', title: "PERSISTENCE.", desc: "Constantly try until I achieve it. I am not afraid to fail, as I view it as a stepping stone towards achieving my goals.", descKr: "." },
+        { id: 2, icon: "/svg/moto/challenge.svg", iconWidth: '30%', title: "CHALLENGE.", desc: "Embrace challenges as a means of expanding knowledge, growth and self-improvement. Failure is accepted as a stepping stone towards the next level of achievement.", descKr: "."}
     ];
 
     useEffect(() => {
@@ -31,7 +33,8 @@ const Bubble = () => {
             {
                 screen === 'small' ?
                 motoList.map(moto =>
-                    <TextContainer key={moto.id}>
+                    <TextContainer key={moto.id} iconWidth={moto.iconWidth}>
+                        <img src={moto.icon} />
                         <h2> {moto.title} </h2>
                         <h3>
                             {moto.desc}
@@ -44,7 +47,8 @@ const Bubble = () => {
                     {
                         motoList.map(moto =>
                             <Circle key={moto.id}>
-                                <TextContainer>
+                                <TextContainer iconWidth={moto.iconWidth}>
+                                    <img src={moto.icon} />
                                     <h2> {moto.title} </h2>
                                     <h3>
                                         {moto.desc}
@@ -65,7 +69,7 @@ const Circle = styled.div`
     float: left; 
     color: ${palette.black0};
     margin: auto -14px; 
-    border: 1px solid ${palette.black0};
+    border: 1px solid ${palette.black0}2b;
     border-radius: 50%; 
     background-color: ${palette.ivory0};
 
@@ -78,32 +82,42 @@ const Circle = styled.div`
         100% {transform: scale(1.03) translate(0, -30px);}
     }
 
-    &:nth-child(1) {height: 280px; width: 280px; margin-top: 140px; animation: bubble 6s ease-in-out alternate infinite;}
-    &:nth-child(2) {height: 380px; width: 380px; margin-top: 20px; animation: bubble 3s ease-in alternate infinite;}
-    &:nth-child(3) {height: 330px; width: 330px; margin-top: 140px; animation: bubble 5.5s ease-out alternate infinite;}
-    &:nth-child(4) {height: 370px; width: 370px; margin-top: 70px; animation: bubble 2.5s ease-in alternate-reverse infinite;}
-    &:nth-child(5) {height: 300px; width: 300px;}
+    &:nth-child(1) {height: 280px; width: 280px; margin-top: 140px; animation: bubble 6s ease-in-out alternate infinite; z-index: 1;}
+    &:nth-child(2) {height: 480px; width: 480px; margin-top: 20px; animation: bubble 3s ease-in alternate infinite; z-index: 3;}
+    &:nth-child(3) {height: 430px; width: 430px; margin-top: 140px; animation: bubble 5.5s ease-out alternate infinite;z-index: 4;}
+    &:nth-child(4) {height: 470px; width: 470px; margin-top: 70px; animation: bubble 2.5s ease-in alternate-reverse infinite;z-index: 2;}
+    &:nth-child(5) {height: 300px; width: 300px;z-index: 1;}
 `;
 
 const TextContainer = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     text-align: center; 
-    padding: 20px;
+    padding: 30px;
     white-space: pre-wrap;
     line-height: 1.6em;
+
     h2 {
-        font-size: 2em;
-        display: inline;
+        font-size: 1.6em;
         color: ${palette.black0};
+        margin: 20px 0px 5px;
     }
 
     h3 {
         color: ${palette.black0};
-        display: block; 
-        margin: 2em auto 0;
-        font-size: 1.2em; 
+        display: block;
+        font-size: 1em; 
+        line-height: 1.4;
+        padding: 0px 35px;
         font-weight: 400; 
         white-space: pre-wrap;
     }
+
+    img {
+        max-width: ${({ iconWidth }) => iconWidth};
+    }
+
     ${device.tablet} {
         width: 100%;
         margin: 20px auto;
@@ -114,6 +128,9 @@ const TextContainer = styled.div`
         }
         h3 {
             margin-top: 1em;
+        }
+        img {
+            opacity: 0.9;
         }
     }
 `;

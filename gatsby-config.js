@@ -58,11 +58,15 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-0BP5J1PF3Q",
-        head: true,
-      },
+        trackingIds: [
+          "G-0BP5J1PF3Q",
+        ],
+        pluginConfig: {
+          head: true
+        },
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,

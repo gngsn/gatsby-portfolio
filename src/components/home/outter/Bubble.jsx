@@ -11,8 +11,8 @@ const Bubble = () => {
 
     const motoList = [
         { id: 0, icon: "/svg/moto/growth.svg", iconWidth: '30%', title: "GROWTH.", desc: "I am a hard worker and a fast learner who is always eager to explore new knowledge and keep up with the latest technology trends.", descKr: "."},
-        { id: 1, icon: "/svg/moto/persistence.svg", iconWidth: '40%', title: "PERSISTENCE.", desc: "Constantly try until I achieve it. I am not afraid to fail, as I view it as a stepping stone towards achieving my goals.", descKr: "." },
-        { id: 2, icon: "/svg/moto/challenge.svg", iconWidth: '30%', title: "CHALLENGE.", desc: "Embrace challenges as a means of expanding knowledge, growth and self-improvement. Failure is accepted as a stepping stone towards the next level of achievement.", descKr: "."}
+        { id: 1, icon: "/svg/moto/persistence.svg", iconWidth: '40%', title: "PERSISTENCE.", desc: "Constantly striving for success. I am not afraid to fail, as I view it as a stepping stone towards achieving my goals.", descKr: "." },
+        { id: 2, icon: "/svg/moto/challenge.svg", iconWidth: '30%', title: "CHALLENGE.", desc: "Embrace challenges as a means of expanding knowledge, growth and self-improvement. Failure gives the proper perspective on success.", descKr: "."}
     ];
 
     useEffect(() => {
@@ -47,7 +47,8 @@ const Bubble = () => {
                     {
                         motoList.map(moto =>
                             <Circle key={moto.id}>
-                                <TextContainer iconWidth={moto.iconWidth}>
+                                {/* TODO img style에 반영되도록 변경 */}
+                                <TextContainer iconWidth={moto.iconWidth}>  
                                     <img src={moto.icon} />
                                     <h2> {moto.title} </h2>
                                     <h3>
@@ -69,7 +70,7 @@ const Circle = styled.div`
     float: left; 
     color: ${palette.black0};
     margin: auto -14px; 
-    border: 1px solid ${palette.black0}2b;
+    border: 1.3px solid #414141a1;
     border-radius: 50%; 
     background-color: ${palette.ivory0};
 
@@ -148,9 +149,11 @@ const Block = styled.div`
     display: flex; 
     flex-direction: column; 
     align-items: center;
+    padding: 100px 0px 150px;
     background-color: ${palette.lavender1};
     h1 {
         font-size: 3.5rem;
+        margin-bottom: 100px;
         color: ${palette.black0}; 
         ${device.tablet} {
             font-size: 2.5rem;

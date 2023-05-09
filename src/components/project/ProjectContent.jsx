@@ -79,6 +79,7 @@ const Cancel = styled.div`
             content: 'close.';
             font-family: 'Fira Code',Roboto,monospace;
             font-size: 2.2rem;
+            z-index: -1;
         }
         img {
             display: none;

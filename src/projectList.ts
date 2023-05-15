@@ -107,13 +107,13 @@ const projectList: Array<IProject> = [
         skillStack: ['xcode', 'ios', 'swift', 'git'],
     },
     {
-    title: 'HCI',
-    duration: '2020.01 ~ 2020.08',
-    subTitle: ['# 따릉이 Redesign'],
-    thumbnail: '/img/hci/hci_dark.png',
-    link: 'hci',
-    summary: "인간과 컴퓨터의 상호작용을 탐구하여 기존에 출시되었던 '따릉이' 어플을 UX을 고려하여 재탄생시켰습니다.",
-    skillStack: ['xd', 'illustrator'],
+        title: 'HCI',
+        duration: '2020.01 ~ 2020.08',
+        subTitle: ['# 따릉이 Redesign'],
+        thumbnail: '/img/hci/hci_dark.png',
+        link: 'hci',
+        summary: "인간과 컴퓨터의 상호작용을 탐구하여 기존에 출시되었던 '따릉이' 어플을 UX을 고려하여 재탄생시켰습니다.",
+        skillStack: ['xd', 'illustrator'],
     },
     {
         title: 'Playlicense',
@@ -143,14 +143,14 @@ const projectList: Array<IProject> = [
         skillStack: ['react', 'git'],
     },
     {
-    title: 'Popupcinema',
-    duration: '2020.09 ~ 2020.12',
-    subTitle: ['# Next.js # Javascript'],
-    thumbnail: '/img/popupcinema/popupcinema-dark.jpeg',
-    link: 'popupcinema',
-    summary: "외주 프로젝트로 Next.js 프레임워크를 이용하여 서버를 보완하였습니다. 공동체영화 상영을 제공하는 웹 서비스입니다. 기존의 서버를 받아 리뉴얼하는 작업을 진행했습니다. 프론트 개발자 1명과 백앤드 개발자 1명이 애자일 스크럼 방식으로, 2주기간을 둔 스프린트로 진행하였습니다. 서비스를 리뉴얼하는 작업이라, 기존의 API 및 DB 데이터와 호환성을 고려하여 확장하는 작업을 하였고 추가되는 기능을 새로 제작하였습니다.",
-    skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux']
-},
+        title: 'Popupcinema',
+        duration: '2020.09 ~ 2020.12',
+        subTitle: ['# Next.js # Javascript'],
+        thumbnail: '/img/popupcinema/popupcinema-dark.jpeg',
+        link: 'popupcinema',
+        summary: "외주 프로젝트로 Next.js 프레임워크를 이용하여 서버를 보완하였습니다. 공동체영화 상영을 제공하는 웹 서비스입니다. 기존의 서버를 받아 리뉴얼하는 작업을 진행했습니다. 프론트 개발자 1명과 백앤드 개발자 1명이 애자일 스크럼 방식으로, 2주기간을 둔 스프린트로 진행하였습니다. 서비스를 리뉴얼하는 작업이라, 기존의 API 및 DB 데이터와 호환성을 고려하여 확장하는 작업을 하였고 추가되는 기능을 새로 제작하였습니다.",
+        skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux']
+    },
     {
         title: 'SOPT 서버파트장',
         duration: '2020.01 ~ 2020.08',

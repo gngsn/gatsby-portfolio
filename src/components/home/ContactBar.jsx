@@ -27,7 +27,7 @@ const ContactBar = () => {
                 <h3>
                     Email
                     <br/>
-                    rudtjs4540@gmail.com
+                    enfj.dev@gmail.com
                 </h3>
                 <h3>
                     Korean 25

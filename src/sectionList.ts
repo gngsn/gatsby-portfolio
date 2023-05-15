@@ -22,7 +22,7 @@ const sectionList: Array<ISection> = [
         cate: 'develop',
         description: 'Code every day for the sake of habit, enjoyment, and the pleasure of learning. Yes, I am an enthusiastic developer.',
         skills: ['react', 'gatsbyjs', 'graphql', 'ios', 'swift', 'angular', 'unity'],
-        project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'tooc', 'playlicense', 'pokit', 'baby-closet', 'get-rest', 'game']
+        project: ['cookie-parking', 'popupcinema', 'sopt-page', 'server-head', 'early-buddy', 'tooc', 'playlicense', 'pokit', 'baby-closet', 'get-rest', 'game', 'pondan', 'clayon']
     },
     {
         key: 2,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as L } from 'gatsby';
+import { Link } from 'gatsby';
 
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
@@ -7,22 +7,17 @@ import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
 
 const Header = () => {
-    const menuList = [
-        { title: "park.", link: "/" },
-        { title: "contact.", link: "/#contact" },
-        { title: "about.", link: "/about" },
-        { title: "proj.", link: "/project" }
-    ];
 
     return (
         <Block>
-            {
-                menuList.map((item) => (
-                    <Link key={item.title} className="link" to={item.link}>
-                        { item.title }
-                    </Link>
-                ))
-            }
+
+            <Link className="link" to={"/"}> park. </Link>
+            <Link className="link" to={"about"}> about. </Link>
+            <Link className="link" to={"/project"}> project. </Link>
+            <a href={`/resume.pdf`} className="link" target="_blank" rel="noreferrer" id="resume" >
+                resume.
+            </a>
+
         </Block>
     )
 }
@@ -40,42 +35,40 @@ const Block = styled.div`
         flex-wrap: wrap;
         border-bottom: none;
     }
-`;
-    
-const Link = styled(L)`
-    padding: 10px;
-    width:100%; max-width: 200px;
-    display: inline-flex;
-    align-items: center; justify-content: center;
-    font-size: 2.2rem;
-    font-weight: 900;
-    margin: 0px; position: relative;
-    color: ${palette.black0};
-    text-decoration: none;
-    &:hover {
-        text-decoration: line-through;
-    }
 
-    &:first-child { 
-        margin: 0px auto 0px 0px;
-        color: ${palette.primary};
-        ${device.tablet} {
-            border-right: none;
+    a, .link {
+        padding: 10px;
+        width:100%; max-width: 200px;
+        display: inline-flex;
+        align-items: center; justify-content: center;
+        font-size: 2.2rem;
+        font-weight: 900;
+        margin: 0px; position: relative;
+        color: ${palette.black0};
+        text-decoration: none;
+        &:hover {
+            text-decoration: line-through;
         }
+
         ${device.mobile} {
-            color: white;
-            background-color: ${palette.primary};
+            max-width: none;
+            flex-basis: 50%;
+            font-size: 1.5rem;
+            border-left: 1px solid ${palette.black0};
+            border-bottom: 1px solid ${palette.black0};
+        }
+
+        &:first-child {
+            margin: 0px auto 0px 0px;
+            color: ${palette.primary};
+            ${device.tablet} {
+                border-right: none;
+            }
+            ${device.mobile} {
+                color: ${palette.primary};
+            }
         }
     }
-
-    ${device.mobile} {
-        max-width: none;
-        flex-basis: 50%;
-        font-size: 1.5rem;
-        border-left: 1px solid ${palette.black0};
-        border-bottom: 1px solid ${palette.black0};
-    }
 `;
-
 
 export default Header;

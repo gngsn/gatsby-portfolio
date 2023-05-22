@@ -14,7 +14,7 @@ const Header = () => {
             <Link className="link" to={"/"}> park. </Link>
             <Link className="link" to={"about"}> about. </Link>
             <Link className="link" to={"/project"}> project. </Link>
-            <a href={`https://gngsn.s3.ap-northeast-2.amazonaws.com/resume.pdf`} className="link" target="_blank" rel="noreferrer" id="resume" >
+            <a href={`http://resume.kyeongsun.com`} className="link" target="_blank" rel="noreferrer" id="resume" >
                 resume.
             </a>
 

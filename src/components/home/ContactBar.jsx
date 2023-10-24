@@ -23,7 +23,7 @@ const ContactBar = () => {
             </Box>
             <Box className="info">
                 <div>
-                <h2>Kyeongsun Park </h2>
+                <h2>Gyeongsun Park </h2>
                 <h3>
                     Email
                     <br/>

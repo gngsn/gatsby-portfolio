@@ -37,7 +37,7 @@ const Skill = () => {
     return (
         <Block>
             <h1>skill.</h1>
-            <small>drag the bubbles anywhere</small>
+            <small>Drag bubbles anywhere</small>
             <Container>
                 {
                     bubbleData.map((skill, idx) => (

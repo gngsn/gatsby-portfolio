@@ -1,6 +1,6 @@
 <br/>
 
-# kyeongsun Park | Portfolio
+# gyeongsun Park | Portfolio
 
 ### 🔗 &nbsp; [visit MYSITE !](https://kyeongsun.com/)
 
@@ -27,7 +27,7 @@ Following items are core frontend technologies used in this project (2021.08) :
 ```
  +- Build  -+        +--  CI  --+           +----  CD  ----+
 |           |        |          |           |              |
-|  Gatsby   |  push  |  Github  |  publish  | Gatsby Cloud |
+|  Gatsby   |  push  |  Github  |  publish  |    Netlify   |
 |  GraphQL  |  --->  |  Action  |   ---->   |  AWS Route53 |
 |           |        |          |           |              |
 +-----------+        +----------+           +--------------+

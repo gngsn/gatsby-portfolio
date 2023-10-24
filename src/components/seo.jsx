@@ -14,9 +14,9 @@
 //     } = site.siteMetadata;
 
 //     const seo = {
-//         title: title || "kyeongsun",
+//         title: title || "gyeongsun",
 //         titleTemplate,
-//         description: description || "kyeongsun portfolio",
+//         description: description || "gyeongsun portfolio",
 //         image: defaultImage || "/img/selfie_sq.png/img/selfie_sq.png",
 //         url: `${siteUrl}`,
 //     };

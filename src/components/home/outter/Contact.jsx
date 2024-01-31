@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ContactBar from '../ContactBar';
 import palette from '../../../lib/styles/palette';
 import { device } from '../../../lib/styles/sizes';
+import ContactBar from '../ContactBar';
 
 const contact = () => {
     return (

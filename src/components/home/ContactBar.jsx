@@ -6,7 +6,7 @@ import { device } from '../../lib/styles/sizes';
 
 const ContactBar = () => {
     return (
-        <Block className="link-diff">
+        <Block id="contact" className="link-diff">
             <Box onClick={() => navigate("https://github.com/gngsn")}>
                 <h2>Github</h2>
             </Box>

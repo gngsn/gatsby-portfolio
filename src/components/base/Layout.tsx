@@ -1,13 +1,11 @@
 import React from "react";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { composeWithDevTools } from "@redux-devtools/extension";
 
-import rootReducer, { RootState } from "../../modules";
-import Header from "./Header";
-import Cursor from "./Cursor";
-import Metadata from "./Metadata";
 import { configureStore } from "@reduxjs/toolkit";
+import rootReducer, { RootState } from "../../modules";
+import Cursor from "./Cursor";
+import Header from "./Header";
+import Metadata from "./Metadata";
 
 const isBrowser = typeof window !== "undefined";
 let store = configureStore({
@@ -41,7 +39,7 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
                 <Header />
                 <div>
                     {children}
-                </div>
+                </div>                
                 {
                     typeof navigator !== 'undefined' && isMobile() ? 
                     null : <Cursor />
@@ -49,5 +47,6 @@ const ContextProvider = ({ children }: ContextProviderProps) => {
         </Provider>
     );
 };
+
 
 export default ContextProvider;

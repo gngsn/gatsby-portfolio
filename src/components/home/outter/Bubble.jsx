@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import palette from '../../../lib/styles/palette';
@@ -10,9 +10,9 @@ const Bubble = () => {
     const [screen, setScreen] = useState(getScreenSize());
 
     const motoList = [
-        { id: 0, icon: "/svg/moto/growth.svg", iconWidth: '20%', title: "GROWTH.", desc: "I am a hard worker and a fast learner who is always eager to explore new knowledge and keep up with the latest technology trends.", descKr: "."},
-        { id: 1, icon: "/svg/moto/persistence.svg", iconWidth: '25%', title: "PERSISTENCE.", desc: "Constantly striving for success. I am not afraid to fail, as I view it as a stepping stone towards achieving my goals.", descKr: "." },
-        { id: 2, icon: "/svg/moto/challenge.svg", iconWidth: '20%', title: "CHALLENGE.", desc: "Embrace challenges as a means of expanding knowledge, growth and self-improvement. Failure gives the proper perspective on success.", descKr: "."}
+        { id: 0, icon: "/svg/moto/growth.svg", iconWidth: '20%', title: "GROWTH.", desc: "An enthusiastic and fast learner who enjoys exploring and diving into new knowledge, driven by curiosity"},
+        { id: 1, icon: "/svg/moto/persistence.svg", iconWidth: '25%', title: "PERSISTENCE.", desc: "Constantly striving for success. I am not afraid to fail, as I view it as a stepping stone towards achieving my goals."},
+        { id: 2, icon: "/svg/moto/challenge.svg", iconWidth: '20%', title: "CHALLENGE.", desc: "Embrace challenges as a means of expanding knowledge, growth and self-improvement. Failure gives the proper perspective on success."}
     ];
 
     useEffect(() => {

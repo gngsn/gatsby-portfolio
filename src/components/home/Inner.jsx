@@ -19,7 +19,7 @@ const Inner = () => {
                             'Hello 👋🏻', 200, 
                             "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥", 200,
                             "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻", 200,
-                            "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 who dedicated to advancing and delivering 🏗️ high-quality services and products 🎁 without confining myself to any specific field 📚", 500,
+                            "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 without confining myself to any specific field 📚", 500,
                         ]}
                         wrapper="h1"
                     />

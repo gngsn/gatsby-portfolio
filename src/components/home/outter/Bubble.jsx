@@ -29,7 +29,7 @@ const Bubble = () => {
 
     return (
         <Block>
-            <h1>MOTTO.</h1>
+            <h1>Motto.</h1>
             {
                 screen === 'small' ?
                 motoList.map(moto =>

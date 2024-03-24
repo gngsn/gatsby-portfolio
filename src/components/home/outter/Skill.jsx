@@ -6,16 +6,15 @@ import { device } from '../../../lib/styles/sizes';
 
 const bubbleData = [
     ["Java", 4],
-    ["Javascript", 4],
+    ["Javascript", 2],
     ["📚"],
-    ["Typescript", 3],
+    ["Typescript", 4],
     ["Python", 3],
     ["👾"],
-    ["C++", 3],
-    ["Bash", 2],
-    ["Go", 2],
+    ["C++", 2],
+    ["Shell Script", 2],
 
-    ["Nodejs", 3],
+    ["Nodejs", 2],
     ["🖥"],
     ["Nextjs", 2],
     ["🎵"],
@@ -24,7 +23,7 @@ const bubbleData = [
     ["🥁"],
     ["AWS", 3],
     ["Nginx", 3],
-    ["Mongodb", 2],
+    ["Postgresql", 2],
     ["🔥"],
     ["MySQL", 4]
 ];
@@ -36,13 +35,13 @@ const getRandomArbitrary = (min, max) => {
 const Skill = () => {
     return (
         <Block>
-            <h1>skill.</h1>
+            <h1>Skills.</h1>
             <small>Drag bubbles anywhere</small>
             <Container>
                 {
                     bubbleData.map((skill, idx) => (
                         <Draggable key={skill[0]}>
-                            <Text num={skill.length === 1 ? getRandomArbitrary(2, 3.2) : skill[1]} className='link'>{skill.join(" ")}</Text>
+                            <Text num={skill.length === 1 ? getRandomArbitrary(2, 2.3) : (skill[1] + 10) * 0.2} className='link'>{skill[0]}</Text>
                         </Draggable>
                     ))
                 }
@@ -92,6 +91,7 @@ const Container = styled.div`
     margin: 40px auto 50px;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 `;
 
 export default Skill;

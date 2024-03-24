@@ -17,10 +17,9 @@ const Inner = () => {
                         cursor={true}
                         sequence={[
                             'Hello 👋🏻', 200, 
-                            "Hello 👋🏻\nMy name is Gyeongsun Park, but you can call me Sunny.", 200,
-                            "Hello 👋🏻\nMy name is Gyeongsun Park, but you can call me Sunny. I am a back-end software engineer 💻", 800,
-                            "Hello 👋🏻\nMy name is Gyeongsun Park, but you can call me Sunny. I am a back-end software engineer 💻 and a tech lover who is always eager to learn 📚 and discover 🔍 new advancements.", 800,
-                            "Hello 👋🏻\nMy name is Gyeongsun Park, but you can call me Sunny. I am a back-end software engineer 💻 and a tech lover who is always eager to learn 📚 and discover 🔍 new advancements. Please take a moment to scroll up to get to know me better 🔥", 800,
+                            "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥", 200,
+                            "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻", 200,
+                            "Hello 👋🏻 My name is Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 who dedicated to advancing and delivering 🏗️ high-quality services and products 🎁 without confining myself to any specific field 📚", 500,
                         ]}
                         wrapper="h1"
                     />

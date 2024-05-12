@@ -7,14 +7,21 @@ import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
 
 const Header = () => {
-  console.log("Hi, good day! If you're curious about me and would like to see my passion, please kindly reach out to me by sending an email to 💌 'enfj.dev@gmail.com'")
+  console.log(`
+  \n\n\n\n\n\n\n\n\n\n
+  Hi, good day!
+  If you're curious about me and want to see my passion, 
+  why don't you reach out to me? 
+  Feel free to contact me at 📬 'enfj.dev@gmail.com'
+  \n\n\n\n\n\n\n\n\n\n
+  `)
 
     return (
         <>
         <Block>
-            <Link className="link" to={"/"}> park. </Link>
+            <Link className="link" to={"/"}> ☀️SUN. </Link>
             <Link className="link" to={"/about"}> about. </Link>
-            <Link className="link" to={"/project"}> project. </Link>
+            <Link className="link" to={"/work"}> work. </Link>
             <Link className="link" to={"/#contact"}> contact. </Link>
         </Block>
       </>

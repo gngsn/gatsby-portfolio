@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import classNames from 'classnames';
+import React, { useState } from 'react';
 
 import styled from 'styled-components';
 import { device } from '../../lib/styles/sizes';
@@ -22,7 +22,7 @@ const Inner = React.memo(({ theme, isOn }) => {
                     <OnOffText>ON<em>/OFF</em></OnOffText>:
                     <OnOffText><em>ON/</em>OFF</OnOffText>
                 }
-                <SmallText className="caption">"push the switch"</SmallText>
+                <SmallText className="caption">"click the switch"</SmallText>
             </div>
             <div>
                 <SwitchImage alt="switch" onClick={clickSwitch} className="link switch" id="switch" src={turnOn ? '/img/switch-on.png' : '/img/switch-off.png'} />

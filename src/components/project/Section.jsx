@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
+import React, { useRef, useState } from 'react';
 
 import styled from 'styled-components';
 
-import SkillList from './SkillList';
-import ProjectCardView from './ProjectCardView';
 import palette from '../../lib/styles/palette';
+import ProjectCardView from './ProjectCardView';
+import SkillList from './SkillList';
 
 
 const Section = ({ data, projects }) => {
@@ -38,7 +38,9 @@ const Section = ({ data, projects }) => {
                     <h2>{data.title}</h2>
                 </Title>
                 <p>{data.description}</p>
-                <SkillList width={60} height={60} padding="40px 0px 20px" fontSize={1.5} list={data.skills} />
+                {
+                    data.skills ? <SkillList width={60} height={60} padding="40px 0px 20px" list={data.skills} /> : <></>
+                }
             </Info>
             <div ref={shortCutDom} >
                 <ShortCutContainer open={open}>
@@ -63,10 +65,10 @@ const Section = ({ data, projects }) => {
                             }
                             {
                                 shortcut.skillStack ?
-                                    <SkillList width={30} height={30} padding={5} fontSize={1.5} list={shortcut.skillStack} /> :
+                                    <SkillList size={60} padding={5} list={shortcut.skillStack} /> :
                                     <></>
                             }
-                            <Link className='link' to={`/project/${shortcut.link}`}>&gt;&gt; 자세히 보기</Link>
+                            <Link className='link' to={`/work/${shortcut.link}`}>&gt;&gt; 자세히 보기</Link>
                         </ShortCutDetail>
                     </ShortCut>
                 </ShortCutContainer>

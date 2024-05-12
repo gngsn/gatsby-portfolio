@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
+import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
 
-import { Paragraph, QuotationMarksTitle, FlexBox, SkillList, ScrollImgContainer, Gallery, LinkIcon } from './mdComponent';
 import palette from '../../lib/styles/palette';
 import { device } from '../../lib/styles/sizes';
+import { FlexBox, Gallery, LinkIcon, Paragraph, QuotationMarksTitle, ScrollImgContainer, SkillList } from './mdComponent';
 
 const components = {
     QuotationMarksTitle,
@@ -25,7 +25,7 @@ const ProjectDetail = React.memo(({ data, body }) => {
                 data ?
                     <PageLayout>
                         <Cancel>
-                            <Link to='/project'>
+                            <Link to='/work'>
                                 <CancelImage src='/img/cancel.png' />
                             </Link>
                         </Cancel>

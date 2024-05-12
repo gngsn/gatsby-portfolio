@@ -34,7 +34,7 @@ exports.createPages = async ({
 
   posts.forEach(node => {
     createPage({
-      path: `/project/${node.frontmatter.slug}`,
+      path: `/work/${node.frontmatter.slug}`,
       component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id

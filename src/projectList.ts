@@ -13,14 +13,14 @@ const projectList: Array<IProject> = [
         title: 'Open API Gateway',
         duration: '2022.10 ~ 2023.01',
         subTitle: ['# Spring', '# OPENAPI', '# Gateway'],
-        link: 'work/openapi',
+        link: 'openapi',
         summary: "외부 개발자를 대상으로 제공하는 OPEN API의 단일 진입점 제어를 위한 Gateway 설계하고, OPEN API Gateway 사용자 인증 및 접근 제한 등 기능 Flow 설계",
     },
     {
         title: 'OPEN API Devlopers Site',
         duration: '2023.02 ~ 2023.03',
         subTitle: ['# Spring MVC', '# Gateway'],
-        link: 'work/developers-site',
+        link: 'developers-site',
         summary: "사용자에게 보여줄 문서 작성을 위한 Asciidoc, Spring Rest doc 적용 및 Technical Writing 개인 학습 후 적용",
         // skillStack: ['spring', 'aws', 'git'],
     },
@@ -29,7 +29,7 @@ const projectList: Array<IProject> = [
         duration: '2022.06 ~ 2022.09',
         subTitle: ['# Spring Batch', '# Billing', '# DataWarehouse'],
         thumbnail: '/img/billingAccount/springboot-springbatch.png',
-        link: 'work/bas',
+        link: 'bas',
         summary: '자체 적재한 결제 데이터와 외부 플랫폼의 원장(결제 데이터) 비교를 위한 기반 시스템 제작. 구글 플레이스토어, 애플 앱스토어, 페이레터 등 매출이 발생하는 채널로부터의 데이터 수집 Data Warehouse를 구축. 정확성 및 신뢰성을 기반한 원장 비교 분석 플랫폼 설계 및 제작',
         skillStack: ['spring-batch', 'spring', 'java', 'mysql']
     },
@@ -58,7 +58,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/babyCloset/logo-dark.png',
         link: 'baby-closet',
         summary: "'2019 년 스마트 서울 모바일 앱 공모전’에 10 명의 팀원과 함께 응시하였습니다. 성장이 빠른 아기들의 옷을 나눔하는 서비스로, 기획과 iOS를 맡았습니다. iOS개발을 하면서 한 명의 팀원과 역할을 나누게 되었는데, 서로 해보지 못한 것들을 도전하기로 했습니다. ‘쉬자’ 라는 프로젝트를 같이 했던 분이라 그런지, 서로 잘 맞은 덕분에 서로 욕심과 타협 사이로 역할을 가져갈 수 있었습니다. 그 결과, 사용자를 관리하는 부분과 게시글을 다루는 서비스에 대한 역할을 맡아 했습니다.",
-        skillStack: ['xcode', 'ios', 'swift', 'git'],
+        skillStack: ['apple', 'swift', 'git'],
     },
     {
         title: '3D Max Animation',
@@ -76,7 +76,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/cookieParking/dark.png',
         link: 'cookie-parking',
         summary: "쿠키파킹은 크롬 익스텐션으로 구성된 북마크 서비스입니다. 인사이트가 되는 게시글 이나 페이지를 종류 별로 저장하여 관리할 수 있는 서비스입니다. IT동아리 SOPT에서 3 주간의 해커톤으로 진행한 프로젝트입니다. 실제 서비스 중이며, Typescript를 이용해 Node 서버를 제작했습니다. CICD를 적용하여 프로젝트 기간동안 개발에 몰입할 수 있게 하였습니다. 백앤드 개발자 2명이 협업하였습니다.",
-        skillStack: ['nextjs', 'aws', 'mariadb', 'git'],
+        skillStack: ['nextjs', 'aws', 'mysql'],
     },
     {
         title: 'EARLY-BUDDY',
@@ -85,7 +85,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/early-buddy.png',
         link: 'early-buddy',
         summary: "2주간의 해커톤 기간 동안, 약속시간을 지키기 어려워하는 사람을 위한 대중교통 배차 알림 서비스를 모바일 어플리케이션의 서버를 node.js를 이용하여 개발하였습니다. 약속 시간에 맞추어 일정을 관리하는 것부터, 약속 장소로 가는 경로까지 제공합니다. ODsay에서 제공해주는 경로 검색 API를 사용하여, 대중교통을 이용한 이동 경로에 대해 데이터들을 받아왔습니다. 서버를 구축해본 경험이 있었기 때문에 해당 프로젝트에서는 주도적인 개발을 하고 싶었고, 또 실제로 주도적인 개발을 이끌어나갔습니다.",
-        skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux'],
+        skillStack: ['aws', 'nodejs', 'nginx', 'mysql', 'linux'],
     },
     {
         title: 'BubbleBubble',
@@ -104,7 +104,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/getRest-dark.png',
         link: 'get-rest',
         summary: "2주간의 해커톤 기간 동안, 쉽게 포트폴리오를 관리하고 자기소개서 작성하는 모바일 어플리케이션서비스를 제작하였습니다. 자신의 활동 로그를 접근하기 가장 편한 핸드폰에 작성해두어 필요할 때마다 추가, 수정할 수 있습니다. 프로젝트에서 두 명이 iOS개발 부분을 맡았습니다.",
-        skillStack: ['xcode', 'ios', 'swift', 'git'],
+        skillStack: ['apple', 'swift'],
     },
     {
         title: 'HCI',
@@ -113,7 +113,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/hci/hci_dark.png',
         link: 'hci',
         summary: "인간과 컴퓨터의 상호작용을 탐구하여 기존에 출시되었던 '따릉이' 어플을 UX을 고려하여 재탄생시켰습니다.",
-        skillStack: ['xd', 'illustrator'],
+        skillStack: ['xd', 'ai'],
     },
     {
         title: 'Playlicense',
@@ -131,7 +131,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/pondan/banner-dark.png',
         link: 'pondan',
         summary: 'SOPT Hackaton으로 하루동안 제작한 작은 프로젝트입니다. \n가볍게 호수에 돌멩이를 퐁-당 던지듯 가벼운 질문으로 시작해서, \n나의 심연으로 몰입하는 시간을 제공하는 서비스 ‘퐁당’입니다.',
-        skillStack: ['node', 'aws', 'mysql'],
+        skillStack: ['nodejs', 'aws', 'mysql'],
     },
     {
         title: 'Pokit',
@@ -149,7 +149,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/popupcinema/popupcinema-dark.jpeg',
         link: 'popupcinema',
         summary: "외주 프로젝트로 Next.js 프레임워크를 이용하여 서버를 보완하였습니다. 공동체영화 상영을 제공하는 웹 서비스입니다. 기존의 서버를 받아 리뉴얼하는 작업을 진행했습니다. 프론트 개발자 1명과 백앤드 개발자 1명이 애자일 스크럼 방식으로, 2주기간을 둔 스프린트로 진행하였습니다. 서비스를 리뉴얼하는 작업이라, 기존의 API 및 DB 데이터와 호환성을 고려하여 확장하는 작업을 하였고 추가되는 기능을 새로 제작하였습니다.",
-        skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux']
+        skillStack: ['aws', 'nodejs', 'nginx', 'mysql', 'linux']
     },
     {
         title: 'SOPT 서버파트장',
@@ -158,7 +158,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/sopt-main.png',
         link: 'server-head',
         summary: "7주간의 세미나로, 약 40명의 파트원들에게 서버에 대한 전반적인 지식을 전달하였습니다. Javascript부터 시작하여, Node.js란 무엇인지와 Express를 사용하여 서버를 구축하는 법을 전달했습니다. AWS EC2를 사용하여 서버를 올리는 방법과, MySQL사용법을 전달하는 동시에 AWS RDS 사용법을 전달했습니다. 마지막에는 Token을 이용한 인증방법인 JWT에 대한 필요성과 이론, 그리고 사용법에 대해 강의했습니다.",
-        skillStack: ['aws', 'node', 'nginx', 'mysql', 'git', 'linux'],
+        skillStack: ['aws', 'nodejs', 'nginx', 'mysql', 'linux'],
     },
     {
         title: 'SOPT 페이지',
@@ -167,7 +167,7 @@ const projectList: Array<IProject> = [
         thumbnail: '/img/sopt-page.png',
         link: 'sopt-page',
         summary: "HCI(Human Computer Interaction)를 응용하여 사용자 경험을 중심으로 페이지를 디자인하여 개발했습니다. 동아리 26기 컨셉이 입체감이었으며, 당시 유행하던 뉴모피즘(Neumorphism)을 참고하여 제작했습니다. javascript를 사용해서 각 필드값의 유효성을 판단하여 알람을 주며, 글자수를 카운팅하도록 했습니다. 각 필드의 데이터는 데이터 베이스와 연동된 php 파일에 데이터를 전송합니다. php는 학교 수업시간에 잠깐 다뤄본 것이 다였지만, 지원서 페이지를 제작하게 되면서 공식 문서를 참고하면서 개발했습니다. 데이터를 다른 페이지에서 전달받아 데이터베이스와 연결하는 것까지 안정적으로 데이터를 처리합니다.",
-        skillStack: ['php', 'aws', 'mysql', 'git'],
+        skillStack: ['php', 'aws', 'mysql'],
     }, {
         title: 'Tooc',
         duration: '2018.02 ~ 2019.01',

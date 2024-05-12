@@ -17,7 +17,6 @@ const contact = () => {
 const Title = styled.h2`
     margin: 0;
     background-color: rgb(21, 21, 21);
-    border-top: 1px solid rgb(249, 247, 243);
     border-bottom: 1px solid rgb(249, 247, 243);
     font-size: 3rem;
     text-align: center;

@@ -1,34 +1,22 @@
 import React from 'react';
-import Icon from '../elements/Icons';
 import styled from 'styled-components';
 
-const SkillList = ({ list, width, height, padding = 20, fontSize = 1.2}) => {
+const SkillList = ({ list, size= 82, padding = 20}) => {
     return (
-        <Skills padding={padding} >
-            {
-            list.map((icon) => (
-                <SkillIcon key={icon}>
-                    <Icon name={icon} width={width} height={height} fontSize={fontSize} />
-                </SkillIcon>
-            ))
-            }
+        <Skills padding={padding}>
+            <Icon width={size * list.length} src={`https://skillicons.dev/icons?i=${list.join(",")}`}/>
         </Skills>
     );
 };
 
 const Skills = styled.div`
     display: flex; flex-wrap : wrap; align-content: center;
+    max-width: ${({ width }) => isNaN(width) ? width : width + 'px'};
     padding: ${({ padding }) => isNaN(padding) ? padding : padding + 'px'};
 `;
 
-const SkillIcon = styled.div`
+const Icon = styled.img`
     max-width: ${({ width }) => isNaN(width) ? width : width + 'px'};
-    max-height: ${({ height }) => isNaN(height) ? height : height + 'px'};
-    margin: auto 10px auto 0px;
-    @media all and (max-width: 1000px) {
-        max-width: 54px;
-        max-height: 54px;
-    }
 `;
 
 export default SkillList;

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Bubble from './Bubble';
-import Skill from './Skill';
-import Contact from './Contact';
 import palette from '../../../lib/styles/palette';
 import { device } from '../../../lib/styles/sizes';
+import Bubble from './Bubble';
+import Contact from './Contact';
+import Skill from './Skill';
 
 const Bottom = () => {
     return (
@@ -21,7 +21,7 @@ const Bottom = () => {
 
 const Container = styled.div`
     cursor: none;
-    border-top: 1px solid black;
+    border-top: 1px solid #d3d3d3;
     margin-top: 100vh; 
     z-index: 2;
     

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Draggable from 'react-draggable';
 import styled from 'styled-components';
 import palette from '../../../lib/styles/palette';
@@ -38,18 +38,13 @@ const getRandomArbitrary = (min, max) => {
 }
 
 const Skill = () => {
+    const [isClient, setIsClient] = useState(false);
     const ref = useRef();
-
+    
     const minBubbleWidth = 100;
     const minBubbleHeight = 80;
-
-    useEffect(() => {
-        if (ref.current) {
-            const rect = ref.current.getBoundingClientRect();
-            console.log(rect.width);
-            console.log(rect.height);
-        }
-    }, []);
+    
+    useEffect(() => setIsClient(true), []);
 
     return (
         <Block style={{backgroundColor: "blanchedalmond"}}>
@@ -61,7 +56,7 @@ const Skill = () => {
                         const size = skill.length === 1 ? getRandomArbitrary(2, 2.3) : (skill[1] + 10) * 0.2
                         const containerSize = ref.current?.getBoundingClientRect()
 
-                        const containerWidth = containerSize?.width ?? window.screen.width
+                        const containerWidth = containerSize?.width ?? isClient? window.screen.width : null
                         const containerHeight = containerSize?.height ?? 500
 
                         const x = getRandomArbitrary(-minBubbleWidth/1.2, containerWidth - minBubbleWidth)

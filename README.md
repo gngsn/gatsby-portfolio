@@ -2,7 +2,7 @@
 
 # gyeongsun Park | Portfolio
 
-### 🔗 &nbsp; [visit MYSITE !](https://kyeongsun.com/)
+### 🔗 &nbsp; Check out [my website](https://gyeongsun.com/)
 
 <br/>
 

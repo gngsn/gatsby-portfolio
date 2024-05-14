@@ -47,7 +47,7 @@ const Skill = () => {
     useEffect(() => setIsClient(true), []);
 
     return (
-        <Block style={{backgroundColor: "blanchedalmond"}}>
+        <Block style={{backgroundColor: "blanchedalmond", overflow: "hidden"}}>
             <h1>Skills.</h1>
             <small>Drag bubbles anywhere</small>
             <Container ref={ref}>
@@ -58,9 +58,10 @@ const Skill = () => {
 
                         const containerWidth = containerSize?.width ?? isClient? window.screen.width : null
                         const containerHeight = containerSize?.height ?? 500
+                        const scatter = 1.2
 
-                        const x = getRandomArbitrary(-minBubbleWidth/1.2, containerWidth - minBubbleWidth)
-                        const y = getRandomArbitrary(minBubbleHeight, containerHeight - minBubbleHeight)
+                        const x = getRandomArbitrary(-minBubbleWidth/scatter, containerWidth + minBubbleWidth/scatter)
+                        const y = getRandomArbitrary(-minBubbleHeight/scatter, containerHeight + minBubbleHeight/scatter)
                         
                         return (
                         <Draggable key={skill[0]}>
@@ -78,7 +79,7 @@ const Skill = () => {
 const Block = styled.div`
     border-top: 1px solid ${palette.black0};
     border-bottom: 1px solid ${palette.black0};
-    max-width: 1960px;
+    // max-width: 1960px;
     margin: auto;
 
     h1 {
@@ -109,8 +110,10 @@ const Bubble = styled.div`
         margin: 5px;
         font-size: ${({ num }) => num *0.85}rem;
     }
+
     ${device.mobile} {
         font-size: ${({ num }) => num *0.65}rem;
+        padding: 5px 10px;
     }
 `;
 
@@ -121,6 +124,11 @@ const Text = styled.h2`
     white-space: nowrap;
     border-radius: ${({ num }) => num /1.2}rem;
     font-size: ${({ num }) => num * 14}px;
+
+    ${device.mobile} {
+        font-size: ${({ num }) => num * 8}px;
+        padding: 5px 5px;
+    }
 `;
 
 const Container = styled.div`
@@ -135,6 +143,10 @@ const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    ${device.mobile} {
+        min-height: 300px;
+    }
 `;
 
 export default Skill;

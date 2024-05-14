@@ -11,9 +11,10 @@ export const sizes = {
 
 export const getScreenSize = () => {
   if (typeof window === "undefined") return;
-  if (window.innerWidth > sizes.large) return 'large';
+  else if (window.innerWidth > sizes.large) return 'large';
   else if (window.innerWidth > sizes.medium) return 'medium';
-  else return 'small';
+  else if (window.innerWidth > sizes.small) return 'small';
+  else return 'xsmall';
 };
 
 

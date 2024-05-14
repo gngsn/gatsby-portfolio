@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getScreenSize } from '../../lib/styles/sizes';
 
 const SkillList = ({ list, size= 82, padding = 20}) => {
+    const wsize = getScreenSize()
+    const perline = wsize == "xsmall" ? 8 : 14
+
     return (
         <Skills padding={padding}>
-            <Icon width={size * list.length} src={`https://skillicons.dev/icons?i=${list.join(",")}`}/>
+            <Icon width={size * list.length} src={`https://skillicons.dev/icons?i=${list.join(",")}&perline=${perline}`}/>
         </Skills>
     );
 };

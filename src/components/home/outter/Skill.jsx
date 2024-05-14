@@ -113,7 +113,7 @@ const Bubble = styled.div`
 
     ${device.mobile} {
         font-size: ${({ num }) => num *0.65}rem;
-        padding: 5px 10px;
+        padding: 0px 20px;
     }
 `;
 

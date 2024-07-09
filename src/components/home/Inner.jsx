@@ -16,12 +16,13 @@ const Inner = () => {
                     <TypeAnimation
                         cursor={true}
                         sequence={[
-                            'Hello 👋🏻', 200, 
+                            'Hello 👋🏻', 100, 
                             "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥", 200,
                             "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻", 200,
-                            "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 ", 500,
-                            "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 exploring and diving into new knowledge, driven by curiosity. 📚", 500,
+                            "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 ", 150,
+                            "Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.\n I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 exploring and diving into new knowledge, driven by curiosity 📚", 100,
                         ]}
+                        speed={60}
                         wrapper="h1"
                     />
                 </TextContainer>
@@ -59,7 +60,7 @@ const TextContainer = styled.div`
         width: 100%;
         margin: 0;
         line-height: 3.7rem;
-        font-size: 2.8rem;
+        font-size: 2.7rem;
         color: ${palette.primary};
         white-space: pre-line;
     }

@@ -19,6 +19,7 @@ export const getScreenSize = () => {
 
 
 export const device = {
+    desktop: mediaQuery(sizes.large),
     tablet: mediaQuery(sizes.medium),
     mobile: mediaQuery(sizes.small),
 };

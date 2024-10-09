@@ -13,6 +13,10 @@ const Inner = () => {
                     <img src={'/img/gyeongseon.png'} alt="selfie" />
                 </ImageContainer>
                 <TextContainer>
+                    <h1 style={{position: "absolute", opacity: 0.2}}>
+                        Hello 👋🏻 I'm Gyeongsun Park, but you can also call me Sunny 🔥.<br/>
+                        I am a software engineer 💻 focused on advancing and delivering 🏗️ high-quality services and products 🎁 exploring and diving into new knowledge, driven by curiosity 📚
+                    </h1>
                     <TypeAnimation
                         cursor={true}
                         sequence={[
@@ -55,18 +59,30 @@ const ImageContainer = styled.div`
 const TextContainer = styled.div`
     margin: auto;
     padding: 0 20px 0 30px;
-    width: 70%; 
+    position: relative;
+    display: flex;
+    align-items: center;
     h1 {
-        width: 100%;
         margin: 0;
         line-height: 3.7rem;
         font-size: 2.7rem;
         color: ${palette.primary};
         white-space: pre-line;
+        width: 900px; 
+        height: 450px;
     }
     h3 {
         color: ${palette.primary};
         font-size: 2.5rem;
+    }
+    ${device.desktop} {
+        width: 700px; 
+        h1 {
+            line-height: 3.2rem; 
+            font-size: 2rem;
+            width: 650px; 
+            height: 450px;
+        }
     }
     ${device.tablet} {
         width: 100%; 
@@ -103,6 +119,10 @@ const Block = styled.div`
     max-width: 1440px;
     padding: 72px 50px 0px; 
 
+    ${device.desktop} {
+        // align-items: center; 
+        // flex-direction: column;
+    }
     ${device.tablet} {
         align-items: center; 
         flex-direction: column;

@@ -5,14 +5,16 @@ import palette from '../../../lib/styles/palette';
 import { device } from '../../../lib/styles/sizes';
 
 const bubbleData = [
+    ["Kotlin", 4],
+    ["💪🏻"],
     ["Java", 4],
-    ["Javascript", 2],
+    ["Typescript", 3],
     ["📚"],
-    ["Typescript", 4],
+    ["Javascript", 2],
     ["Python", 3],
     ["👾"],
-    ["C++", 2],
-    ["Shell Script", 2],
+    ["C++", 1],
+    ["Shell Script", 1],
 
     ["Nodejs", 2],
     ["🖥"],
@@ -23,7 +25,7 @@ const bubbleData = [
     ["🥁"],
     ["AWS", 3],
     ["Nginx", 3],
-    ["Postgresql", 2],
+    ["PostgreSQL", 2],
     ["🔥"],
     ["MySQL", 4]
 ];
@@ -86,7 +88,7 @@ const Text = styled.h2`
 `;
 
 const Container = styled.div`
-    width: 100%;
+    width: 70%;
     display: flex;
     margin: 40px auto 50px;
     flex-wrap: wrap;
